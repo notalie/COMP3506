@@ -1,0 +1,328 @@
+\documentclass[oneside, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[hypertexnames=false]{hyperref} 
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{soul}
+\usepackage{amsmath}
+\usepackage{forest}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+
+% Set spacing (i set it to 1.2x)
+\renewcommand{\baselinestretch}{1}
+% Indentation (set this to zero for normal prose)
+\setlength{\parindent}{0em}
+% Line breaking (spacing between paragraphs)
+\setlength{\parskip}{0.5em}
+
+% Use the whole page
+\usepackage{geometry}
+% Extra math glyphs
+\usepackage{amsmath}
+% Proper enumerate spacing
+\usepackage{enumitem}
+% More pleasing screen fonts
+\usepackage{lmodern}
+% Fancy headers
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{algpseudocode}
+% Allows absolute positioning of images
+\usepackage{float}
+% \usepackage[section]{placeins}
+% Set no separation
+\setlist{noitemsep}
+% Set margins to reasonable
+\geometry{margin=2.5cm}
+% Sets graphics path
+\graphicspath{ {./images/} }
+% Sets up fancy headers
+
+\addto\captionsenglish{
+}
+
+
+\usepackage{listings}
+\usepackage{color}
+
+\pagestyle{plain}
+
+\begin{document}
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{s4530974 - Homework Assignment 1}
+\rhead{COMP3506}
+
+\begin{titlepage}
+\newgeometry{left=7.5cm} %defines the geometry for the titlepage
+\noindent
+\color{black}
+\makebox[0pt][l]{\rule{1.3\textwidth}{1pt}}
+
+{\Huge {Student - s4530974}}
+\vskip\baselineskip
+\noindent
+{\huge{COMP3506 - Homework 1}}
+
+\vskip\baselineskip
+{\large {Semester 2 - 2020}}
+\end{titlepage}
+
+\newpage
+\tableofcontents
+
+\listoffigures
+
+\newpage
+
+
+\section*{Question 1}
+
+\subsection*{1a - The Running Time of $T_{odd}$}
+If n is odd then the if statement skips to this section of the function which then becomes $T_{odd}$. 
+
+\
+\begin{algorithmic}[1]
+    \Function{$T_{odd}$}{int n}
+    \State $sum \gets 0$ [1]
+    \While {$n > 0$} [?? + 1]
+        \State $sum \gets sum + (n \& 1)$ [3] 
+        \State $n \gets (n >> 1)$ [2]
+    \EndWhile
+    \State \Return $sum$ [1]
+    \EndFunction
+\end{algorithmic}
+
+\subsubsection*{Solving the ?? Part}
+\hl{CHECK - I have no idea what this is uhhhh}
+
+The running of the while loop part of the function is determined by the value of n and its most significant bit, you can assume that this bit would determine the times that the while loop would execute within $T_{odd}$. Since the most significant bit is being used as an indicator of how many times the while loop executes, you can use a formula to find which power of 2 the most significant bit would lie on. This is done with the equation 
+$$\frac{\log{n}}{\log(2)}$$ 
+Multiplying this equation by the amount of operations within the while loop and then adding 1 to the amount of iterations to account for the while loop check will give:
+
+$$(\frac{\log{n}}{\log(2)} * 5) + 1$$
+
+You also have to account for the assigning of sum and returning of sum at the beginning as well as the if statement. This adds on 2 extra to the constant at the end resulting in the ending formula of:
+
+$$(\frac{\log{n}}{\log(2)} * 5) + 3$$
+
+An assumption made was that the $n \& 1$ and $sum + (n \& 1)$ counted as 1 and 2 primitive operations each respectively which is why I counted the line with the assignment as 3. I am also assuming that $\frac{\log{n}}{\log(2)}$ gives an int rounded down.
+
+\subsection*{1b - Finding a suitable function for $O(n)$}
+
+A suitable function $g(n)$ that would fit $T_{odd}$ such that $g(n) \epsilon O(n)$. Since we know that the runtime function can be described as $(\frac{\log{n}}{\log(2)} * 5) + 3$ we can start from there.
+
+First, remove all constants and lower order terms which leaves us with $\frac{\log{n}}{\log(2)}$. We then have to find the bound for $O(n)$ which can be defined by $f(n) \leq c * g(n)$. 
+
+Suppose $g(n) = n^2, n_0 = 2, c = 3$
+
+Then
+ 
+
+\subsection*{1c - Finding $\Omega$}
+
+The Lower Bound for $T_{odd} \epsilon \Omega(n)$ when $c = ??$ and $n_0 = ??$ 
+
+\hl{Prove above thing}
+
+In terms of $\Theta(n)$, I believe it does not exist as there is no guaranteed run time or within $T_{odd}$ that will be executed. It also does not exist as the upper and lower bounds are too small for $\Theta(n)$ to be defined.
+
+\subsection*{1d - Bounds for $T_{even}$}
+
+\begin{algorithmic}
+    \Function{$T_{even}$}{int n}
+    \For {$i = 0$ to n} [n-1]
+        \For {$j = i$ to $n^2$} [$n^2 - i$]
+            \State {$sum \gets sum + i + j$} [3]
+        \EndFor
+    \EndFor
+    \State \Return $sum$
+    \EndFunction
+\end{algorithmic}
+
+The Upper Bound for $T_{even} \epsilon O(n^3)$ when $c = ??$ and $n_0 = ??$ 
+
+The Lower Bound for $T_{even} \epsilon \Omega(n)$ when $c = ??$ and $n_0 = ??$ 
+
+\subsection*{1e}
+The best case for this algorithm would be if n = 1. The run time of this would be 
+
+The worst case for this algorithm would be contained within $T_{even}$ and would be $O(n^3)$
+
+\subsection*{1f}
+\subsection*{1g}
+\subsection*{1h}
+
+\newpage
+\section*{Question 2}
+
+\subsection*{2a}
+\begin{algorithmic}
+    \Function{FINDPOSITIONRECURSE}{A[n], int low, int high}
+        \If{$high \geq low$}
+            \State $mid \gets low + (high - low) / 2$
+            \If{mid == A[mid]}
+                \State \Return true    
+            \EndIf
+                
+            \If{$mid < A[mid]$}
+                \State \Return FINDPOSITIONRECURSE(A, low, (mid - 1))
+            \Else
+                \State \Return FINDPOSITIONRECURSE(A, (mid + 1), high)
+            \EndIf
+
+        \Else 
+            \State \Return false    
+        \EndIf
+        
+    \EndFunction
+\end{algorithmic}
+\
+\
+\begin{algorithmic}
+    \Function{FINDPOSITION}{A[n]}
+        \State return FINDPOSITIONRECURSE(A, 0, n - 1)
+    \EndFunction
+\end{algorithmic}
+
+
+\subsection*{2b}
+The steps taken within my function would take in the array and then call the recursive function FINDPOSITIONRECURSE low and high values set as 0 and n - 1 respecitvely. The function would then begin searching to see if $A[i] == i$. The recursion would be as follows:
+
+\begin{itemize}
+    \item -1 \textrightarrow the function would calculate and set mid as 4, it would then check if A[4] == 4, which it is not. It would then check if 4 < A[4], which it is. It would the enter recursion and pass in low as the same value but change high to be that of (mid - 1). 
+    \item 0 \textrightarrow the function would calculate and set mid as 1, it would then check if A[1] == 1, which it is not. It would then check to see if 1 < A[1], which it is not. It would then enter recursion again and pass in high as the same value and change low to be that of (mid + 1). 
+    \item 2 \textrightarrow the function would calculate and set mid as 2, it would then check to see if A[2] == 2, which it is. The function would then exit recursion and return true.
+\end{itemize}
+
+\subsection*{2c}
+The worst case for my algorithm is where none of the values in A meet the conditions and the if high and low variables do not meet the requirements for the if statement $high \geq low$ and false is returned. The recurrence for this worse case would look like the following recurrence tree:
+
+\input{tree.tex}
+
+When put into a formula, the recurrence equation would look like the following:
+
+\begin{equation}
+    \begin{array}{l}
+        T(n) = T(\frac{n}{2}) ... + 1\\\\
+        T(n) = T(\frac{n}{2}) + T(\frac{n}{4}) + T(\frac{n}{8}) ... T(\frac{n}{2^k}) + 1
+      \end{array}
+\end{equation}
+
+The constant is 1 because that is what is used for the return statement out of recursion. 
+
+Since the tree eventually ends as $T(\frac{n}{2^k})$, you could break this function down to 
+
+Since we know that $T(1) = 1$ as given by the base case. We can do the following:
+$$\frac{n}{2^k} = 1$$
+$$n = 2^k$$
+$$k = log_2n$$
+
+Therefore $O(g(n))$ of this algorithm is $O(log(n))$.
+
+\subsection*{2d}
+
+\subsubsection*{2di}
+Since we know that $O(log(n))$ and that 
+
+\begin{equation}
+    T(n)=\begin{cases}
+        T(\frac{n}{2^k}) + 1, & \text{if $n>1$}.\\
+        1, & \text{$n = 1$}.
+    \end{cases}
+\end{equation}
+
+With $a = 1, b = 2^k, c = 1, g(n) = 1$. 
+
+Since $g(n) \epsilon \Theta(n^d), d = 0$
+
+Using the Master Theorem, since $a = {2^k}^0 = 1$ then $T(n) = \Theta(log(n))$. The algorithm is therefore $\Theta(log(n))$. 
+
+\subsubsection*{2dii}
+\begin{center}
+    $$T(n) = 5 * T (\frac{n}{3}) + n^2 + 2n$$
+
+    Where $a = 5, b = 3, g(n) = n^2 + 2n$
+
+    Since $g(n) \epsilon \Theta(n^d)$ 
+
+    Then $g(n) \epsilon \Theta(n^2)$ and $d = 2$
+
+    Sicne $5 < 3^2$, the $\Theta$ bounds for $T(n)$ is $\Theta(n^2)$ where 2 is d for when $T(1) = 100$.
+\end{center}
+
+
+\subsubsection*{2diii}
+Since n = k, the $\Theta$ is  $\Theta(1)$ for when $T(1) = 1$.
+
+\subsection*{2e}
+\begin{algorithmic}
+    \Function{FINDPOSITION}{A[n]}
+        \State $low \gets 0$
+        \State $high \gets (n - 1)$
+
+        \While{$high \geq low$}
+
+            \State $mid \gets low + (high - low) / 2$
+            \If{mid == A[mid]}
+                \State \Return true    
+            \EndIf
+                
+            \If{$mid < A[mid]$}
+                \State $high \gets (mid + 1)$
+            \Else
+                \State $low \gets (mid - 1)$
+            \EndIf
+
+        \EndWhile
+        \State \Return false    
+        
+    \EndFunction
+\end{algorithmic}
+
+The runtime complexity of my second solution is within $O(log(n))$ time. This is because while there is no recursion within my program, it is still a binary search implementation which works by splitting search size by 2 which eventually 
+
+\subsection*{2f}
+I believe that the better function to run within Java will be my iterative one. This is because if there are more elements within A, there runs the risk of getting a Stack Overflow during the program. 
+
+
+\section*{Question 3}
+
+\end{document}

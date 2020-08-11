@@ -1,0 +1,21 @@
+\begin{center}
+    \begin{forest}
+    for tree={
+      draw,
+      align=center
+    }
+    [$T(n) + 1$
+      [$T(\frac{n}{2})$
+        [$T(\frac{n}{4})$]
+        [$T(\frac{n}{4})$
+            [$T(\frac{n}{2^n})$]
+        ]
+      ]
+      [$T(\frac{n}{2})$
+        [$T(\frac{n}{4})$]
+        [$T(\frac{n}{4})$]
+      ]
+    ]
+  \end{forest}
+\end{center}
+  
