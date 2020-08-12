@@ -131,51 +131,86 @@ If n is odd then the if statement skips to this section of the function which th
 \end{algorithmic}
 
 \subsubsection*{Solving the ?? Part}
-\hl{CHECK - I have no idea what this is uhhhh}
+The running of the while loop part of the function is determined by the value of n and its most significant bit, you can assume that this bit would determine the times that the while loop would execute within $T_{odd}$. 
 
-The running of the while loop part of the function is determined by the value of n and its most significant bit, you can assume that this bit would determine the times that the while loop would execute within $T_{odd}$. Since the most significant bit is being used as an indicator of how many times the while loop executes, you can use a formula to find which power of 2 the most significant bit would lie on. This is done with the equation 
-$$\frac{\log{n}}{\log(2)}$$ 
+The function cannot be $O(n)$ as the amount of while loop iterations does not linearly increase as the number increases. As seen below with the first 9 inputs, going from 5 to 7 does not increase the amount of while loops iterations by a constant factor but is actually the same.
+
+\input{while.tex}
+
+Since the most significant bit is being used as an indicator of how many times the while loop executes, you can use a formula to find which power of 2 the most significant bit would lie on. This is done with the equation 
+
+
+$$\ceil[\Bigg]{\frac{\log{(n)}}{\log(2)}}$$ 
 Multiplying this equation by the amount of operations within the while loop and then adding 1 to the amount of iterations to account for the while loop check will give:
 
-$$(\frac{\log{n}}{\log(2)} * 5) + 1$$
+$$\ceil[\Bigg]{\frac{\log{(n)}}{\log(2)}} + 1$$ 
+
+This equation was then multiplied by the number of primitive operations within the while loop which add up to be 5. This was then multiplied by the existing equation to give:
+
+$$\ceil[\Bigg]{\frac{5\log{(n)}}{\log(2)}} + 5$$ 
 
 You also have to account for the assigning of sum and returning of sum at the beginning as well as the if statement. This adds on 2 extra to the constant at the end resulting in the ending formula of:
 
-$$(\frac{\log{n}}{\log(2)} * 5) + 3$$
+$$\ceil[\Bigg]{\frac{5\log{(n)}}{\log(2)}} + 7$$ 
 
-An assumption made was that the $n \& 1$ and $sum + (n \& 1)$ counted as 1 and 2 primitive operations each respectively which is why I counted the line with the assignment as 3. I am also assuming that $\frac{\log{n}}{\log(2)}$ gives an int rounded down.
+An assumption made was that the $n \& 1$ and $sum + (n \& 1)$ counted as 1 and 2 primitive operations each respectively which is why I counted the line with the assignment as 3.
 
 \subsection*{1b - Finding a suitable function for $O(n)$}
 
-A suitable function $g(n)$ that would fit $T_{odd}$ such that $g(n) \epsilon O(n)$. Since we know that the runtime function can be described as $(\frac{\log{n}}{\log(2)} * 5) + 3$ we can start from there.
+A suitable function $g(n)$ that would fit $T_{odd}$ such that $g(n) \epsilon O(n)$. Since we know that the runtime function can be described as $\ceil[\Big]{\frac{5\log{(n)}}{\log(2)}} + 7$ we can start from there.
 
-First, remove all constants and lower order terms which leaves us with $\frac{\log{n}}{\log(2)}$. We then have to find the bound for $O(n)$ which can be defined by $f(n) \leq c * g(n)$. 
+First, remove all constants and lower order terms which leaves us with $\frac{\log{n}}{\log(2)}$. 
 
-Suppose $g(n) = n^2, n_0 = 2, c = 3$
+Using the definition for $O(n)$ which is:
+Given functions $f(n)$ and $g(n)$, we say that $f(n)$ is $O(g(n))$ if there are positive constants $c$ and $n_0$ such that 
+$f(n) \leq c * g(n)$ for $n \geq n_0$
 
-Then
+\begin{center}
+    Suppose $g(n) = n, n_0 = 5, c = 3$
+
+    Then $\frac{log(n)}{log(2)} \leq 3n$
+    $$log(n) \leq 3n * log(2)$$
+    $$log(n) \leq 3n * log(2), n = 5$$
+
+    $log(5) \leq 3 * 5 * log(2)$ is true
+
+    $\dot{.\hspace{.095in}.}\hspace{.5in} \frac{\log{n}}{\log(2)}$ is $O(n)$ when $n \geq 5, c = 3$
+\end{center}
+
  
-
 \subsection*{1c - Finding $\Omega$}
+Using the definition for $O(n)$ which is:
+Given functions $f(n)$ and $g(n)$, we say that $f(n)$ is $\Omega(g(n))$ if there are positive constants $c$ and $n_0$ such that $f(n) \geq c * g(n)$ for $n \geq n_0$
 
-The Lower Bound for $T_{odd} \epsilon \Omega(n)$ when $c = ??$ and $n_0 = ??$ 
+\begin{center}
+    Suppose $g(n) = log(n), n_0 = 5, c = 3$
 
-\hl{Prove above thing}
+    Then $\frac{log(n)}{log(2)} \geq 3log(n)$
+    $\frac{log(n)}{log(2)} \geq 3log(n)$
 
-In terms of $\Theta(n)$, I believe it does not exist as there is no guaranteed run time or within $T_{odd}$ that will be executed. It also does not exist as the upper and lower bounds are too small for $\Theta(n)$ to be defined.
+    Since $\frac{log(n)}{log(2)}$ is always $\geq 3log(n)$ 
+
+    $\dot{.\hspace{.095in}.}\hspace{.5in} \frac{\log{n}}{\log(2)}$ is $\Omega(log(n))$ when $n \geq 5, c = 3$
+\end{center}
+
+In terms of $\Theta(n)$, I believe it does not exist as it only exists when Big-O == Big-Omega and $O(g(n)) \neq \Omega(g(n))$ so it does not exist.
 
 \subsection*{1d - Bounds for $T_{even}$}
 
 \begin{algorithmic}
     \Function{$T_{even}$}{int n}
-    \For {$i = 0$ to n} [n-1]
-        \For {$j = i$ to $n^2$} [$n^2 - i$]
+    \For {$i = 0$ to n} [n + 1]
+        \For {$j = i$ to $n^2$} [$n^2$]
             \State {$sum \gets sum + i + j$} [3]
         \EndFor
     \EndFor
     \State \Return $sum$
     \EndFunction
 \end{algorithmic}
+
+$T_{even}$
+
+I am assuming that the condition for the for loop is $i \leq n$ 
 
 The Upper Bound for $T_{even} \epsilon O(n^3)$ when $c = ??$ and $n_0 = ??$ 
 
@@ -188,7 +223,16 @@ The worst case for this algorithm would be contained within $T_{even}$ and would
 
 \subsection*{1f}
 \subsection*{1g}
-\subsection*{1h}
+My team mate is wrong as the best case does not define the bounds which are what Big-$\Omega$ and Big-$O$ are. A worst and best case scenario describe a singular scenario and are a singular point within the space of the algorithm where Big-$\Omega$ and Big-$O$ represent bound the lower and higher bounds respectively. They also define where worst and best cases can take place within the algorithm's asymptotic runtime.
+\subsection*{1h - Some $\Theta(f(n))$ Proof}
+Statement - $\Theta(g(n))$ only exists when $O(g(n)) = \Omega(g(n))$. 
+
+This can be proved using the definition given as:
+$f(n)$ is $\Theta(g(n))$ if there exist positive constants $c_1, c_2$ and $n_0$ such that $c_1 * g(n) \leq f(n) \leq c_2 * g(n)$ for all $n \geq n_0$
+
+Since $O(g(n)) = \Omega(g(n))$, for $\Theta(f(n))$ to exist, it must be $g(n)$ otherwise the definition does not hold. 
+
+Therefore $\Theta(f(n))$ is $\Theta(g(n))$ when $O(g(n)) = \Omega(g(n))$.
 
 \newpage
 \section*{Question 2}
@@ -320,9 +364,37 @@ Since n = k, the $\Theta$ is  $\Theta(1)$ for when $T(1) = 1$.
 The runtime complexity of my second solution is within $O(log(n))$ time. This is because while there is no recursion within my program, it is still a binary search implementation which works by splitting search size by 2 which eventually 
 
 \subsection*{2f}
-I believe that the better function to run within Java will be my iterative one. This is because if there are more elements within A, there runs the risk of getting a Stack Overflow during the program. 
+I believe that the better function to run within Java will be my iterative one. This is because if there are more elements within A, there runs the risk of getting a Stack Overflow during the program, which is very much unwanted. 
+
+In terms of space complexity, I believe that 
 
 
 \section*{Question 3}
+\section*{Question 4}
+\subsection*{4a}
+\subsection*{4b}
+
+Returns a true if the drilled plot is a water source and false if it is not.
+\begin{algorithmic}[1]
+    \Function{IsWaterSource}{G[n], int x, int y}
+    \State \Return boolean isSource
+    \EndFunction
+\end{algorithmic}
+
+\
+Returns a char relating to the source direction ('N', 'E', 'S', 'W')
+\begin{algorithmic}[1]
+    \Function{GetSourceDirection}{G[n], int x, int y}
+    \State \Return char direction
+    \EndFunction
+\end{algorithmic}
+
+\
+\begin{algorithmic}[1]
+    \Function{FindWaterSourceMinimal}{G[n]}
+    \State
+
+    \EndFunction
+\end{algorithmic}
 
 \end{document}

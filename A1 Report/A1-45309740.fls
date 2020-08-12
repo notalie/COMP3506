@@ -1,9 +1,9 @@
-PWD /Users/zenzlia/Documents/UNI/COMP3506/A1/report
+PWD /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report
 INPUT /usr/local/texlive/2018/texmf.cnf
 INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.tex
-OUTPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.log
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.tex
+OUTPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.log
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
@@ -260,9 +260,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.aux
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.aux
-OUTPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.aux
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.aux
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.aux
+OUTPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.aux
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lm/ot1lmr.fd
@@ -272,14 +272,14 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.out
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.out
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.out
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.out
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.out
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.out
-OUTPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.out
-OUTPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.pdf
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.out
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.out
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.out
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.out
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.out
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.out
+OUTPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.out
+OUTPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.pdf
 INPUT /usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -296,12 +296,12 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
 INPUT /usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.toc
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.toc
-OUTPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.toc
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.lof
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.lof
-OUTPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.lof
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.toc
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.toc
+OUTPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.toc
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.lof
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.lof
+OUTPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.lof
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmr6.tfm
@@ -328,19 +328,21 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmsy7.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmsy5.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmcsc10.tfm
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/while.tex
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/while.tex
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/ts1-lmr10.tfm
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/tree.tex
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/tree.tex
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.aux
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.out
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/A1/report/A1-45309740.out
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/tree.tex
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/tree.tex
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.aux
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.out
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.out
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-rmsc.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
