@@ -276,10 +276,10 @@ INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-453097
 INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.out
 INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.out
 INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.out
+OUTPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.pdf
 INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.out
 INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.out
 OUTPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.out
-OUTPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.pdf
 INPUT /usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -298,10 +298,8 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.toc
 INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.toc
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
 OUTPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.toc
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.lof
-INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.lof
-OUTPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.lof
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmr6.tfm
@@ -326,7 +324,6 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmsy7.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmsy5.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmcsc10.tfm
 INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/while.tex
 INPUT /Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/while.tex

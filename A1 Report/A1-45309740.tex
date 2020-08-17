@@ -108,12 +108,10 @@
 \newpage
 \tableofcontents
 
-\listoffigures
-
 \newpage
 
-
-\section*{Question 1}
+\setcounter{secnumdepth}{-1}
+\section{Question 1}
 
 \subsection*{1a - The Running Time of $T_{odd}$}
 If n is odd then the if statement skips to this section of the function which then becomes $T_{odd}$. 
@@ -137,29 +135,28 @@ The function cannot be $O(n)$ as the amount of while loop iterations does not li
 
 \input{while.tex}
 
-Since the most significant bit is being used as an indicator of how many times the while loop executes, you can use a formula to find which power of 2 the most significant bit would lie on. This is done with the equation 
+Since the most significant bit is being used as an indicator of how many times the while loop executes, you can use a formula to find which power of 2 the most significant bit would lie on. This is done with the equation:
 
-
-$$\ceil[\Bigg]{\frac{\log{(n)}}{\log(2)}}$$ 
+$$\ceil[\Bigg]{\frac{\log{(n)}}{\log(2)}} = \ceil{\log_2(n)}$$ 
 Multiplying this equation by the amount of operations within the while loop and then adding 1 to the amount of iterations to account for the while loop check will give:
 
-$$\ceil[\Bigg]{\frac{\log{(n)}}{\log(2)}} + 1$$ 
+$$\ceil{\log_2(n)}+ 1$$ 
 
 This equation was then multiplied by the number of primitive operations within the while loop which add up to be 5. This was then multiplied by the existing equation to give:
 
-$$\ceil[\Bigg]{\frac{5\log{(n)}}{\log(2)}} + 5$$ 
+$$\ceil{5\log_2(n)} + 5$$ 
 
 You also have to account for the assigning of sum and returning of sum at the beginning as well as the if statement. This adds on 2 extra to the constant at the end resulting in the ending formula of:
 
-$$\ceil[\Bigg]{\frac{5\log{(n)}}{\log(2)}} + 7$$ 
+$$\ceil{5\log_2(n)} + 7$$ 
 
 An assumption made was that the $n \& 1$ and $sum + (n \& 1)$ counted as 1 and 2 primitive operations each respectively which is why I counted the line with the assignment as 3.
 
 \subsection*{1b - Finding a suitable function for $O(n)$}
 
-A suitable function $g(n)$ that would fit $T_{odd}$ such that $g(n) \epsilon O(n)$. Since we know that the runtime function can be described as $\ceil[\Big]{\frac{5\log{(n)}}{\log(2)}} + 7$ we can start from there.
+A suitable function $g(n)$ that would fit $T_{odd}$ such that $g(n) \epsilon O(n)$. Since we know that the runtime function can be described as $\ceil{5\log_2(n)} + 7$ we can start from there.
 
-First, remove all constants and lower order terms which leaves us with $\frac{\log{n}}{\log(2)}$. 
+First, remove all constants and lower order terms which leaves us with $\ceil{\log_2(n)}$. 
 
 Using the definition for $O(n)$ which is:
 Given functions $f(n)$ and $g(n)$, we say that $f(n)$ is $O(g(n))$ if there are positive constants $c$ and $n_0$ such that 
@@ -168,13 +165,13 @@ $f(n) \leq c * g(n)$ for $n \geq n_0$
 \begin{center}
     Suppose $g(n) = n, n_0 = 5, c = 3$
 
-    Then $\frac{log(n)}{log(2)} \leq 3n$
-    $$log(n) \leq 3n * log(2)$$
-    $$log(n) \leq 3n * log(2), n = 5$$
+    Sub $c = 3$, $\ceil{\log_2(n)} \leq 3n$
 
-    $log(5) \leq 3 * 5 * log(2)$ is true
+    Sub $n = 5$, $\ceil{\log_2(5)}  \leq 3*5$
 
-    $\dot{.\hspace{.095in}.}\hspace{.5in} \frac{\log{n}}{\log(2)}$ is $O(n)$ when $n \geq 5, c = 3$
+    $3 \leq 15$ is true
+
+    $\dot{.\hspace{.095in}.}\hspace{.5in} \ceil{\log_2(n)} \text{ }\epsilon \text{ } O(n)$ when $n \geq 5, c = 3$
 \end{center}
 
  
@@ -184,13 +181,13 @@ Given functions $f(n)$ and $g(n)$, we say that $f(n)$ is $\Omega(g(n))$ if there
 
 \begin{center}
     Suppose $g(n) = log(n), n_0 = 5, c = 3$
+    Sub $c = 3$, $\ceil{\log_2(n)} \geq 3log(n)$
 
-    Then $\frac{log(n)}{log(2)} \geq 3log(n)$
-    $\frac{log(n)}{log(2)} \geq 3log(n)$
+    Sub $n = 5$, $\ceil{\log_2(5)} \geq 3log(5)$
 
-    Since $\frac{log(n)}{log(2)}$ is always $\geq 3log(n)$ 
+    $3 \geq 2.096...$
 
-    $\dot{.\hspace{.095in}.}\hspace{.5in} \frac{\log{n}}{\log(2)}$ is $\Omega(log(n))$ when $n \geq 5, c = 3$
+    $\dot{.\hspace{.095in}.}\hspace{.5in} \ceil{\log_2(n)} \text{  }\epsilon \text{ } \Omega(log(n))$ when $n \geq 5, c = 3$
 \end{center}
 
 In terms of $\Theta(n)$, I believe it does not exist as it only exists when Big-O == Big-Omega and $O(g(n)) \neq \Omega(g(n))$ so it does not exist.
@@ -208,20 +205,21 @@ In terms of $\Theta(n)$, I believe it does not exist as it only exists when Big-
     \EndFunction
 \end{algorithmic}
 
-$T_{even}$
+$T_{even}$ has a runtime complexity of $(n+1)(n^2)(3) = 3n^3 + 3n^2$
 
-I am assuming that the condition for the for loop is $i \leq n$ 
+I am assuming that the condition for the for loop is $i \leq n$ rather than $i < n$.  
 
-The Upper Bound for $T_{even} \epsilon O(n^3)$ when $c = ??$ and $n_0 = ??$ 
+The Upper Bound for $T_{even} \text{ } \epsilon \text{ } O(n^3)$ when $c = 1$ and $n \geq 1$
 
-The Lower Bound for $T_{even} \epsilon \Omega(n)$ when $c = ??$ and $n_0 = ??$ 
+The Lower Bound for $T_{even} \text{ } \epsilon \text{ } \Omega(n)$ when $c = 1$ and $n \geq 1$ 
 
 \subsection*{1e}
-The best case for this algorithm would be if n = 1. The run time of this would be 
-
-The worst case for this algorithm would be contained within $T_{even}$ and would be $O(n^3)$
+The worst case will always occur within $T_{even}$ as it has a larger runtime complexity. Therefore, the Big-$\Omega$ of the worst case in the algorithm is $\Omega(n^3)$ occuring in $T_{even}$. The same logic can be applied vice-versa to $T_{odd}$ and as such, the Big-$O$ of the best case in the algorithm is $O(log(n))$ occuring in $T_{odd}$.
 
 \subsection*{1f}
+The Big-$\Omega$ Bound for the algorithm is $\Omega(log(n))$ while the Big-$O$ Bound for the algorithm is $O(n^3)$. In terms of Big-$\Theta$, I believe that it does not exist as $\Omega(g(n)) \neq \Theta(g(n))$.
+
+
 \subsection*{1g}
 My team mate is wrong as the best case does not define the bounds which are what Big-$\Omega$ and Big-$O$ are. A worst and best case scenario describe a singular scenario and are a singular point within the space of the algorithm where Big-$\Omega$ and Big-$O$ represent bound the lower and higher bounds respectively. They also define where worst and best cases can take place within the algorithm's asymptotic runtime.
 \subsection*{1h - Some $\Theta(f(n))$ Proof}
@@ -235,7 +233,9 @@ Since $O(g(n)) = \Omega(g(n))$, for $\Theta(f(n))$ to exist, it must be $g(n)$ o
 Therefore $\Theta(f(n))$ is $\Theta(g(n))$ when $O(g(n)) = \Omega(g(n))$.
 
 \newpage
-\section*{Question 2}
+
+\setcounter{secnumdepth}{-1}
+\section{Question 2}
 
 \subsection*{2a}
 \begin{algorithmic}
@@ -301,7 +301,7 @@ $$k = log_2n$$
 
 Therefore $O(g(n))$ of this algorithm is $O(log(n))$.
 
-\subsection*{2d}
+\subsection*{2d - Recurrences}
 
 \subsubsection*{2di}
 Since we know that $O(log(n))$ and that 
@@ -364,37 +364,97 @@ Since n = k, the $\Theta$ is  $\Theta(1)$ for when $T(1) = 1$.
 The runtime complexity of my second solution is within $O(log(n))$ time. This is because while there is no recursion within my program, it is still a binary search implementation which works by splitting search size by 2 which eventually 
 
 \subsection*{2f}
-I believe that the better function to run within Java will be my iterative one. This is because if there are more elements within A, there runs the risk of getting a Stack Overflow during the program, which is very much unwanted. 
+For the consideration of larger inputs, I believe that the iterative method is better. This is because if there are more elements within A (as n increases), there runs the risk of getting a Stack Overflow due to a recursive depth being reached. This is mainly due to recursive methods relying on the stack which is ineffective for larger inputs.
 
-In terms of space complexity, I believe that 
+In terms of space complexity, iterative methods rely on one stack instance which can get quite large. On the other hand as recursive methods continously create a new stack on each resursive call which takes up much more memory. This means that due to these multiple stacks, recursive methods will take up more space resulting in a slower program for larger inputs.
 
+\subsubsection*{References}
+\href{https://medium.com/backticks-tildes/iteration-vs-recursion-c2017a483890}{Iteration vs Recursion}
 
-\section*{Question 3}
-\section*{Question 4}
-\subsection*{4a}
-\subsection*{4b}
+\href{https://www.ideserve.co.in/learn/time-and-space-complexity-of-recursive-algorithms}{Time and Space Complexity of Recursive Algorithms}
+
+\newpage
+\setcounter{secnumdepth}{-1}
+\section{Question 3}
+
+\newpage
+\setcounter{secnumdepth}{-1}
+\section{Question 4}
+\subsection*{4a - My algorithm but in words}
+Some things I would like to note about my algorithm that I would need to implement/consider:
+\begin{itemize}
+    \item The water source will always be below the corresponding x or y value when a drill breaks 
+    \item It's probably best to start from the center
+    \item When a drill breaks, you should always make sure to check if the plot is a water source or not in case that both conditions are met
+    \item Once you have the water direction on one axis, you do not need to search that axis again
+    \item Bounds for searching for the water source would need to be set and changed during the algorithm for an efficient function
+\end{itemize}
+
+\subsubsection*{Description of my algorithm}
+First I would set bounds $x_n, y_n$ which would represent a bound to search for the water source starting at 0 to n - 1. Once an axis (direction for the water source) has been found, these bounds would change values to indicate this.
+
+Then I would begin my algorithm starting from the center of the plot and dig there (I would round up if the length/width of the plot was even). 
+
+From there I would do the following checks:
+\begin{enumerate}
+    \item Check if any axis ($x_n$ or $y_n$) has already been found. 
+    \begin{itemize}
+        \item If it has, skip the checks for the already found axis broken
+    \end{itemize}
+    \item Check if the drill breaks
+        \begin{itemize}
+            \item Lower the bounds ($x_n$ or $y_n$) of the axis if the drill is broken. 
+            \item Increase the bounds ($x_n$ or $y_n$) of the axis if the drill has not been broken
+        \end{itemize}
+    \item Check if a water source has been found
+    \begin{itemize}
+        \item Set the axis ($x_n$ or $y_n$) as found if the direction is known
+    \end{itemize}
+\end{enumerate}
+
+I would then dig again from the center of the new bounds set until a water source is eventually found.
+
+The Big-$O$ complexity on the amount of holes to dig would be $O(log_2(n))$ holes.
+
+\subsection*{4b - Minimal Algorithm}
 
 Returns a true if the drilled plot is a water source and false if it is not.
 \begin{algorithmic}[1]
     \Function{IsWaterSource}{G[n], int x, int y}
-    \State \Return boolean isSource
+        \State \Return boolean isSource
     \EndFunction
 \end{algorithmic}
-
 \
-Returns a char relating to the source direction ('N', 'E', 'S', 'W')
+Digs in the water hole in the x, y position and returns true if the drill is broken and false if it is not
 \begin{algorithmic}[1]
-    \Function{GetSourceDirection}{G[n], int x, int y}
-    \State \Return char direction
+    \Function{IsBroken}{int x, int y}
+        \State \Return boolean pumpStatus
     \EndFunction
 \end{algorithmic}
 
 \
 \begin{algorithmic}[1]
     \Function{FindWaterSourceMinimal}{G[n]}
-    \State
-
+    \State $x \gets 0$
+    \State $y \gets 0$
+    
+    \While {$x < n$}
+        \If {$isBroken(x, y)$}
+            \State break
+        \Else \State $x \gets x + 1$
+        \EndIf
+    \EndWhile
+    
+    \While {$y < n$}
+        \If {$isBroken(x, y)$}
+            \State break
+        \Else \State $x \gets y + 1$
+        \EndIf
+    \EndWhile
+    \State \Return (x, y)
     \EndFunction
 \end{algorithmic}
+
+The Big-$O$ bound for my function is $O(2n)$ where n is the length of the grid.
 
 \end{document}
