@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.20)  17 AUG 2020 13:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.20)  18 AUG 2020 16:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.tex"
-(/Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.tex
+**"/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A1 Report/A1-45309740.tex"
+(/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A1 Report/A1-45309740.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
@@ -1023,7 +1023,7 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
- (/Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.aux)
+ (/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A1 Report/A1-45309740.aux)
 \openout1 = `A1-45309740.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
@@ -1062,7 +1062,7 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 64.
 LaTeX Info: Redefining \pageref on input line 64.
 LaTeX Info: Redefining \nameref on input line 64.
- (/Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.out) (/Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.out)
+ (/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A1 Report/A1-45309740.out) (/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A1 Report/A1-45309740.out)
 \@outlinefile=\write5
 \openout5 = `A1-45309740.out'.
 
@@ -1164,7 +1164,7 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
  [1
 
 
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.toc)
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A1 Report/A1-45309740.toc)
 \tf@toc=\write6
 \openout6 = `A1-45309740.toc'.
 
@@ -1193,30 +1193,30 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 117.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 117.
- (/Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/while.tex) [2] [3] [4]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 274.
+ (/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A1 Report/while.tex) [2] [3] [4]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 281.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) (/Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/tree.tex) [5] [6] [7] [8] [9] [10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 460.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 460.
- (/Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 460.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 460.
+) (/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A1 Report/tree.tex) [5] [6] [7] [8] [9] [10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 467.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 467.
+ (/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A1 Report/A1-45309740.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 467.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 467.
 Package rerunfilecheck Info: File `A1-45309740.out' has not changed.
 (rerunfilecheck)             Checksum: 3DC40B78D7E521F17E321DF0BB4C5F5D;187.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 460.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 467.
  ) 
 Here is how much of TeX's memory you used:
  39550 strings out of 492649
- 846404 string characters out of 6129622
+ 846309 string characters out of 6129622
  932963 words of memory out of 5000000
  42927 multiletter control sequences out of 15000+600000
  573221 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 135i,12n,160p,10452b,1423s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 135i,12n,160p,10447b,1423s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-rmsc.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on "/Users/zenzlia/Documents/UNI/COMP3506/COMP3506-REPORTS/A1 Report/A1-45309740.pdf" (11 pages, 259335 bytes).
+Output written on "/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A1 Report/A1-45309740.pdf" (11 pages, 259143 bytes).
 PDF statistics:
  188 PDF objects out of 1000 (max. 8388607)
  158 compressed objects within 2 object streams

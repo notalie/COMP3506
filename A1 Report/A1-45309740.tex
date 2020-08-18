@@ -163,15 +163,15 @@ Given functions $f(n)$ and $g(n)$, we say that $f(n)$ is $O(g(n))$ if there are 
 $f(n) \leq c * g(n)$ for $n \geq n_0$
 
 \begin{center}
-    Suppose $g(n) = n, n_0 = 5, c = 3$
+    Suppose $g(n) = log(n), n_0 = 5, c = 8$
 
-    Sub $c = 3$, $\ceil{\log_2(n)} \leq 3n$
+    Sub $c = 3$, $\ceil{\log_2(n)} \leq 8log(n)$
 
-    Sub $n = 5$, $\ceil{\log_2(5)}  \leq 3*5$
+    Sub $n = 5$, $\ceil{\log_2(5)}  \leq 8log(n)$
 
-    $3 \leq 15$ is true
+    $3 \leq 5.59$ is true
 
-    $\dot{.\hspace{.095in}.}\hspace{.5in} \ceil{\log_2(n)} \text{ }\epsilon \text{ } O(n)$ when $n \geq 5, c = 3$
+    $\dot{.\hspace{.095in}.}\hspace{.5in} \ceil{\log_2(n)} \text{ }\epsilon \text{ } O(log(n))$ when $n \geq 5, c = 8$
 \end{center}
 
  
@@ -190,7 +190,14 @@ Given functions $f(n)$ and $g(n)$, we say that $f(n)$ is $\Omega(g(n))$ if there
     $\dot{.\hspace{.095in}.}\hspace{.5in} \ceil{\log_2(n)} \text{  }\epsilon \text{ } \Omega(log(n))$ when $n \geq 5, c = 3$
 \end{center}
 
-In terms of $\Theta(n)$, I believe it does not exist as it only exists when Big-O == Big-Omega and $O(g(n)) \neq \Omega(g(n))$ so it does not exist.
+In terms of $\Theta(n)$, I believe it does exist. This can be proved using the definition given as:
+$f(n)$ is $\Theta(g(n))$ if there exist positive constants $c_1, c_2$ and $n_0$ such that $c_1 * g(n) \leq f(n) \leq c_2 * g(n)$ for all $n \geq n_0$.
+
+Since $g(n)$ in this case would be $log(n)$ and $f(n)$ would be $log(n)$. Suppose $c_1 = 1$, $c_2 = 2$ and $n = 2$
+
+$1 * log(n) \leq log(n) \leq 2 * log(n)$ 
+
+$log(2) \leq log(2) \leq 2log(2)$, for all $n \geq 2$
 
 \subsection*{1d - Bounds for $T_{even}$}
 
@@ -268,12 +275,12 @@ Therefore $\Theta(f(n))$ is $\Theta(g(n))$ when $O(g(n)) = \Omega(g(n))$.
 
 
 \subsection*{2b}
-The steps taken within my function would take in the array and then call the recursive function FINDPOSITIONRECURSE low and high values set as 0 and n - 1 respecitvely. The function would then begin searching to see if $A[i] == i$. The recursion would be as follows:
+The steps taken within my function would take in the array and then call the recursive function FINDPOSITIONRECURSE low and high values set as 0 and (n - 1) respecitvely. The function would then begin searching to see if $A[i] == i$. The recursion would be as follows:
 
 \begin{itemize}
-    \item -1 \textrightarrow the function would calculate and set mid as 4, it would then check if A[4] == 4, which it is not. It would then check if 4 < A[4], which it is. It would the enter recursion and pass in low as the same value but change high to be that of (mid - 1). 
-    \item 0 \textrightarrow the function would calculate and set mid as 1, it would then check if A[1] == 1, which it is not. It would then check to see if 1 < A[1], which it is not. It would then enter recursion again and pass in high as the same value and change low to be that of (mid + 1). 
-    \item 2 \textrightarrow the function would calculate and set mid as 2, it would then check to see if A[2] == 2, which it is. The function would then exit recursion and return true.
+    \item -1 \textrightarrow the function would calculate and set mid as 4, it would then check if $A[4] == 4$, which it is not. It would then check if $4 < A[4]$, which it is. It would the enter recursion and pass in low as the same value but change high to be that of (mid - 1). 
+    \item 0 \textrightarrow the function would calculate and set mid as 1, it would then check if $A[1] == 1$, which it is not. It would then check to see if $1 < A[1]$, which it is not. It would then enter recursion again and pass in high as the same value and change low to be that of (mid + 1). 
+    \item 2 \textrightarrow the function would calculate and set mid as 2, it would then check to see if $A[2] == 2$, which it is. The function would then exit recursion and return true.
 \end{itemize}
 
 \subsection*{2c}
@@ -361,7 +368,7 @@ Since n = k, the $\Theta$ is  $\Theta(1)$ for when $T(1) = 1$.
     \EndFunction
 \end{algorithmic}
 
-The runtime complexity of my second solution is within $O(log(n))$ time. This is because while there is no recursion within my program, it is still a binary search implementation which works by splitting search size by 2 which eventually 
+The runtime complexity of my second solution is within $O(log(n))$ time. This is because while there is no recursion within my program, it is still a binary search implementation which works by splitting the search size by 2 which eventually leads to $log_2(n)$ which gives the same complexity as the recursive one.
 
 \subsection*{2f}
 For the consideration of larger inputs, I believe that the iterative method is better. This is because if there are more elements within A (as n increases), there runs the risk of getting a Stack Overflow due to a recursive depth being reached. This is mainly due to recursive methods relying on the stack which is ineffective for larger inputs.
