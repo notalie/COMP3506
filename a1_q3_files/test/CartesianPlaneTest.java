@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -130,5 +131,12 @@ public class CartesianPlaneTest {
     public void testInvalidResizeExistingElement() {
         plane.add(3, 3, 3);
         plane.resize(2, 4, 0, 2);
+    }
+
+    @Test
+    public void testResize() {
+        plane.add(3, 3, 3);
+        plane.resize(-1, 4, -1, 5);
+        Assert.assertEquals(plane.get(3, 3), Integer.valueOf(3));
     }
 }
