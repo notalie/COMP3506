@@ -1,4 +1,28 @@
 \BOOKMARK [1][-]{section*.2}{Question 1}{}% 1
-\BOOKMARK [1][-]{section*.12}{Question 2}{}% 2
-\BOOKMARK [1][-]{section*.25}{Question 3}{}% 3
-\BOOKMARK [1][-]{section*.26}{Question 4}{}% 4
+\BOOKMARK [2][-]{section*.3}{1a - The Running Time of Todd}{section*.2}% 2
+\BOOKMARK [2][-]{section*.5}{1b - Finding a suitable function for O\(n\)}{section*.2}% 3
+\BOOKMARK [2][-]{section*.6}{1c - Finding }{section*.2}% 4
+\BOOKMARK [2][-]{section*.7}{1d - Bounds for Teven}{section*.2}% 5
+\BOOKMARK [2][-]{section*.8}{1e}{section*.2}% 6
+\BOOKMARK [2][-]{section*.9}{1f}{section*.2}% 7
+\BOOKMARK [2][-]{section*.10}{1g}{section*.2}% 8
+\BOOKMARK [2][-]{section*.11}{1h - Some \(f\(n\)\) Proof}{section*.2}% 9
+\BOOKMARK [1][-]{section*.12}{Question 2}{}% 10
+\BOOKMARK [2][-]{section*.13}{2a}{section*.12}% 11
+\BOOKMARK [2][-]{section*.14}{2b}{section*.12}% 12
+\BOOKMARK [2][-]{section*.15}{2c}{section*.12}% 13
+\BOOKMARK [2][-]{section*.17}{2d - Recurrences}{section*.12}% 14
+\BOOKMARK [3][-]{section*.18}{2di}{section*.17}% 15
+\BOOKMARK [3][-]{section*.20}{2dii}{section*.17}% 16
+\BOOKMARK [3][-]{section*.21}{2diii}{section*.17}% 17
+\BOOKMARK [2][-]{section*.22}{2e}{section*.12}% 18
+\BOOKMARK [2][-]{section*.23}{2f}{section*.12}% 19
+\BOOKMARK [3][-]{section*.24}{References}{section*.23}% 20
+\BOOKMARK [1][-]{section*.25}{Question 3}{}% 21
+\BOOKMARK [2][-]{section*.26}{3b}{section*.25}% 22
+\BOOKMARK [2][-]{section*.27}{3c}{section*.25}% 23
+\BOOKMARK [2][-]{section*.28}{3d}{section*.25}% 24
+\BOOKMARK [1][-]{section*.29}{Question 4}{}% 25
+\BOOKMARK [2][-]{section*.30}{4a - My algorithm but in words}{section*.29}% 26
+\BOOKMARK [3][-]{section*.31}{Description of my algorithm}{section*.30}% 27
+\BOOKMARK [2][-]{section*.35}{4b - Minimal Algorithm}{section*.29}% 28

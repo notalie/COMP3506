@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b229d3a8-048c-4199-a2eb-dc1b2c2855a1" name="Default Changelist" comment="" />
+    <list default="true" id="b229d3a8-048c-4199-a2eb-dc1b2c2855a1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.fdb_latexmk" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.fdb_latexmk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.fls" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.fls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.log" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.out" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A1 Report/while.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/while.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/a1_q3_files/ArrayCartesianPlane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/a1_q3_files/ArrayCartesianPlane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/a1_q3_files/CartesianPlaneTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/a1_q3_files/CartesianPlaneTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ArrayCartesianPlane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArrayCartesianPlane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/CartesianPlaneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/CartesianPlaneTest.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ArrayCartesianPlane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="480">
+              <caret line="32" column="62" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -22,34 +39,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/CartesianPlaneTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="61" column="9" lean-forward="true" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
+            <state relative-caret-position="870">
+              <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1317#1318#0" expanded="true" />
-                <element signature="e#1349#1350#0" expanded="true" />
-                <element signature="e#1782#1783#0" expanded="true" />
-                <element signature="e#1829#1830#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CartesianPlane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>remove</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/ArrayCartesianPlane.java" />
+        <option value="$PROJECT_DIR$/test/CartesianPlaneTest.java" />
       </list>
     </option>
   </component>
@@ -58,13 +71,12 @@
     <option name="width" value="1440" />
     <option name="height" value="767" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -86,6 +98,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -93,9 +107,9 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1596886842806" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597819582696" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -127,9 +141,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CartesianPlaneTest.testInvalidResizeExistingElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="a1_q3_files" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CartesianPlaneTest" />
+      <option name="METHOD_NAME" value="testInvalidResizeExistingElement" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CartesianPlaneTest.testResize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="a1_q3_files" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CartesianPlaneTest" />
+      <option name="METHOD_NAME" value="testResize" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CartesianPlaneTest" />
+        <item itemvalue="JUnit.CartesianPlaneTest.testResize" />
+        <item itemvalue="JUnit.CartesianPlaneTest.testInvalidResizeExistingElement" />
       </list>
     </recent_temporary>
   </component>
@@ -147,14 +183,41 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CartesianPlaneTest - 2020.08.08 at 21h 39m 59s.xml">
+    <history-entry file="CartesianPlaneTest - 2020.08.19 at 16h 43m 54s.xml">
+      <configuration name="CartesianPlaneTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartesianPlaneTest - 2020.08.19 at 16h 44m 20s.xml">
+      <configuration name="CartesianPlaneTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartesianPlaneTest - 2020.08.19 at 16h 44m 34s.xml">
+      <configuration name="CartesianPlaneTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartesianPlaneTest - 2020.08.19 at 16h 45m 00s.xml">
+      <configuration name="CartesianPlaneTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartesianPlaneTest - 2020.08.19 at 17h 02m 39s.xml">
+      <configuration name="CartesianPlaneTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartesianPlaneTest - 2020.08.19 at 17h 03m 50s.xml">
+      <configuration name="CartesianPlaneTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartesianPlaneTest - 2020.08.20 at 13h 04m 28s.xml">
+      <configuration name="CartesianPlaneTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartesianPlaneTest - 2020.08.20 at 13h 04m 35s.xml">
+      <configuration name="CartesianPlaneTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartesianPlaneTest - 2020.08.20 at 13h 04m 38s.xml">
+      <configuration name="CartesianPlaneTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartesianPlaneTest - 2020.08.20 at 13h 04m 40s.xml">
       <configuration name="CartesianPlaneTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="767" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2746781" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -168,7 +231,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3288889" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.20592593" />
@@ -185,29 +248,25 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/CartesianPlane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/CartesianPlaneTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="61" column="9" lean-forward="true" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1317#1318#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1782#1783#0" expanded="true" />
-            <element signature="e#1829#1830#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="121">
+          <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ArrayCartesianPlane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="480">
+          <caret line="32" column="62" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/CartesianPlaneTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -67,6 +67,13 @@ public class CartesianPlaneTest {
     }
 
     @Test
+    public void testRemove2() {
+        plane.add(1, 2, 5);
+        assertTrue(plane.remove(1, 2));
+        assertNull(plane.get(1,2));
+    }
+
+    @Test
     public void testRemoveNonElement() {
         assertFalse(plane.remove(1, 2));
     }

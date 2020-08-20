@@ -101,7 +101,7 @@ public class ArrayCartesianPlane<T> implements CartesianPlane<T> {
         if (x > maximumX || x < minimumX || y > maximumY || y < minimumY) {
             throw new IndexOutOfBoundsException();
         } else if (this.planeCoordinates[x][y] != null) {
-            this.planeCoordinates[x][y] = null;
+            add(x, y, null);
             return true;
         } else {
             return false;

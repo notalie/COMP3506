@@ -113,7 +113,7 @@
 \setcounter{secnumdepth}{-1}
 \section{Question 1}
 
-\subsection*{1a - The Running Time of $T_{odd}$}
+\subsection{1a - The Running Time of $T_{odd}$}
 If n is odd then the if statement skips to this section of the function which then becomes $T_{odd}$. 
 
 \
@@ -152,7 +152,7 @@ $$\ceil{5\log_2(n)} + 7$$
 
 An assumption made was that the $n \& 1$ and $sum + (n \& 1)$ counted as 1 and 2 primitive operations each respectively which is why I counted the line with the assignment as 3.
 
-\subsection*{1b - Finding a suitable function for $O(n)$}
+\subsection{1b - Finding a suitable function for $O(n)$}
 
 A suitable function $g(n)$ that would fit $T_{odd}$ such that $g(n) \epsilon O(n)$. Since we know that the runtime function can be described as $\ceil{5\log_2(n)} + 7$ we can start from there.
 
@@ -175,7 +175,7 @@ $f(n) \leq c * g(n)$ for $n \geq n_0$
 \end{center}
 
  
-\subsection*{1c - Finding $\Omega$}
+\subsection{1c - Finding $\Omega$}
 Using the definition for $O(n)$ which is:
 Given functions $f(n)$ and $g(n)$, we say that $f(n)$ is $\Omega(g(n))$ if there are positive constants $c$ and $n_0$ such that $f(n) \geq c * g(n)$ for $n \geq n_0$
 
@@ -199,7 +199,7 @@ $1 * log(n) \leq log(n) \leq 2 * log(n)$
 
 $log(2) \leq log(2) \leq 2log(2)$, for all $n \geq 2$
 
-\subsection*{1d - Bounds for $T_{even}$}
+\subsection{1d - Bounds for $T_{even}$}
 
 \begin{algorithmic}
     \Function{$T_{even}$}{int n}
@@ -220,16 +220,17 @@ The Upper Bound for $T_{even} \text{ } \epsilon \text{ } O(n^3)$ when $c = 1$ an
 
 The Lower Bound for $T_{even} \text{ } \epsilon \text{ } \Omega(n)$ when $c = 1$ and $n \geq 1$ 
 
-\subsection*{1e}
+\subsection{1e}
 The worst case will always occur within $T_{even}$ as it has a larger runtime complexity. Therefore, the Big-$\Omega$ of the worst case in the algorithm is $\Omega(n^3)$ occuring in $T_{even}$. The same logic can be applied vice-versa to $T_{odd}$ and as such, the Big-$O$ of the best case in the algorithm is $O(log(n))$ occuring in $T_{odd}$.
 
-\subsection*{1f}
+\subsection{1f}
 The Big-$\Omega$ Bound for the algorithm is $\Omega(log(n))$ while the Big-$O$ Bound for the algorithm is $O(n^3)$. In terms of Big-$\Theta$, I believe that it does not exist as $\Omega(g(n)) \neq \Theta(g(n))$.
 
 
-\subsection*{1g}
+\subsection{1g}
 My team mate is wrong as the best case does not define the bounds which are what Big-$\Omega$ and Big-$O$ are. A worst and best case scenario describe a singular scenario and are a singular point within the space of the algorithm where Big-$\Omega$ and Big-$O$ represent bound the lower and higher bounds respectively. They also define where worst and best cases can take place within the algorithm's asymptotic runtime.
-\subsection*{1h - Some $\Theta(f(n))$ Proof}
+
+\subsection{1h - Some $\Theta(f(n))$ Proof}
 Statement - $\Theta(g(n))$ only exists when $O(g(n)) = \Omega(g(n))$. 
 
 This can be proved using the definition given as:
@@ -244,7 +245,7 @@ Therefore $\Theta(f(n))$ is $\Theta(g(n))$ when $O(g(n)) = \Omega(g(n))$.
 \setcounter{secnumdepth}{-1}
 \section{Question 2}
 
-\subsection*{2a}
+\subsection{2a}
 \begin{algorithmic}
     \Function{FINDPOSITIONRECURSE}{A[n], int low, int high}
         \If{$high \geq low$}
@@ -274,7 +275,7 @@ Therefore $\Theta(f(n))$ is $\Theta(g(n))$ when $O(g(n)) = \Omega(g(n))$.
 \end{algorithmic}
 
 
-\subsection*{2b}
+\subsection{2b}
 The steps taken within my function would take in the array and then call the recursive function FINDPOSITIONRECURSE low and high values set as 0 and (n - 1) respecitvely. The function would then begin searching to see if $A[i] == i$. The recursion would be as follows:
 
 \begin{itemize}
@@ -283,7 +284,7 @@ The steps taken within my function would take in the array and then call the rec
     \item 2 \textrightarrow the function would calculate and set mid as 2, it would then check to see if $A[2] == 2$, which it is. The function would then exit recursion and return true.
 \end{itemize}
 
-\subsection*{2c}
+\subsection{2c}
 The worst case for my algorithm is where none of the values in A meet the conditions and the if high and low variables do not meet the requirements for the if statement $high \geq low$ and false is returned. The recurrence for this worse case would look like the following recurrence tree:
 
 \input{tree.tex}
@@ -308,9 +309,9 @@ $$k = log_2n$$
 
 Therefore $O(g(n))$ of this algorithm is $O(log(n))$.
 
-\subsection*{2d - Recurrences}
+\subsection{2d - Recurrences}
 
-\subsubsection*{2di}
+\subsubsection{2di}
 Since we know that $O(log(n))$ and that 
 
 \begin{equation}
@@ -326,7 +327,7 @@ Since $g(n) \epsilon \Theta(n^d), d = 0$
 
 Using the Master Theorem, since $a = {2^k}^0 = 1$ then $T(n) = \Theta(log(n))$. The algorithm is therefore $\Theta(log(n))$. 
 
-\subsubsection*{2dii}
+\subsubsection{2dii}
 \begin{center}
     $$T(n) = 5 * T (\frac{n}{3}) + n^2 + 2n$$
 
@@ -340,10 +341,10 @@ Using the Master Theorem, since $a = {2^k}^0 = 1$ then $T(n) = \Theta(log(n))$. 
 \end{center}
 
 
-\subsubsection*{2diii}
+\subsubsection{2diii}
 Since n = k, the $\Theta$ is  $\Theta(1)$ for when $T(1) = 1$.
 
-\subsection*{2e}
+\subsection{2e}
 \begin{algorithmic}
     \Function{FINDPOSITION}{A[n]}
         \State $low \gets 0$
@@ -370,12 +371,12 @@ Since n = k, the $\Theta$ is  $\Theta(1)$ for when $T(1) = 1$.
 
 The runtime complexity of my second solution is within $O(log(n))$ time. This is because while there is no recursion within my program, it is still a binary search implementation which works by splitting the search size by 2 which eventually leads to $log_2(n)$ which gives the same complexity as the recursive one.
 
-\subsection*{2f}
+\subsection{2f}
 For the consideration of larger inputs, I believe that the iterative method is better. This is because if there are more elements within A (as n increases), there runs the risk of getting a Stack Overflow due to a recursive depth being reached. This is mainly due to recursive methods relying on the stack which is ineffective for larger inputs.
 
 In terms of space complexity, iterative methods rely on one stack instance which can get quite large. On the other hand as recursive methods continously create a new stack on each resursive call which takes up much more memory. This means that due to these multiple stacks, recursive methods will take up more space resulting in a slower program for larger inputs.
 
-\subsubsection*{References}
+\subsubsection{References}
 \href{https://medium.com/backticks-tildes/iteration-vs-recursion-c2017a483890}{Iteration vs Recursion}
 
 \href{https://www.ideserve.co.in/learn/time-and-space-complexity-of-recursive-algorithms}{Time and Space Complexity of Recursive Algorithms}
@@ -383,11 +384,35 @@ In terms of space complexity, iterative methods rely on one stack instance which
 \newpage
 \setcounter{secnumdepth}{-1}
 \section{Question 3}
+\subsection{3b}
+The Big-$O$ for my CartesianPlane class is $O(nm)$ where n is the length and m is the width of the plane.
+
+\subsection{3c}
+The cartesian plane still needs to reserve space for null elements. Additionally large elements means more wasted space. You could store pointers in the array instead of the actual objects but this adds another level of indirection.
+
+\subsection{3d}
+$n$ and $m$ represent the length and width of the CartesianPlane
+
+\begin{tabular}{|c c p{0.7\textwidth}|} 
+    \hline
+    Method & Big-$O$ & Reasoning \\ [0.5ex] 
+    \hline
+    add & $O(1)$ & It takes constant time to add the value within the 2D array as you only need to get the indexes for the cartian plane \\ 
+    \hline
+    get & $O(1)$ & It takes constant time to access a variable within a 2D array as it only needs to index and return the value \\
+    \hline
+    remove & $O(1)$ &  It takes constant time to get the value from the 2D array and return a boolean depending if the value could or could not be returned \\
+    \hline
+    resize & $O(nm)$ & The for loops within the function increase in complexity as the length/width increase so the function has a complexity of $O(nm)$\\
+    \hline
+    clear & $O(nm)$ & The for loops for setting each value within the 2D array to null/empty values change in complexity with the changing of the length/width of the array \\ 
+    \hline
+\end{tabular}
 
 \newpage
 \setcounter{secnumdepth}{-1}
 \section{Question 4}
-\subsection*{4a - My algorithm but in words}
+\subsection{4a - My algorithm but in words}
 Some things I would like to note about my algorithm that I would need to implement/consider:
 \begin{itemize}
     \item The water source will always be below the corresponding x or y value when a drill breaks 
@@ -397,7 +422,7 @@ Some things I would like to note about my algorithm that I would need to impleme
     \item Bounds for searching for the water source would need to be set and changed during the algorithm for an efficient function
 \end{itemize}
 
-\subsubsection*{Description of my algorithm}
+\subsubsection{Description of my algorithm}
 First I would set bounds $x_n, y_n$ which would represent a bound to search for the water source starting at 0 to n - 1. Once an axis (direction for the water source) has been found, these bounds would change values to indicate this.
 
 Then I would begin my algorithm starting from the center of the plot and dig there (I would round up if the length/width of the plot was even). 
@@ -421,9 +446,9 @@ From there I would do the following checks:
 
 I would then dig again from the center of the new bounds set until a water source is eventually found.
 
-The Big-$O$ complexity on the amount of holes to dig would be $O(log_2(n))$ holes.
+The Big-$O$ complexity on the amount of holes to dig would be $O(log_2(n))$ holes as the bounds decrease to half/the center of the grid which leads to a smaller bound with each search. This search is a binary search across two axis and as such, the Big-$O$ notation of my algorithm is $O(log(n))$. 
 
-\subsection*{4b - Minimal Algorithm}
+\subsection{4b - Minimal Algorithm}
 
 Returns a true if the drilled plot is a water source and false if it is not.
 \begin{algorithmic}[1]
