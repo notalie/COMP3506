@@ -1,0 +1,120 @@
+\documentclass[oneside, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[hypertexnames=false]{hyperref} 
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{soul}
+\usepackage{amsmath}
+\usepackage{forest}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+
+% Set spacing (i set it to 1.2x)
+\renewcommand{\baselinestretch}{1}
+% Indentation (set this to zero for normal prose)
+\setlength{\parindent}{0em}
+% Line breaking (spacing between paragraphs)
+\setlength{\parskip}{0.5em}
+
+% Use the whole page
+\usepackage{geometry}
+% Extra math glyphs
+\usepackage{amsmath}
+% Proper enumerate spacing
+\usepackage{enumitem}
+% More pleasing screen fonts
+\usepackage{lmodern}
+% Fancy headers
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{algpseudocode}
+% Allows absolute positioning of images
+\usepackage{float}
+% \usepackage[section]{placeins}
+% Set no separation
+\setlist{noitemsep}
+% Set margins to reasonable
+\geometry{margin=2.5cm}
+% Sets graphics path
+\graphicspath{ {./images/} }
+% Sets up fancy headers
+
+\addto\captionsenglish{
+}
+
+
+\usepackage{listings}
+\usepackage{color}
+
+\pagestyle{plain}
+
+\begin{document}
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{s4530974 - Homework Assignment 2}
+\rhead{COMP3506}
+
+\begin{titlepage}
+\newgeometry{left=7.5cm} %defines the geometry for the titlepage
+\noindent
+\color{black}
+\makebox[0pt][l]{\rule{1.3\textwidth}{1pt}}
+
+{\Huge {Student - s4530974}}
+\vskip\baselineskip
+\noindent
+{\huge{COMP3506 - Homework 2}}
+
+\vskip\baselineskip
+{\large {Semester 2 - 2020}}
+\end{titlepage}
+
+\newpage
+
+\setcounter{secnumdepth}{-1}
+\section{Question 2}
+
+\subsection{2a}
+
+\begin{lstlisting}
+    for(int i = 0; i < 10; i++) {}
+\end{lstlisting}
+
+
+\end{document}
