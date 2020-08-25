@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b229d3a8-048c-4199-a2eb-dc1b2c2855a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.fdb_latexmk" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.fdb_latexmk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.fls" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.fls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.log" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.out" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../A1 Report/A1-45309740.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/A1-45309740.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../A1 Report/while.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../A1 Report/while.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/a1_q3_files/ArrayCartesianPlane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/a1_q3_files/ArrayCartesianPlane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/a1_q3_files/CartesianPlaneTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/a1_q3_files/CartesianPlaneTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArrayCartesianPlane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArrayCartesianPlane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/CartesianPlaneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/CartesianPlaneTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="b229d3a8-048c-4199-a2eb-dc1b2c2855a1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +60,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -99,7 +83,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -217,7 +200,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="767" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2746781" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27825466" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
