@@ -28,7 +28,7 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
      * @requires otherDeque != null
      */
     public SimpleLinkedDeque(SimpleDeque<? extends T> otherDeque) {
-
+        
     }
     
     /**

@@ -3,6 +3,15 @@ import java.util.NoSuchElementException;
 
 public class SimpleArrayDeque<T> implements SimpleDeque<T> {
 
+
+    private int size;
+
+    private int capacity;
+
+    private int topIndex;
+
+    private int bottomIndex;
+
     /**
      * Constructs a new array based deque with limited capacity.
      * 
@@ -10,7 +19,8 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
      * @throws IllegalArgumentException if capacity <= 0
      */
     public SimpleArrayDeque(int capacity) throws IllegalArgumentException {
-        
+        this.size = 0;
+        this.capacity = capacity;
     }
 
     /**
@@ -23,22 +33,25 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
      */
     public SimpleArrayDeque(int capacity, SimpleDeque<? extends T> otherDeque) 
             throws IllegalArgumentException {
+//        if (otherDeque.capacity > capacity || capacity <= 0) {
+//            throw new IllegalArgumentException();
+//        }
 
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return this.size == 0;
     }
 
     @Override
     public boolean isFull() {
-        return false;
+        return this.size == this.capacity;
     }
 
     @Override
     public int size() {
-        return 0;
+        return this.size;
     }
 
     @Override
