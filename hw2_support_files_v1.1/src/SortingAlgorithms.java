@@ -2,6 +2,21 @@ import java.util.Arrays; // TODO: take this out
 
 public class SortingAlgorithms {
 
+
+    /**
+     * Switches the
+     * @param input - the array containing a bunch of comparable objects
+     * @param elementIndex - the first index number of the element to switch out
+     * @param toSwitchIndex - the second index number of the element to
+     *                      switch out
+     */
+    private static <T extends Comparable> void swap(T[] input, int elementIndex,
+                int toSwitchIndex) {
+        T temp = input [elementIndex];
+        input[elementIndex] = input[toSwitchIndex];
+        input[toSwitchIndex] = temp;
+    }
+
     /**
      * Sorts the given array using the selection sort algorithm.
      * This should modify the array in-place.
@@ -12,7 +27,7 @@ public class SortingAlgorithms {
      * @requires input != null
      */
     static <T extends Comparable> void selectionSort(T[] input, boolean reversed) {
-        for (int i = 1; i < input.length - 1; i++) {
+        for (int i = 0; i < input.length - 1; i++) {
             int elementIndex = i;
             for (int j = i + 1; j < input.length; j++) {
                 if (input[j].compareTo(input[elementIndex]) < 0 && !reversed) { 
@@ -25,9 +40,7 @@ public class SortingAlgorithms {
                 }
             }
             if (elementIndex != i) {
-                T temp = input[elementIndex]; // keep a pointer to the element
-                input[elementIndex] = input[i];
-                input[i] = temp;
+                swap(input, elementIndex, i);
             }
         }
     }
@@ -63,7 +76,15 @@ public class SortingAlgorithms {
         }
     }
 
-    // TODO: Comment
+    /**
+     * Mergest the two arrays from the right and left side and modifies the main
+     * array passed in
+     * @param input - the array of comparable objects
+     * @param left - the left index of the array to merge
+     * @param middle - the middle index of the merge array
+     * @param right - the right side index of the array to merge
+     * @param reversed - indicating whether or not to reverse the array
+     */
     private static <T extends Comparable> void merge(T[] input, int left, 
                 int middle, int right, boolean reversed) {
         int n1 = middle - left + 1; // size of first half of A
@@ -83,15 +104,13 @@ public class SortingAlgorithms {
         int j = 0;
         int k = left;
 
-
         while (i < n1 && j < n2) {
-            if (L[i].compareTo(R[j]) <= 0 && !reversed) { 
-                // L[i] <= R[j] for normal ordering
+            // L[i] <= R[j] for ascending
+            if (L[i].compareTo(R[j]) <= 0 && !reversed) {
                 input[k++] = L[i++];
-            } else if (L[i].compareTo(R[j]) > 0 && reversed) { 
-                // L[i] > R[j] for reversing
+            } else if (L[i].compareTo(R[j]) > 0 && reversed) { // descending
                 input[k++] = L[i++];
-            } else {
+            } else { // add it otherwise to the right side
                 input[k++] = R[j++];
             }
         }
@@ -105,7 +124,14 @@ public class SortingAlgorithms {
         }
     }
 
-    //TODO: comment
+    /**
+     * Recursive helper method that breaks down the inputs until the
+     *  right index >= left index
+     * @param input - an array of comparable objects
+     * @param left - the left side index
+     * @param right - the right side index
+     * @param reversed - indicating whether or not to reverse the array
+     */
     private static <T extends Comparable> void mergeSortRecurse(T[] input, 
                 int left, int right, boolean reversed) {
         if (left < right)  {
@@ -129,12 +155,7 @@ public class SortingAlgorithms {
         mergeSortRecurse(input, 0, input.length - 1, reversed);
     }
 
-    //TODO: comment
-    private static <T extends Comparable> void swap(T[] input, int i, int j) {
-        T temp = input [i];
-        input[i] = input[j];
-        input[j] = temp;
-    }
+
 
     // TODO: comment
     private static <T extends Comparable> void inPlaceQuickSort(T[] input, 
@@ -194,7 +215,7 @@ public class SortingAlgorithms {
 
     public static <T extends Comparable> void test() {
         T[] aux = (T[]) new Comparable[5];
-        Integer[] toCompare = {5,1,2,3,4};
+        String[] toCompare = {"AA","a","ba","bba","a"};
         for (int i = 0; i < toCompare.length; i++) {
             aux[i] = (T)toCompare[i];
         }

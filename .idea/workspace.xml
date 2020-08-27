@@ -14,7 +14,7 @@
       <file leaf-file-name="SimpleArrayDeque.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="612">
               <caret line="35" selection-start-line="35" selection-start-column="2" selection-end-line="37" selection-end-column="11" />
             </state>
           </provider>
@@ -23,11 +23,21 @@
       <file leaf-file-name="SortingAlgorithms.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SortingAlgorithms.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2160">
-              <caret column="28" selection-start-column="28" selection-end-column="28" />
+            <state relative-caret-position="379">
+              <caret line="224" column="17" selection-start-line="224" selection-start-column="17" selection-end-line="224" selection-end-column="17" />
               <folding>
-                <element signature="e#6854#6855#0" expanded="true" />
-                <element signature="e#6876#6877#0" expanded="true" />
+                <element signature="docComment;method#swap#0;class#SortingAlgorithms#0" />
+                <element signature="method#swap#0;class#SortingAlgorithms#0" />
+                <element signature="docComment;method#selectionSort#0;class#SortingAlgorithms#0" />
+                <element signature="method#selectionSort#0;class#SortingAlgorithms#0" />
+                <element signature="docComment;method#insertionSort#0;class#SortingAlgorithms#0" />
+                <element signature="method#insertionSort#0;class#SortingAlgorithms#0" />
+                <element signature="docComment;method#merge#0;class#SortingAlgorithms#0" />
+                <element signature="method#merge#0;class#SortingAlgorithms#0" />
+                <element signature="docComment;method#mergeSortRecurse#0;class#SortingAlgorithms#0" />
+                <element signature="method#mergeSortRecurse#0;class#SortingAlgorithms#0" />
+                <element signature="docComment;method#mergeSort#0;class#SortingAlgorithms#0" />
+                <element signature="method#mergeSort#0;class#SortingAlgorithms#0" />
               </folding>
             </state>
           </provider>
@@ -80,7 +90,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -167,7 +177,7 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32946146" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32946146" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
@@ -193,6 +203,41 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="35" selection-start-line="35" selection-start-column="2" selection-end-line="37" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SortingAlgorithms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+          <folding>
+            <element signature="docComment;method#swap#0;class#SortingAlgorithms#0" />
+            <element signature="method#swap#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#selectionSort#0;class#SortingAlgorithms#0" />
+            <element signature="method#selectionSort#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#insertionSort#0;class#SortingAlgorithms#0" />
+            <element signature="method#insertionSort#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#merge#0;class#SortingAlgorithms#0" />
+            <element signature="method#merge#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#mergeSortRecurse#0;class#SortingAlgorithms#0" />
+            <element signature="method#mergeSortRecurse#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#mergeSort#0;class#SortingAlgorithms#0" />
+            <element signature="method#mergeSort#0;class#SortingAlgorithms#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
@@ -210,8 +255,18 @@
         <state relative-caret-position="1530">
           <caret line="85" column="17" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
           <folding>
-            <element signature="e#6854#6855#0" expanded="true" />
-            <element signature="e#6876#6877#0" expanded="true" />
+            <element signature="docComment;method#swap#0;class#SortingAlgorithms#0" />
+            <element signature="method#swap#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#selectionSort#0;class#SortingAlgorithms#0" />
+            <element signature="method#selectionSort#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#insertionSort#0;class#SortingAlgorithms#0" />
+            <element signature="method#insertionSort#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#merge#0;class#SortingAlgorithms#0" />
+            <element signature="method#merge#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#mergeSortRecurse#0;class#SortingAlgorithms#0" />
+            <element signature="method#mergeSortRecurse#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#mergeSort#0;class#SortingAlgorithms#0" />
+            <element signature="method#mergeSort#0;class#SortingAlgorithms#0" />
           </folding>
         </state>
       </provider>
@@ -235,8 +290,18 @@
         <state relative-caret-position="576">
           <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
           <folding>
-            <element signature="e#6854#6855#0" expanded="true" />
-            <element signature="e#6876#6877#0" expanded="true" />
+            <element signature="docComment;method#swap#0;class#SortingAlgorithms#0" />
+            <element signature="method#swap#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#selectionSort#0;class#SortingAlgorithms#0" />
+            <element signature="method#selectionSort#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#insertionSort#0;class#SortingAlgorithms#0" />
+            <element signature="method#insertionSort#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#merge#0;class#SortingAlgorithms#0" />
+            <element signature="method#merge#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#mergeSortRecurse#0;class#SortingAlgorithms#0" />
+            <element signature="method#mergeSortRecurse#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#mergeSort#0;class#SortingAlgorithms#0" />
+            <element signature="method#mergeSort#0;class#SortingAlgorithms#0" />
           </folding>
         </state>
       </provider>
@@ -250,18 +315,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="612">
           <caret line="35" selection-start-line="35" selection-start-column="2" selection-end-line="37" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SortingAlgorithms.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2160">
-          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        <state relative-caret-position="379">
+          <caret line="224" column="17" selection-start-line="224" selection-start-column="17" selection-end-line="224" selection-end-column="17" />
           <folding>
-            <element signature="e#6854#6855#0" expanded="true" />
-            <element signature="e#6876#6877#0" expanded="true" />
+            <element signature="docComment;method#swap#0;class#SortingAlgorithms#0" />
+            <element signature="method#swap#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#selectionSort#0;class#SortingAlgorithms#0" />
+            <element signature="method#selectionSort#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#insertionSort#0;class#SortingAlgorithms#0" />
+            <element signature="method#insertionSort#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#merge#0;class#SortingAlgorithms#0" />
+            <element signature="method#merge#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#mergeSortRecurse#0;class#SortingAlgorithms#0" />
+            <element signature="method#mergeSortRecurse#0;class#SortingAlgorithms#0" />
+            <element signature="docComment;method#mergeSort#0;class#SortingAlgorithms#0" />
+            <element signature="method#mergeSort#0;class#SortingAlgorithms#0" />
           </folding>
         </state>
       </provider>
