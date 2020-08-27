@@ -1,0 +1,84 @@
+import java.awt.desktop.SystemEventListener;
+import java.util.Arrays; // TODO: take this out
+import java.util.Collections;
+import java.util.Random;
+
+
+public class TimedSorting {
+    private int[] arraySizes = {5, 10, 50, 100, 500, 1000, 10000};
+    Random rand = new Random();
+
+
+    private <T extends Comparable> T[] populateArray(int arraySize) {
+        T[] array = (T[]) new Comparable[arraySize];
+        for (int i = 0 ; i < arraySize; i++) {
+            array[i] = (T)(Integer)rand.nextInt();
+        }
+        return array;
+    }
+
+    public <T extends Comparable> void timeArray(T[] array) {
+        // Selection Sort
+        T[] copiedArray = array.clone();
+        long startTime = System.currentTimeMillis();
+        SortingAlgorithms.selectionSort(copiedArray, false);
+        long endTime = System.currentTimeMillis();
+        System.out.println("Selection Sort," + (double)(endTime - startTime));
+
+        // Insertion Sort
+        copiedArray = array.clone();
+        startTime = System.currentTimeMillis();
+        SortingAlgorithms.insertionSort(copiedArray, false);
+        endTime = System.currentTimeMillis();
+        System.out.println("Insertion Sort," + (double)(endTime - startTime));
+
+        // Merge Sort
+        copiedArray = array.clone();
+        startTime = System.currentTimeMillis();
+        SortingAlgorithms.mergeSort(copiedArray, false);
+        endTime = System.currentTimeMillis();
+        System.out.println("Merge Sort," + (double)(endTime - startTime));
+
+        // Quicksort
+        copiedArray = array.clone();
+        startTime = System.currentTimeMillis();
+        SortingAlgorithms.quickSort(copiedArray, false);
+        endTime = System.currentTimeMillis();
+        System.out.println("Quick Sort," + (double)(endTime - startTime));
+    }
+
+
+    public <T extends Comparable> void unsortedTimes() {
+        for (int n = 0; n < this.arraySizes.length; n++) {
+            T[] array = this.populateArray(arraySizes[n]);
+            System.out.println(arraySizes[n] + " elements");
+            timeArray(array);
+        }
+    }
+
+    public <T extends Comparable> void ascendingTimes() {
+        for (int n = 0; n < this.arraySizes.length; n++) {
+            T[] array = this.populateArray(arraySizes[n]);
+            System.out.println(arraySizes[n] + " elements");
+            Arrays.sort(array, null);
+            timeArray(array);
+        }
+    }
+
+
+    public <T extends Comparable> void descendingTimes() {
+        for (int n = 0; n < this.arraySizes.length; n++) {
+            T[] array = this.populateArray(arraySizes[n]);
+            System.out.println(arraySizes[n] + " elements");
+            Arrays.sort(array, Collections.reverseOrder());
+            timeArray(array);
+        }
+    }
+
+
+
+    public static void main(String[] args) {
+        TimedSorting ts = new TimedSorting();
+        ts.unsortedTimes();
+    }
+}

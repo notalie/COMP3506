@@ -1,10 +1,7 @@
-import java.util.Arrays; // TODO: take this out
 
 public class SortingAlgorithms {
-
-
     /**
-     * Switches the
+     * Switches the objects contained within two indexes
      * @param input - the array containing a bunch of comparable objects
      * @param elementIndex - the first index number of the element to switch out
      * @param toSwitchIndex - the second index number of the element to
@@ -83,8 +80,9 @@ public class SortingAlgorithms {
      * @param left - the left index of the array to merge
      * @param middle - the middle index of the merge array
      * @param right - the right side index of the array to merge
-     * @param reversed - indicating whether or not to reverse the array
-     */
+     * @param reversed - If false, the array should be sorted ascending.
+     *                 Otherwise, it should be sorted descending.
+     **/
     private static <T extends Comparable> void merge(T[] input, int left, 
                 int middle, int right, boolean reversed) {
         int n1 = middle - left + 1; // size of first half of A
@@ -130,8 +128,9 @@ public class SortingAlgorithms {
      * @param input - an array of comparable objects
      * @param left - the left side index
      * @param right - the right side index
-     * @param reversed - indicating whether or not to reverse the array
-     */
+     * @param reversed - If false, the array should be sorted ascending.
+     *                 Otherwise, it should be sorted descending.
+     **/
     private static <T extends Comparable> void mergeSortRecurse(T[] input, 
                 int left, int right, boolean reversed) {
         if (left < right)  {
@@ -156,43 +155,53 @@ public class SortingAlgorithms {
     }
 
 
-
-    // TODO: comment
+    /**
+     * A recursive inplace quicksort helper function called from the original
+     * quicksort function. It can reverse or maintain order.
+     * @param input - an array of comparable objects
+     * @param left - the left index of the array
+     * @param right - the right index of the array
+     * @param reversed - If false, the array should be sorted ascending.
+     *                 Otherwise, it should be sorted descending.
+     */
     private static <T extends Comparable> void inPlaceQuickSort(T[] input, 
                 int left, int right, boolean reversed) {
-        if (left >= right) {
+        if (left >= right) { // base case
             return;
         }
         T pivot = input[left + (right - left) / 2];
-        int i = left;
-        int j = right;
-        while (i <= j) {
+        int h = left;
+        int k = right;
+        while (h <= k) { // in place partitioning
 
-            if (!reversed) { // The sort does not need to be reversed
-                while (input[i].compareTo(pivot) < 0) {
-                    i++;
+            if (!reversed) { // Ascending order
+                // keep going while h < pivot
+                while (input[h].compareTo(pivot) < 0) {
+                    h++;
                 }
-                while (input[j].compareTo(pivot) > 0) {
-                    j--;
+                // keep going while k > pivot
+                while (input[k].compareTo(pivot) > 0) {
+                    k--;
                 }
-            } else { // The sort needs to be reversed
-
-                while (input[i].compareTo(pivot) > 0) {
-                    i++;
+            } else { // Descending order
+                // keep going while h >= pivot
+                while (input[h].compareTo(pivot) > 0) {
+                    h++;
                 }
-                while (input[j].compareTo(pivot) < 0) {
-                    j--;
+                // keep going while k < pivot
+                while (input[k].compareTo(pivot) < 0) {
+                    k--;
                 }
             }
-            if (i <= j) {
-                swap(input, i++, j--);
+            if (h <= k) {
+                swap(input, h++, k--);
             }
         }
-        if (left < j) {
-            inPlaceQuickSort(input, left, j, reversed);
+        if (left < k) {
+            inPlaceQuickSort(input, left, k, reversed);
         }
-        if (i < right) {
-            inPlaceQuickSort(input, i, right, reversed);
+        if (h < right) {
+            inPlaceQuickSort(input, h, right, reversed);
         }
     }
 
@@ -211,23 +220,5 @@ public class SortingAlgorithms {
      */
     static <T extends Comparable> void quickSort(T[] input, boolean reversed) {
         inPlaceQuickSort(input, 0, input.length -  1, reversed);
-    }
-
-    public static <T extends Comparable> void test() {
-        T[] aux = (T[]) new Comparable[5];
-        String[] toCompare = {"AA","a","ba","bba","a"};
-        for (int i = 0; i < toCompare.length; i++) {
-            aux[i] = (T)toCompare[i];
-        }
-
-        quickSort(aux, false);
-        System.out.println(Arrays.toString(aux));
-        quickSort(aux, true);
-        System.out.println(Arrays.toString(aux));
-    }
-
-
-    public static void main(String[] args) {
-        test();
     }
 }
