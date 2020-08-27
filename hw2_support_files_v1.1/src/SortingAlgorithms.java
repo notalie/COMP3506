@@ -12,12 +12,15 @@ public class SortingAlgorithms {
      * @requires input != null
      */
     static <T extends Comparable> void selectionSort(T[] input, boolean reversed) {
-        for (int i = 0; i < input.length - 1; i++) {
+        for (int i = 1; i < input.length - 1; i++) {
             int elementIndex = i;
             for (int j = i + 1; j < input.length; j++) {
-                if (input[j].compareTo(input[i]) < 0 && !reversed) { // input[j] < input[i] - smallest to largest
+                if (input[j].compareTo(input[elementIndex]) < 0 && !reversed) { 
+                    // input[j] < input[i] - smallest to largest
                     elementIndex = j;
-                } else if (input[j].compareTo(input[i]) > 0 && reversed){ // input[j] > input[i] - largest to smallest
+                } else if (input[j].compareTo(input[elementIndex]) > 0 && 
+                        reversed) { 
+                    // input[j] > input[i] - largest to smallest
                     elementIndex = j;
                 }
             }
@@ -44,12 +47,14 @@ public class SortingAlgorithms {
             T valueToInsert = input[i];
             int holePosition = i;
             if (!reversed) { // Ascending Order
-                while (holePosition > 0 && input[holePosition - 1 ].compareTo(valueToInsert) > 0) {
+                while (holePosition > 0 && 
+                        input[holePosition - 1 ].compareTo(valueToInsert) > 0) {
                     input[holePosition] = input[holePosition - 1];
                     holePosition -= 1;
                 }
             } else { // Descending Order
-                while (holePosition > 0 && input[holePosition - 1 ].compareTo(valueToInsert) < 0) {
+                while (holePosition > 0 && 
+                        input[holePosition - 1 ].compareTo(valueToInsert) < 0) {
                     input[holePosition] = input[holePosition - 1];
                     holePosition -= 1;
                 }
@@ -59,7 +64,8 @@ public class SortingAlgorithms {
     }
 
     // TODO: Comment
-    private static <T extends Comparable> void merge(T[] input, int left, int middle, int right, boolean reversed) {
+    private static <T extends Comparable> void merge(T[] input, int left, 
+                int middle, int right, boolean reversed) {
         int n1 = middle - left + 1; // size of first half of A
         int n2 = right - middle; // size of second half of A
         T[] L = (T[]) new Comparable[n1];
@@ -79,26 +85,29 @@ public class SortingAlgorithms {
 
 
         while (i < n1 && j < n2) {
-            if (L[i].compareTo(R[j]) <= 0 && !reversed) { // L[i] <= R[j]
+            if (L[i].compareTo(R[j]) <= 0 && !reversed) { 
+                // L[i] <= R[j] for normal ordering
                 input[k++] = L[i++];
-            } else if (L[i].compareTo(R[j]) > 0 && reversed) { // L[i] > R[j] for reversing
+            } else if (L[i].compareTo(R[j]) > 0 && reversed) { 
+                // L[i] > R[j] for reversing
                 input[k++] = L[i++];
             } else {
                 input[k++] = R[j++];
             }
         }
 
-        while (i < n1) {
+        while (i < n1) { // Add left side to input
             input[k++] = L[i++];
         }
 
-        while (j < n2) {
+        while (j < n2) { // Add right side to input
             input[k++] = R[j++];
         }
     }
 
     //TODO: comment
-    private static <T extends Comparable> void mergeSortRecurse(T[] input, int left, int right, boolean reversed) {
+    private static <T extends Comparable> void mergeSortRecurse(T[] input, 
+                int left, int right, boolean reversed) {
         if (left < right)  {
             int middle = (left + right) / 2;
             mergeSortRecurse(input, left, middle, reversed);
@@ -128,7 +137,8 @@ public class SortingAlgorithms {
     }
 
     // TODO: comment
-    private static <T extends Comparable> void inPlaceQuickSort(T[] input, int left, int right, boolean reversed) {
+    private static <T extends Comparable> void inPlaceQuickSort(T[] input, 
+                int left, int right, boolean reversed) {
         if (left >= right) {
             return;
         }
