@@ -296,7 +296,37 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
 INPUT /usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/U.tex
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/U.tex
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmr7.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmr5.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lm/omllmm.fd
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lm/omllmm.fd
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmmi7.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lm/omslmsy.fd
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lm/omslmsy.fd
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmsy7.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmsy5.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lm/omxlmex.fd
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lm/omxlmex.fd
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/lmex10.tfm
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/U.png
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/U.png
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/U.png
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/A.tex
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/A.tex
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/A.png
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/A.png
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/A.png
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/D.tex
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/D.tex
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/D.png
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/D.png
+INPUT /Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/D.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/lm/rm-lmr9.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lm/ot1lmtt.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lm/ot1lmtt.fd
@@ -306,8 +336,11 @@ INPUT /Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/A2-45309740.ou
 INPUT /Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/A2-45309740.out
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr17.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr7.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtt9.pfb

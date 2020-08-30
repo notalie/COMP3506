@@ -110,11 +110,119 @@
 \setcounter{secnumdepth}{-1}
 \section{Question 2}
 
-\subsection{2a}
+\section{Results - Graphs and Tables}
+The following results will be shown in tables and graphs. Please note that a lot of the data points were very small and are not visible due to the axis having to stretch across the large input range. The boolean for reversed that I passed into my timed functions was false which slightly influenced my results for the ascending sorted list.
+
+\input{U.tex}
+\newpage
+
+\input{A.tex}
+\newpage
+
+\input{D.tex}
+
+\newpage
+\section{Results Analysis}
+The first thing that I was able to notice was that the Big-$O$ of Selection and Insertion sort is that of $O(n^2)$ meaning that the runtime graphs of the sorts did not change the graph trends for either when the input was changed. Quick sort and merge sort both have a Big-$O$ complexity of expected $O(nlog(n))$ with quicksort having a worst case Big-$O$ of $O(n^2)$. First, it’s worth noting that in comparison to selection and insertion sorts, merge and quick sort have less runtime. Secondly, as the number of inputs increases (500 – 10 000), quick sort and merge sort both increase steadily but not at the same rate as insertion and selection sorts. 
+
+Something that was assumed within the data I received was that the time taken to execute each sorting function would increase with the input size. This was proven to be a correct assumption as all the graphs/tables that I was able to generate have a noticeable increase in time taken per input.
+
+When comparing the ascending input times to the descending input times. It is evident that there was less time spent executing the sort. This was because the elements were sorted in the right order (ascending) meaning that there were less iterations and less time spent going through the array making it faster. 
+
+When looking at the unsorted algorithm time, I was lucky that the worst case for the quick sort algorithm I had was never triggered within the unsorted input which would have resulted in a larger time taken due to the pivots chosen. It’s interesting to note that the times taken for the unsorted input for selection and insertion sort are less than the ascending and descending inputs. This might be an outlier or I might have gotten very lucky with my random inputs.
+
+\section{Written Code}
+The way that my timing algorithm worked was utilising System.nanoTime() which wrapped around each sorting algorithm. I would then have 3 separate functions which would create different arrays according to the specifications. Each of these functions would then pass the created array into a function which would time them and print out the time taken to execute each function and looked like the following:
 
 \begin{lstlisting}
-    for(int i = 0; i < 10; i++) {}
-\end{lstlisting}
+import java.awt.desktop.SystemEventListener;
+import java.util.Arrays; 
+import java.util.Collections;
+import java.util.Random;
 
+
+public class TimedSorting {
+    private int[] arraySizes = {5, 10, 50, 100, 500, 1000, 10000};
+    Random rand = new Random();
+
+    // Creates a randomised array
+    private <T extends Comparable> T[] populateArray(int arraySize) {
+        T[] array = (T[]) new Comparable[arraySize];
+        for (int i = 0 ; i < arraySize; i++) {
+            array[i] = (T)(Integer)rand.nextInt();
+        }
+        return array;
+    }
+
+    // Time the time it takes for each sorting algorithm
+    public <T extends Comparable> void timeArray(T[] array) {
+        // Selection Sort
+        T[] copiedArray = array.clone();
+        long startTime = System.nanoTime();
+        SortingAlgorithms.selectionSort(copiedArray, false);
+        long endTime = System.nanoTime();
+        System.out.println("Selection Sort," + ((endTime - startTime)/1000000.0));
+
+        // Insertion Sort
+        copiedArray = array.clone();
+        startTime = System.nanoTime();
+        SortingAlgorithms.insertionSort(copiedArray, false);
+        endTime = System.nanoTime();
+        System.out.println("Insertion Sort," + ((endTime - startTime)/1000000.0));
+
+        // Merge Sort
+        copiedArray = array.clone();
+        startTime = System.nanoTime();
+        SortingAlgorithms.mergeSort(copiedArray, false);
+        endTime = System.nanoTime();
+        System.out.println("Merge Sort," + ((endTime - startTime)/1000000.0));
+
+        // Quicksort
+        copiedArray = array.clone();
+        startTime = System.nanoTime();
+        SortingAlgorithms.quickSort(copiedArray, false);
+        endTime = System.nanoTime();
+        System.out.println("Quick Sort," + ((endTime - startTime)/1000000.0));
+    }
+
+
+    // Create an unsorted array
+    public <T extends Comparable> void unsortedTimes() {
+        for (int n = 0; n < this.arraySizes.length; n++) {
+            T[] array = this.populateArray(arraySizes[n]);
+            System.out.println(arraySizes[n] + " elements");
+            timeArray(array);
+        }
+    }
+
+    // Create an ascending array
+    public <T extends Comparable> void ascendingTimes() {
+        for (int n = 0; n < this.arraySizes.length; n++) {
+            T[] array = this.populateArray(arraySizes[n]);
+            System.out.println(arraySizes[n] + " elements");
+            Arrays.sort(array, null);
+            timeArray(array);
+        }
+    }
+
+    // Create an descending array
+    public <T extends Comparable> void descendingTimes() {
+        for (int n = 0; n < this.arraySizes.length; n++) {
+            T[] array = this.populateArray(arraySizes[n]);
+            System.out.println(arraySizes[n] + " elements");
+            Arrays.sort(array, Collections.reverseOrder());
+            timeArray(array);
+        }
+    }
+
+
+    public static void main(String[] args) {
+        TimedSorting ts = new TimedSorting();
+        // Changes depending on which array I want to pass in
+        ts.descendingTimes();
+    }
+}
+
+\end{lstlisting}
 
 \end{document}

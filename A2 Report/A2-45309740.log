@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.20)  25 AUG 2020 13:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.20)  30 AUG 2020 19:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1023,7 +1023,14 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
- (/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/A2-45309740.aux)
+ (/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/A2-45309740.aux
+
+LaTeX Warning: Label `fig:figure1' multiply defined.
+
+
+LaTeX Warning: Label `fig:figure1' multiply defined.
+
+)
 \openout1 = `A2-45309740.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
@@ -1164,33 +1171,73 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
  [1
 
 
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 115.
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/U.tex
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 6.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 6.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 6.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 6.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 6.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 6.
+<U.png, id=42, 523.2348pt x 339.669pt>
+File: U.png Graphic file (type png)
+<use U.png>
+Package pdftex.def Info: U.png  used on input line 23.
+(pdftex.def)             Requested size: 392.42514pt x 254.75111pt.
+) [1 </Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/U.png>] (/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/A.tex
+<A.png, id=53, 522.753pt x 339.669pt>
+File: A.png Graphic file (type png)
+<use A.png>
+Package pdftex.def Info: A.png  used on input line 22.
+(pdftex.def)             Requested size: 470.47336pt x 305.69926pt.
+) [2 </Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/A.png>] (/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/D.tex
+<D.png, id=61, 507.8172pt x 320.397pt>
+File: D.png Graphic file (type png)
+<use D.png>
+Package pdftex.def Info: D.png  used on input line 21.
+(pdftex.def)             Requested size: 482.4236pt x 304.37541pt.
+) [3 </Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/D.png>]
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 137.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [1]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 120.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 120.
+) [4] [5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 228.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 228.
  (/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/A2-45309740.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 120.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 120.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 228.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 228.
 Package rerunfilecheck Info: File `A2-45309740.out' has not changed.
-(rerunfilecheck)             Checksum: BA3C3654F91E8EEDD86DB1871B2DD0E9;94.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 120.
+(rerunfilecheck)             Checksum: 22341CDF97105FA00AEBEE22C5412163;394.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 228.
  ) 
 Here is how much of TeX's memory you used:
- 38474 strings out of 492649
- 825130 string characters out of 6129622
- 925409 words of memory out of 5000000
- 41923 multiletter control sequences out of 15000+600000
- 554500 words of font info for 32 fonts, out of 8000000 for 9000
+ 38690 strings out of 492649
+ 828389 string characters out of 6129622
+ 977486 words of memory out of 5000000
+ 42010 multiletter control sequences out of 15000+600000
+ 562567 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,11n,69p,10447b,1139s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtt9.pfb>
-Output written on "/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/A2-45309740.pdf" (2 pages, 117743 bytes).
+ 61i,12n,69p,10447b,1909s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtt9.pfb>
+Output written on "/Users/zenzlia/Documents/UNI/COMP3506/Assignments/A2 Report/A2-45309740.pdf" (6 pages, 232371 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 500000)
- 29 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 219 PDF objects out of 1000 (max. 8388607)
+ 196 compressed objects within 2 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
