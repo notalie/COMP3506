@@ -20,31 +20,31 @@ public class TimedSorting {
     public <T extends Comparable> void timeArray(T[] array) {
         // Selection Sort
         T[] copiedArray = array.clone();
-        long startTime = System.currentTimeMillis();
+        long startTime = System.nanoTime();
         SortingAlgorithms.selectionSort(copiedArray, false);
-        long endTime = System.currentTimeMillis();
-        System.out.println("Selection Sort," + (double)(endTime - startTime));
+        long endTime = System.nanoTime();
+        System.out.println("Selection Sort," + ((endTime - startTime)/1000000.0));
 
         // Insertion Sort
         copiedArray = array.clone();
-        startTime = System.currentTimeMillis();
+        startTime = System.nanoTime();
         SortingAlgorithms.insertionSort(copiedArray, false);
-        endTime = System.currentTimeMillis();
-        System.out.println("Insertion Sort," + (double)(endTime - startTime));
+        endTime = System.nanoTime();
+        System.out.println("Insertion Sort," + ((endTime - startTime)/1000000.0));
 
         // Merge Sort
         copiedArray = array.clone();
-        startTime = System.currentTimeMillis();
+        startTime = System.nanoTime();
         SortingAlgorithms.mergeSort(copiedArray, false);
-        endTime = System.currentTimeMillis();
-        System.out.println("Merge Sort," + (double)(endTime - startTime));
+        endTime = System.nanoTime();
+        System.out.println("Merge Sort," + ((endTime - startTime)/1000000.0));
 
         // Quicksort
         copiedArray = array.clone();
-        startTime = System.currentTimeMillis();
+        startTime = System.nanoTime();
         SortingAlgorithms.quickSort(copiedArray, false);
-        endTime = System.currentTimeMillis();
-        System.out.println("Quick Sort," + (double)(endTime - startTime));
+        endTime = System.nanoTime();
+        System.out.println("Quick Sort," + ((endTime - startTime)/1000000.0));
     }
 
 
@@ -79,6 +79,6 @@ public class TimedSorting {
 
     public static void main(String[] args) {
         TimedSorting ts = new TimedSorting();
-        ts.unsortedTimes();
+        ts.descendingTimes();
     }
 }
