@@ -88,6 +88,7 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         }
 
         this.size++;
+
         this.dequeArray[backIndex] = e;
     }
 
@@ -183,7 +184,7 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
 
             @Override
             public boolean hasNext() {
-                return index < backIndex;
+                return index <= backIndex;
             }
 
             @Override

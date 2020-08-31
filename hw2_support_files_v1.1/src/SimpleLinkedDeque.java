@@ -3,11 +3,33 @@ import java.util.NoSuchElementException;
 
 public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
 
+    private int size = 0;
+
+    private int capacity;
+
+    private DequeElement head;
+    private DequeElement tail;
+
+
+    private class DequeElement {
+        private DequeElement next;
+        private DequeElement prev;
+        private T data;
+        private DequeElement(DequeElement nextElement, DequeElement previousElement, T data) {
+            this.data = data;
+            this.next = nextElement;
+            this.prev = previousElement;
+        }
+    }
+
     /**
      * Constructs a new linked list based deque with unlimited capacity.
      */
     public SimpleLinkedDeque() {
-
+        this.size = 0;
+        this.head = null;
+        this.tail = null;
+        this.capacity = 0;
     }
 
     /**
@@ -17,7 +39,10 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
      * @throws IllegalArgumentException if capacity <= 0
      */
     public SimpleLinkedDeque(int capacity) throws IllegalArgumentException {
-
+        if (capacity <= 0) {
+            throw new IllegalArgumentException();
+        }
+        this.capacity = capacity;
     }
 
     /**
@@ -46,27 +71,27 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return this.size == 0;
     }
 
     @Override
     public boolean isFull() {
-        return false;
+        return this.capacity == this.size;
     }
 
     @Override
     public int size() {
-        return 0;
+        return this.size;
     }
 
     @Override
     public void pushLeft(T e) throws RuntimeException {
-
+//        new DequeElement(null, null, null) // go through tali way
     }
 
     @Override
     public void pushRight(T e) throws RuntimeException {
-
+            // go through head way
     }
 
     @Override

@@ -139,8 +139,6 @@ public class ArrayTest {
         while (iter.hasNext()) {
             arr2[i++] = iter.next();
         }
-        System.out.println(Arrays.toString(arr));
-        System.out.println(Arrays.toString(arr2));
         assertArrayEquals(arr2, arr);
     }
 
@@ -164,7 +162,24 @@ public class ArrayTest {
         fullDeque.iterator();
 
         SimpleArrayDeque<Integer> other = new SimpleArrayDeque<>(fullDeque.size(), fullDeque);
+        assertTrue(other.isFull());
+    }
 
-//        assertTrue(other.isFull());
+    @Test
+    public void reverseIteratorArrayDeque() {
+        SimpleArrayDeque<Integer> deque = new SimpleArrayDeque<>(10);
+        Integer[] arr = new Integer[8];
+        for (int i = 0; i < 7; i++) {
+            arr[i] = rand.nextInt(10);
+            deque.pushLeft(arr[i]);
+        }
+
+        Iterator<Integer> iter = deque.reverseIterator();
+        Integer[] arr2 = new Integer[8];
+        int i = 0;
+        while (iter.hasNext()) {
+            arr2[i++] = iter.next();
+        }
+        assertArrayEquals(arr2, arr);
     }
 }
