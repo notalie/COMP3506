@@ -25,8 +25,9 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
             throw new IllegalArgumentException();
         }
         this.capacity = capacity;
-        this.frontIndex = - 1; // Indicator for start of array deque
+        this.frontIndex = this.capacity; // Indicator for start of array deque
         this.backIndex = 0;
+
         this.dequeArray = (T[])new Object[this.capacity];
     }
 
@@ -43,9 +44,10 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         if (otherDeque.size() > capacity || capacity <= 0) {
             throw new IllegalArgumentException();
         }
-        this.frontIndex = - 1;
-        this.backIndex = 0;
+
         this.capacity = capacity;
+        this.frontIndex = this.capacity;
+        this.backIndex = 0;
 
         this.dequeArray = (T[])new Object[this.capacity];
         Iterator<?> otherDequeIterator = otherDeque.iterator();
@@ -59,15 +61,12 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
 
     @Override
     public boolean isEmpty() {
-        return this.frontIndex == -1;
+        return this.size == 0;
     }
 
     @Override
     public boolean isFull() {
-        if (this.size == this.capacity) {
-            return true;
-        }
-        return false;
+        return this.size == this.capacity;
     }
 
     @Override
@@ -80,7 +79,7 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         if (isFull()) {
             throw new RuntimeException();
         }
-        if (this.frontIndex == -1) {
+        if (this.frontIndex == this.capacity) { // First initialisation
             this.frontIndex = 0;
             this.backIndex = 0;
         } else {
@@ -99,10 +98,7 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         }
         this.size++;
 
-        if (this.frontIndex == -1) {
-            this.frontIndex =  this.capacity - 1;
-            this.backIndex = 0;
-        } else if (this.frontIndex == 0) {
+        if (this.frontIndex == 0) {
             this.frontIndex = this.capacity - 1;
         } else {
             this.frontIndex--;

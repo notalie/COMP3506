@@ -86,7 +86,7 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
 
     @Override
     public void pushLeft(T e) throws RuntimeException {
-//        new DequeElement(null, null, null) // go through tali way
+//        new DequeElement(null, null, null) // go through tail way
     }
 
     @Override

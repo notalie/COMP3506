@@ -11,36 +11,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="SimpleArrayDeque.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SimpleArrayDeque.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="35" selection-start-line="35" selection-start-column="2" selection-end-line="37" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SortingAlgorithms.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SortingAlgorithms.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="222" column="5" selection-start-line="222" selection-start-column="5" selection-end-line="222" selection-end-column="5" />
+            <state relative-caret-position="-1431">
+              <caret line="73" column="25" lean-forward="true" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
               <folding>
-                <element signature="method#selectionSort#0;class#SortingAlgorithms#0" />
-                <element signature="method#mergeSortRecurse#0;class#SortingAlgorithms#0" />
-                <element signature="method#mergeSort#0;class#SortingAlgorithms#0" />
+                <element signature="e#1931#1932#0" expanded="true" />
+                <element signature="e#1967#1968#0" expanded="true" />
+                <element signature="e#2035#2036#0" expanded="true" />
+                <element signature="e#2083#2084#0" expanded="true" />
+                <element signature="e#2156#2157#0" expanded="true" />
+                <element signature="e#2188#2189#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimedSorting.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/TimedSorting.java">
+      <file leaf-file-name="ArrayTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/tst/ArrayTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+            <state relative-caret-position="366">
+              <caret line="182" selection-start-line="182" selection-end-line="182" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1301#1302#0" expanded="true" />
+                <element signature="e#1337#1338#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,13 +78,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java" />
         <option value="$PROJECT_DIR$/hw2_support_files_v1.1/src/SortingAlgorithms.java" />
         <option value="$PROJECT_DIR$/hw2_support_files_v1.1/src/TimedSorting.java" />
+        <option value="$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="976" />
@@ -117,13 +113,19 @@
               <item name="hw2_support_files_v1.1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="COMP3506" type="b2602c69:ProjectViewProjectNode" />
+              <item name="COMP3506" type="462c0819:PsiDirectoryNode" />
+              <item name="hw2_support_files_v1.1" type="462c0819:PsiDirectoryNode" />
+              <item name="tst" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -146,7 +148,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ArrayTest">
     <configuration name="Unnamed" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="TimedSorting" />
       <module name="COMP3506" />
@@ -154,6 +156,74 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="ArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="COMP3506" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ArrayTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ArrayTest.peekLeftArrayDequeSingleElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="COMP3506" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ArrayTest" />
+      <option name="METHOD_NAME" value="peekLeftArrayDequeSingleElement" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ArrayTest.popLeftArrayDequeEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="COMP3506" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ArrayTest" />
+      <option name="METHOD_NAME" value="popLeftArrayDequeEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ArrayTest.validConstructorArrayDequeSameType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="COMP3506" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ArrayTest" />
+      <option name="METHOD_NAME" value="validConstructorArrayDequeSameType" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -193,6 +263,21 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="JUnit.ArrayTest" />
+      <item itemvalue="JUnit.ArrayTest.popLeftArrayDequeEmpty" />
+      <item itemvalue="JUnit.ArrayTest.peekLeftArrayDequeSingleElement" />
+      <item itemvalue="JUnit.ArrayTest.validConstructorArrayDequeSameType" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ArrayTest" />
+        <item itemvalue="JUnit.ArrayTest.popLeftArrayDequeEmpty" />
+        <item itemvalue="JUnit.ArrayTest.validConstructorArrayDequeSameType" />
+        <item itemvalue="JUnit.ArrayTest.peekLeftArrayDequeSingleElement" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -207,8 +292,40 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="ArrayTest_popLeftArrayDequeEmpty - 2020.09.01 at 00h 46m 00s.xml">
+      <configuration name="ArrayTest.popLeftArrayDequeEmpty" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayTest - 2020.09.01 at 00h 46m 03s.xml">
+      <configuration name="ArrayTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayTest - 2020.09.01 at 00h 46m 05s.xml">
+      <configuration name="ArrayTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayTest - 2020.09.01 at 00h 47m 01s.xml">
+      <configuration name="ArrayTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayTest - 2020.09.01 at 00h 47m 18s.xml">
+      <configuration name="ArrayTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayTest - 2020.09.01 at 00h 48m 23s.xml">
+      <configuration name="ArrayTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayTest - 2020.09.01 at 00h 48m 40s.xml">
+      <configuration name="ArrayTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayTest - 2020.09.01 at 00h 48m 53s.xml">
+      <configuration name="ArrayTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayTest - 2020.09.01 at 00h 49m 43s.xml">
+      <configuration name="ArrayTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayTest - 2020.09.01 at 00h 50m 20s.xml">
+      <configuration name="ArrayTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="976" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -219,12 +336,12 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38331574" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38331574" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36770833" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18385416" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -259,6 +376,79 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1116">
+          <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+          <folding>
+            <element signature="e#1931#1932#0" expanded="true" />
+            <element signature="e#1967#1968#0" expanded="true" />
+            <element signature="e#2035#2036#0" expanded="true" />
+            <element signature="e#2083#2084#0" expanded="true" />
+            <element signature="e#2156#2157#0" expanded="true" />
+            <element signature="e#2188#2189#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/tst/ArrayTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1206">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1301#1302#0" expanded="true" />
+            <element signature="e#1337#1338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="35" selection-start-line="35" selection-start-column="2" selection-end-line="37" selection-end-column="11" />
+          <folding>
+            <element signature="e#1931#1932#0" expanded="true" />
+            <element signature="e#1967#1968#0" expanded="true" />
+            <element signature="e#2035#2036#0" expanded="true" />
+            <element signature="e#2083#2084#0" expanded="true" />
+            <element signature="e#2156#2157#0" expanded="true" />
+            <element signature="e#2188#2189#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SortingAlgorithms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3528">
+          <caret line="222" column="5" selection-start-line="222" selection-start-column="5" selection-end-line="222" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/TimedSorting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="35" selection-start-line="35" selection-start-column="2" selection-end-line="37" selection-end-column="11" />
         </state>
@@ -268,11 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3528">
           <caret line="222" column="5" selection-start-line="222" selection-start-column="5" selection-end-line="222" selection-end-column="5" />
-          <folding>
-            <element signature="method#selectionSort#0;class#SortingAlgorithms#0" />
-            <element signature="method#mergeSortRecurse#0;class#SortingAlgorithms#0" />
-            <element signature="method#mergeSort#0;class#SortingAlgorithms#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -311,11 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="28" selection-start-column="28" selection-end-column="28" />
-          <folding>
-            <element signature="method#selectionSort#0;class#SortingAlgorithms#0" />
-            <element signature="method#mergeSortRecurse#0;class#SortingAlgorithms#0" />
-            <element signature="method#mergeSort#0;class#SortingAlgorithms#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -337,11 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="85" column="17" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
-          <folding>
-            <element signature="method#selectionSort#0;class#SortingAlgorithms#0" />
-            <element signature="method#mergeSortRecurse#0;class#SortingAlgorithms#0" />
-            <element signature="method#mergeSort#0;class#SortingAlgorithms#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -363,25 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-          <folding>
-            <element signature="method#selectionSort#0;class#SortingAlgorithms#0" />
-            <element signature="method#mergeSortRecurse#0;class#SortingAlgorithms#0" />
-            <element signature="method#mergeSort#0;class#SortingAlgorithms#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleDeque.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="35" selection-start-line="35" selection-start-column="2" selection-end-line="37" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -392,24 +548,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SortingAlgorithms.java">
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/TimedSorting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="222" column="5" selection-start-line="222" selection-start-column="5" selection-end-line="222" selection-end-column="5" />
+        <state relative-caret-position="711">
+          <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
           <folding>
-            <element signature="method#selectionSort#0;class#SortingAlgorithms#0" />
-            <element signature="method#mergeSortRecurse#0;class#SortingAlgorithms#0" />
-            <element signature="method#mergeSort#0;class#SortingAlgorithms#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/TimedSorting.java">
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SortingAlgorithms.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+        <state relative-caret-position="492">
+          <caret line="222" column="5" selection-start-line="222" selection-start-column="5" selection-end-line="222" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/tst/ArrayTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="182" selection-start-line="182" selection-end-line="182" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1301#1302#0" expanded="true" />
+            <element signature="e#1337#1338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1431">
+          <caret line="73" column="25" lean-forward="true" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+          <folding>
+            <element signature="e#1931#1932#0" expanded="true" />
+            <element signature="e#1967#1968#0" expanded="true" />
+            <element signature="e#2035#2036#0" expanded="true" />
+            <element signature="e#2083#2084#0" expanded="true" />
+            <element signature="e#2156#2157#0" expanded="true" />
+            <element signature="e#2188#2189#0" expanded="true" />
           </folding>
         </state>
       </provider>
