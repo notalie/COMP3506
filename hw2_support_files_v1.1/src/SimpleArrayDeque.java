@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -25,7 +26,7 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         }
         this.capacity = capacity;
         this.frontIndex = - 1; // Indicator for start of array deque
-        this.backIndex = -1;
+        this.backIndex = 0;
         this.dequeArray = (T[])new Object[this.capacity];
     }
 
@@ -43,23 +44,30 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
             throw new IllegalArgumentException();
         }
         this.frontIndex = - 1;
-        this.backIndex = -1;
+        this.backIndex = 0;
         this.capacity = capacity;
+
         this.dequeArray = (T[])new Object[this.capacity];
         Iterator<?> otherDequeIterator = otherDeque.iterator();
-        for (int i = 0; i < this.capacity; i++) {
-            this.dequeArray[i] = (T)otherDequeIterator.next();
+        while(otherDequeIterator.hasNext()) {
+            T elem = (T)otherDequeIterator.next();
+            if (elem != null) {
+                pushLeft(elem);
+            }
         }
     }
 
     @Override
     public boolean isEmpty() {
-        return this.size == 0;
+        return this.frontIndex == -1;
     }
 
     @Override
     public boolean isFull() {
-        return this.size == this.capacity;
+        if (this.size == this.capacity) {
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -72,7 +80,7 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         if (isFull()) {
             throw new RuntimeException();
         }
-        if (this.backIndex == -1) {
+        if (this.frontIndex == -1) {
             this.frontIndex = 0;
             this.backIndex = 0;
         } else {
@@ -91,7 +99,7 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         this.size++;
 
         if (this.frontIndex == -1) {
-            this.frontIndex = 0;
+            this.frontIndex =  this.capacity - 1;
             this.backIndex = 0;
         } else if (this.frontIndex == 0) {
             this.frontIndex = this.capacity - 1;
@@ -141,23 +149,24 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
     
     @Override
     public Iterator<T> iterator() {
-        T[] iteratingArray = this.dequeArray;
+        T[] iteratingArray = this.dequeArray.clone();
+        int frontIndex = this.frontIndex;
         return new Iterator<T>() {
-            int index = 0;
+            int index = iteratingArray.length - 1;
+
             @Override
             public boolean hasNext() {
-                return iteratingArray[index] == null;
+                return index >= frontIndex;
             }
 
             @Override
             public T next() {
                 if (hasNext()) {
-                    index = (index + 1) % iteratingArray.length;
-                    return iteratingArray[index];
+                    T elem = iteratingArray[index--];
+                    return elem;
                 }
-                return null;
+                throw new NoSuchElementException();
             }
-
             @Override
             public void remove() {
                 // Does nothing
@@ -167,27 +176,24 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
 
     @Override
     public Iterator<T> reverseIterator() {
-        T[] iteratingArray = this.dequeArray;
+        T[] iteratingArray = this.dequeArray.clone();
+        int backIndex = this.backIndex;
         return new Iterator<T>() {
-            int index = iteratingArray.length - 1;
+            int index = 0;
+
             @Override
             public boolean hasNext() {
-                return iteratingArray[index] == null;
+                return index < backIndex;
             }
 
             @Override
             public T next() {
                 if (hasNext()) {
-                    if (index == 0) {
-                        index = iteratingArray.length - 1;
-                    } else {
-                        index--;
-                    }
-                    return iteratingArray[index];
+                    T elem = iteratingArray[index++];
+                    return elem;
                 }
-                return null;
+                throw new NoSuchElementException();
             }
-
             @Override
             public void remove() {
                 // Does nothing

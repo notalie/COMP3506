@@ -2,6 +2,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.Random;
@@ -36,6 +37,59 @@ public class ArrayTest {
     }
 
     @Test
+    public void sizeElementsArrayDeque() {
+        arrayDeque.pushRight(2);
+        assertEquals(1, arrayDeque.size());
+    }
+
+    @Test(expected = NoSuchElementException.class)
+    public void popLeftArrayDequeEmpty() {
+        emptyDeque.popLeft();
+    }
+
+    @Test
+    public void isFullArrayDeque() {
+        SimpleDeque<String> deque = new SimpleArrayDeque<>(1);
+        deque.pushLeft("hello");
+        assertTrue(deque.isFull());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void invalidConstructorNegLinkedDeque() {
+        new SimpleArrayDeque<Integer>(-2);
+    }
+
+    @Test
+    public void isEmptyArrayDeque() {
+        SimpleDeque<Integer> deque = new SimpleArrayDeque<>(20);
+        assertTrue(deque.isEmpty());
+
+        deque.pushRight(1);
+        assertFalse(deque.isEmpty());
+    }
+
+    @Test(expected = NoSuchElementException.class)
+    public void peekLeftArrayDequeEmpty() {
+        emptyDeque.peekLeft();
+    }
+
+    @Test
+    public void peekLeftArrayDequeSingleElement() {
+        SimpleDeque<String> deque = new SimpleArrayDeque<>(1);
+        deque.pushRight("hello");
+        int priorSize = deque.size();
+        assertEquals("hello", deque.peekLeft());
+        assertEquals(priorSize, deque.size());
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void pushLeftArrayDequeFull() {
+        SimpleDeque<String> deque = new SimpleArrayDeque<>(1);
+        deque.pushLeft("hello");
+        deque.pushLeft("world");
+    }
+
+    @Test
     public void iterator() {
         Integer[] nums = {1, 2, 3, 4};
         arrayDeque.pushLeft(1);
@@ -44,9 +98,12 @@ public class ArrayTest {
         arrayDeque.pushLeft(4);
 
         Iterator<Integer> iterator = arrayDeque.iterator();
-       int index = 0;
+        int index = nums.length - 1;
         while(iterator.hasNext()) {
-            Assert.assertEquals(arrayDeque.popRight(), nums[index++]);
+            Integer elem = iterator.next();
+            if (elem != null) {
+                Assert.assertEquals(elem, nums[index--]);
+            }
         }
     }
 
@@ -58,10 +115,56 @@ public class ArrayTest {
         arrayDeque.pushRight(3);
         arrayDeque.pushRight(4);
 
-        Iterator<Integer> iterator = arrayDeque.iterator();
-        int index = nums.length - 1;
+        int index = 0;
+        Iterator<Integer> iterator = arrayDeque.reverseIterator();
         while(iterator.hasNext()) {
-            Assert.assertEquals(arrayDeque.popRight(), nums[index--]);
+            Integer elem = iterator.next();
+            if (elem != null) {
+                Assert.assertEquals(elem, nums[index++]);
+            }
         }
+    }
+
+    @Test
+    public void iteratorArrayDeque() {
+        SimpleArrayDeque<Integer> deque = new SimpleArrayDeque<>(10);
+        Integer[] arr = new Integer[8];
+        for (int i = 0; i < 7; i++) {
+            arr[i] = rand.nextInt(10);
+            deque.pushRight(arr[i]);
+        }
+        Iterator<Integer> iter = deque.iterator();
+        Integer[] arr2 = new Integer[8];
+        int i = 0;
+        while (iter.hasNext()) {
+            arr2[i++] = iter.next();
+        }
+        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr2));
+        assertArrayEquals(arr2, arr);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void invalidConstructorNegArrayDeque() {
+        new SimpleArrayDeque<Integer>(-2);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void invalidConstructorArrayDequeOther() {
+        arrayDeque.pushLeft(2);
+        arrayDeque.pushLeft(3);
+        new SimpleArrayDeque<>(1, arrayDeque);
+    }
+
+    @Test
+    public void validConstructorArrayDequeSameType() {
+        SimpleArrayDeque<Integer> fullDeque = new SimpleArrayDeque<>(10);
+        fullDeque.pushLeft(5);
+        fullDeque.pushLeft(4);
+        fullDeque.iterator();
+
+        SimpleArrayDeque<Integer> other = new SimpleArrayDeque<>(fullDeque.size(), fullDeque);
+
+//        assertTrue(other.isFull());
     }
 }
