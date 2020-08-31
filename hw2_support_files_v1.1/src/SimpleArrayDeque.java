@@ -3,14 +3,15 @@ import java.util.NoSuchElementException;
 
 public class SimpleArrayDeque<T> implements SimpleDeque<T> {
 
+    private T[] dequeArray;
 
     private int size;
 
     private int capacity;
 
-    private int topIndex;
+    private int frontIndex;
 
-    private int bottomIndex;
+    private int backIndex;
 
     /**
      * Constructs a new array based deque with limited capacity.
@@ -19,8 +20,13 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
      * @throws IllegalArgumentException if capacity <= 0
      */
     public SimpleArrayDeque(int capacity) throws IllegalArgumentException {
-        this.size = 0;
+        if (capacity <= 0) {
+            throw new IllegalArgumentException();
+        }
         this.capacity = capacity;
+        this.frontIndex = this.capacity - 1;
+        this.backIndex = 0;
+        this.dequeArray = (T[])new Object[this.capacity];
     }
 
     /**
@@ -33,10 +39,17 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
      */
     public SimpleArrayDeque(int capacity, SimpleDeque<? extends T> otherDeque) 
             throws IllegalArgumentException {
-//        if (otherDeque.capacity > capacity || capacity <= 0) {
-//            throw new IllegalArgumentException();
-//        }
-
+        if (otherDeque.size() > capacity || capacity <= 0) {
+            throw new IllegalArgumentException();
+        }
+        this.capacity = capacity;
+        this.frontIndex = this.capacity - 1;
+        this.backIndex = 0;
+        this.dequeArray = (T[])new Object[this.capacity];
+        Iterator<?> otherDequeIterator = otherDeque.iterator();
+        for (int i = 0; i < this.capacity; i++) {
+            this.dequeArray[i] = (T)otherDequeIterator.next();
+        }
     }
 
     @Override
@@ -56,7 +69,7 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
 
     @Override
     public void pushLeft(T e) throws RuntimeException {
-
+        
     }
 
     @Override
