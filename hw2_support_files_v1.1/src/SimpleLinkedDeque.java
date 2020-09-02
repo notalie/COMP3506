@@ -10,7 +10,6 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
     private DequeNode head;
     private DequeNode tail;
 
-
     private class DequeNode {
         private DequeNode next;
         private DequeNode prev;
@@ -43,6 +42,8 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
             throw new IllegalArgumentException();
         }
         this.capacity = capacity;
+        this.head = null;
+        this.tail = null;
     }
 
     /**
@@ -106,31 +107,37 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
             throw new RuntimeException();
         }
 
-        DequeNode tailVal = this.tail;
-        DequeNode newNode = new DequeNode(null, tailVal, e);
-        this.tail = newNode;
+        DequeNode newNode = new DequeNode(this.tail, null, e);
 
         if (this.head == null) {
             this.head = newNode;
+        } else {
+            this.tail.next = newNode;
         }
+
+        newNode.prev = this.tail;
+        this.tail = newNode;
 
         this.size++;
     }
 
+    // go through head way/front way
     @Override
     public void pushRight(T e) throws RuntimeException {
         if (isFull()) {
             throw new RuntimeException();
         }
-        DequeNode headVal = this.head;
-        DequeNode newNode = new DequeNode(headVal, null, e);
-        this.head = newNode;
+        DequeNode newNode = new DequeNode(null, this.head, e);
 
         if (this.tail == null) {
             this.tail = newNode;
+        } else {
+            this.head.prev = newNode;
         }
+
+        newNode.next = this.head;
+        this.head = newNode;
         this.size++;
-        // go through head way/front way
     }
 
     @Override
@@ -138,6 +145,7 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
         if (isEmpty()) {
             throw new NoSuchElementException();
         }
+
         return this.tail.data;
     }
 
@@ -155,7 +163,7 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
             throw new NoSuchElementException();
         }
         DequeNode tailVal = this.tail;
-        this.tail = tailVal.next;
+        this.tail = tailVal.prev;
 
         this.size--;
         return tailVal.data;
@@ -167,8 +175,6 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
             throw new NoSuchElementException();
         }
         DequeNode headVal = this.head;
-
-
         this.head = headVal.next;
         this.size--;
         return headVal.data;

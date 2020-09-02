@@ -35,6 +35,49 @@ public class LinkedTest {
         deque.peekLeft();
     }
 
+
+    @Test
+    public void pushTests() {
+        SimpleLinkedDeque help = new SimpleLinkedDeque<>(10);
+        Integer[] nums = {1, 2, 3, 4};
+
+        for (int i = 0; i < nums.length; i++) {
+            help.pushRight(nums[i]);
+        }
+
+        for (int i = nums.length - 1; i >= 0; i--) {
+            Assert.assertEquals(help.popRight(), nums[i]);
+        }
+    }
+
+    @Test
+    public void weird() {
+        SimpleLinkedDeque help = new SimpleLinkedDeque<>(10);
+        Integer[] nums = {1, 2, 3, 4};
+
+        for (int i = 0; i < nums.length; i++) {
+            help.pushRight(nums[i]);
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            Assert.assertEquals(help.popLeft(), nums[i]);
+        }
+    }
+
+    @Test
+    public void weird2() {
+        SimpleLinkedDeque help = new SimpleLinkedDeque<>(10);
+        Integer[] nums = {1, 2, 3, 4};
+
+        for (int i = 0; i < nums.length; i++) {
+            help.pushLeft(nums[i]);
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            Assert.assertEquals(help.popRight(), nums[i]);
+        }
+    }
+
     @Test(expected = NoSuchElementException.class)
     public void popLeftLinkedDequeEmpty() {
         SimpleLinkedDeque<Integer> deque = new SimpleLinkedDeque<>(emptyDeque);
