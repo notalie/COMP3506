@@ -7,15 +7,15 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
 
     private int capacity;
 
-    private DequeElement head;
-    private DequeElement tail;
+    private DequeNode head;
+    private DequeNode tail;
 
 
-    private class DequeElement {
-        private DequeElement next;
-        private DequeElement prev;
+    private class DequeNode {
+        private DequeNode next;
+        private DequeNode prev;
         private T data;
-        private DequeElement(DequeElement nextElement, DequeElement previousElement, T data) {
+        private DequeNode(DequeNode nextElement, DequeNode previousElement, T data) {
             this.data = data;
             this.next = nextElement;
             this.prev = previousElement;
@@ -29,7 +29,7 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
         this.size = 0;
         this.head = null;
         this.tail = null;
-        this.capacity = 0;
+        this.capacity = -1; // No cap on the capacity max
     }
 
     /**
@@ -53,7 +53,14 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
      * @requires otherDeque != null
      */
     public SimpleLinkedDeque(SimpleDeque<? extends T> otherDeque) {
-        
+        Iterator<?> otherDequeIterator = otherDeque.iterator();
+        this.capacity = -1;
+        while(otherDequeIterator.hasNext()) {
+            T elem = (T)otherDequeIterator.next();
+            if (elem != null) {
+                pushLeft(elem);
+            }
+        }
     }
     
     /**
@@ -66,7 +73,14 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
      */
     public SimpleLinkedDeque(int capacity, SimpleDeque<? extends T> otherDeque) 
             throws IllegalArgumentException {
-
+        this.capacity = capacity;
+        Iterator<?> otherDequeIterator = otherDeque.iterator();
+        while(otherDequeIterator.hasNext()) {
+            T elem = (T)otherDequeIterator.next();
+            if (elem != null) {
+                pushLeft(elem);
+            }
+        }
     }
 
     @Override
@@ -84,34 +98,80 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
         return this.size;
     }
 
+
+    // go through tail way/back way
     @Override
     public void pushLeft(T e) throws RuntimeException {
-//        new DequeElement(null, null, null) // go through tail way
+        if (isFull()) {
+            throw new RuntimeException();
+        }
+
+        DequeNode tailVal = this.tail;
+        DequeNode newNode = new DequeNode(null, tailVal, e);
+        this.tail = newNode;
+
+        if (this.head == null) {
+            this.head = newNode;
+        }
+
+        this.size++;
     }
 
     @Override
     public void pushRight(T e) throws RuntimeException {
-            // go through head way
+        if (isFull()) {
+            throw new RuntimeException();
+        }
+        DequeNode headVal = this.head;
+        DequeNode newNode = new DequeNode(headVal, null, e);
+        this.head = newNode;
+
+        if (this.tail == null) {
+            this.tail = newNode;
+        }
+        this.size++;
+        // go through head way/front way
     }
 
     @Override
     public T peekLeft() throws NoSuchElementException {
-        return null;
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return this.tail.data;
     }
 
     @Override
     public T peekRight() throws NoSuchElementException {
-        return null;
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return this.head.data;
     }
 
     @Override
     public T popLeft() throws NoSuchElementException {
-        return null;
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        DequeNode tailVal = this.tail;
+        this.tail = tailVal.next;
+
+        this.size--;
+        return tailVal.data;
     }
 
     @Override
     public T popRight() throws NoSuchElementException {
-        return null;
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        DequeNode headVal = this.head;
+
+
+        this.head = headVal.next;
+        this.size--;
+        return headVal.data;
     }
 
     @Override

@@ -21,6 +21,10 @@ public class LinkedTest {
         linkedDeque.pushRight(7);
         linkedDeque.pushRight(10);
 
+        arrayDeque = new SimpleArrayDeque<>(10);
+        arrayDeque.pushLeft(5);
+        arrayDeque.pushLeft(4);
+
         emptyDeque = new SimpleArrayDeque<>(5);
         rand = new Random();
     }

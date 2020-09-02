@@ -11,19 +11,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="SimpleArrayDeque.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java">
+      <file leaf-file-name="SimpleLinkedDeque.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleLinkedDeque.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1431">
-              <caret line="73" column="25" lean-forward="true" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
-              <folding>
-                <element signature="e#1931#1932#0" expanded="true" />
-                <element signature="e#1967#1968#0" expanded="true" />
-                <element signature="e#2035#2036#0" expanded="true" />
-                <element signature="e#2083#2084#0" expanded="true" />
-                <element signature="e#2156#2157#0" expanded="true" />
-                <element signature="e#2188#2189#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-534">
+              <caret line="129" column="32" lean-forward="true" selection-start-line="129" selection-start-column="32" selection-end-line="129" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LinkedTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/tst/LinkedTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="110" selection-start-line="110" selection-end-line="110" />
             </state>
           </provider>
         </entry>
@@ -31,8 +32,8 @@
       <file leaf-file-name="ArrayTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/tst/ArrayTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="182" selection-start-line="182" selection-end-line="182" />
+            <state relative-caret-position="-1242">
+              <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1301#1302#0" expanded="true" />
@@ -45,7 +46,7 @@
       <file leaf-file-name="SimpleDeque.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleDeque.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="-234">
               <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
             </state>
           </provider>
@@ -81,6 +82,8 @@
         <option value="$PROJECT_DIR$/hw2_support_files_v1.1/src/SortingAlgorithms.java" />
         <option value="$PROJECT_DIR$/hw2_support_files_v1.1/src/TimedSorting.java" />
         <option value="$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java" />
+        <option value="$PROJECT_DIR$/hw2_support_files_v1.1/tst/LinkedTest.java" />
+        <option value="$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleLinkedDeque.java" />
       </list>
     </option>
   </component>
@@ -123,9 +126,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -148,7 +151,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ArrayTest">
+  <component name="RunManager" selected="JUnit.LinkedTest">
     <configuration name="Unnamed" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="TimedSorting" />
       <module name="COMP3506" />
@@ -174,13 +177,30 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ArrayTest.peekLeftArrayDequeSingleElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LinkedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="COMP3506" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ArrayTest" />
-      <option name="METHOD_NAME" value="peekLeftArrayDequeSingleElement" />
+      <option name="MAIN_CLASS_NAME" value="LinkedTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="LinkedTest.peekLeftLinkedDequeEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="COMP3506" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LinkedTest" />
+      <option name="METHOD_NAME" value="peekLeftLinkedDequeEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -191,13 +211,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ArrayTest.popLeftArrayDequeEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LinkedTest.peekLeftLinkedDequeSingleElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="COMP3506" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ArrayTest" />
-      <option name="METHOD_NAME" value="popLeftArrayDequeEmpty" />
+      <option name="MAIN_CLASS_NAME" value="LinkedTest" />
+      <option name="METHOD_NAME" value="peekLeftLinkedDequeSingleElement" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -208,13 +228,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ArrayTest.validConstructorArrayDequeSameType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LinkedTest.popLeftLinkedDequeEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="COMP3506" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ArrayTest" />
-      <option name="METHOD_NAME" value="validConstructorArrayDequeSameType" />
+      <option name="MAIN_CLASS_NAME" value="LinkedTest" />
+      <option name="METHOD_NAME" value="popLeftLinkedDequeEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -266,16 +286,18 @@
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="JUnit.ArrayTest" />
-      <item itemvalue="JUnit.ArrayTest.popLeftArrayDequeEmpty" />
-      <item itemvalue="JUnit.ArrayTest.peekLeftArrayDequeSingleElement" />
-      <item itemvalue="JUnit.ArrayTest.validConstructorArrayDequeSameType" />
+      <item itemvalue="JUnit.LinkedTest" />
+      <item itemvalue="JUnit.LinkedTest.peekLeftLinkedDequeEmpty" />
+      <item itemvalue="JUnit.LinkedTest.popLeftLinkedDequeEmpty" />
+      <item itemvalue="JUnit.LinkedTest.peekLeftLinkedDequeSingleElement" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LinkedTest" />
+        <item itemvalue="JUnit.LinkedTest.peekLeftLinkedDequeSingleElement" />
+        <item itemvalue="JUnit.LinkedTest.popLeftLinkedDequeEmpty" />
+        <item itemvalue="JUnit.LinkedTest.peekLeftLinkedDequeEmpty" />
         <item itemvalue="JUnit.ArrayTest" />
-        <item itemvalue="JUnit.ArrayTest.popLeftArrayDequeEmpty" />
-        <item itemvalue="JUnit.ArrayTest.validConstructorArrayDequeSameType" />
-        <item itemvalue="JUnit.ArrayTest.peekLeftArrayDequeSingleElement" />
       </list>
     </recent_temporary>
   </component>
@@ -293,35 +315,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ArrayTest_popLeftArrayDequeEmpty - 2020.09.01 at 00h 46m 00s.xml">
-      <configuration name="ArrayTest.popLeftArrayDequeEmpty" configurationId="JUnit" />
+    <history-entry file="LinkedTest - 2020.09.02 at 17h 09m 16s.xml">
+      <configuration name="LinkedTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayTest - 2020.09.01 at 00h 46m 03s.xml">
-      <configuration name="ArrayTest" configurationId="JUnit" />
+    <history-entry file="LinkedTest - 2020.09.02 at 17h 09m 59s.xml">
+      <configuration name="LinkedTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayTest - 2020.09.01 at 00h 46m 05s.xml">
-      <configuration name="ArrayTest" configurationId="JUnit" />
+    <history-entry file="LinkedTest_peekLeftLinkedDequeEmpty - 2020.09.02 at 17h 10m 17s.xml">
+      <configuration name="LinkedTest.peekLeftLinkedDequeEmpty" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayTest - 2020.09.01 at 00h 47m 01s.xml">
-      <configuration name="ArrayTest" configurationId="JUnit" />
+    <history-entry file="LinkedTest_peekLeftLinkedDequeEmpty - 2020.09.02 at 17h 11m 12s.xml">
+      <configuration name="LinkedTest.peekLeftLinkedDequeEmpty" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayTest - 2020.09.01 at 00h 47m 18s.xml">
-      <configuration name="ArrayTest" configurationId="JUnit" />
+    <history-entry file="LinkedTest - 2020.09.02 at 17h 11m 16s.xml">
+      <configuration name="LinkedTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayTest - 2020.09.01 at 00h 48m 23s.xml">
-      <configuration name="ArrayTest" configurationId="JUnit" />
+    <history-entry file="LinkedTest_popLeftLinkedDequeEmpty - 2020.09.02 at 17h 11m 23s.xml">
+      <configuration name="LinkedTest.popLeftLinkedDequeEmpty" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayTest - 2020.09.01 at 00h 48m 40s.xml">
-      <configuration name="ArrayTest" configurationId="JUnit" />
+    <history-entry file="LinkedTest - 2020.09.02 at 17h 14m 13s.xml">
+      <configuration name="LinkedTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayTest - 2020.09.01 at 00h 48m 53s.xml">
-      <configuration name="ArrayTest" configurationId="JUnit" />
+    <history-entry file="LinkedTest_peekLeftLinkedDequeSingleElement - 2020.09.02 at 17h 14m 22s.xml">
+      <configuration name="LinkedTest.peekLeftLinkedDequeSingleElement" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayTest - 2020.09.01 at 00h 49m 43s.xml">
-      <configuration name="ArrayTest" configurationId="JUnit" />
+    <history-entry file="LinkedTest_peekLeftLinkedDequeSingleElement - 2020.09.02 at 17h 16m 14s.xml">
+      <configuration name="LinkedTest.peekLeftLinkedDequeSingleElement" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayTest - 2020.09.01 at 00h 50m 20s.xml">
-      <configuration name="ArrayTest" configurationId="JUnit" />
+    <history-entry file="LinkedTest - 2020.09.02 at 17h 16m 17s.xml">
+      <configuration name="LinkedTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -336,7 +358,7 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38331574" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38331574" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
@@ -376,15 +398,41 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1314">
+          <caret line="73" column="25" lean-forward="true" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+          <folding>
+            <element signature="e#2035#2036#0" expanded="true" />
+            <element signature="e#2084#2085#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/tst/ArrayTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3276">
+          <caret line="182" selection-start-line="182" selection-end-line="182" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1301#1302#0" expanded="true" />
+            <element signature="e#1337#1338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1116">
           <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
           <folding>
-            <element signature="e#1931#1932#0" expanded="true" />
-            <element signature="e#1967#1968#0" expanded="true" />
             <element signature="e#2035#2036#0" expanded="true" />
-            <element signature="e#2083#2084#0" expanded="true" />
-            <element signature="e#2156#2157#0" expanded="true" />
-            <element signature="e#2188#2189#0" expanded="true" />
+            <element signature="e#2084#2085#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -413,12 +461,8 @@
         <state relative-caret-position="612">
           <caret line="35" selection-start-line="35" selection-start-column="2" selection-end-line="37" selection-end-column="11" />
           <folding>
-            <element signature="e#1931#1932#0" expanded="true" />
-            <element signature="e#1967#1968#0" expanded="true" />
             <element signature="e#2035#2036#0" expanded="true" />
-            <element signature="e#2083#2084#0" expanded="true" />
-            <element signature="e#2156#2157#0" expanded="true" />
-            <element signature="e#2188#2189#0" expanded="true" />
+            <element signature="e#2084#2085#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -441,9 +485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1386">
           <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -472,9 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1350">
           <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -552,9 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="711">
           <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -565,17 +600,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleDeque.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/tst/ArrayTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="182" selection-start-line="182" selection-end-line="182" />
+        <state relative-caret-position="-1242">
+          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1301#1302#0" expanded="true" />
@@ -584,18 +612,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-234">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/tst/LinkedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1431">
-          <caret line="73" column="25" lean-forward="true" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+        <state relative-caret-position="-129">
+          <caret line="112" column="9" lean-forward="true" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
           <folding>
-            <element signature="e#1931#1932#0" expanded="true" />
-            <element signature="e#1967#1968#0" expanded="true" />
             <element signature="e#2035#2036#0" expanded="true" />
-            <element signature="e#2083#2084#0" expanded="true" />
-            <element signature="e#2156#2157#0" expanded="true" />
-            <element signature="e#2188#2189#0" expanded="true" />
+            <element signature="e#2084#2085#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleLinkedDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-534">
+          <caret line="129" column="32" lean-forward="true" selection-start-line="129" selection-start-column="32" selection-end-line="129" selection-end-column="32" />
         </state>
       </provider>
     </entry>
