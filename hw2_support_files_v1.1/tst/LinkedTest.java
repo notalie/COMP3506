@@ -118,9 +118,9 @@ public class LinkedTest {
 
     @Test
     public void iteratorLinkedDeque() {
-        Integer[] arr = new Integer[15];
+        Integer[] arr = new Integer[3];
         SimpleLinkedDeque<Integer> deque = new SimpleLinkedDeque<>();
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 3; i++) {
             Integer num = rand.nextInt(20);
             arr[i] = num;
             deque.pushRight(num);
@@ -129,8 +129,10 @@ public class LinkedTest {
         Iterator<Integer> iter = deque.iterator();
         Integer[] actual = new Integer[arr.length];
         int i = 0;
-        while (iter.hasNext()) {
-            actual[i++] = iter.next();
+//        System.out.println(Arrays.toString(arr));
+        while (i < 3) {
+            Integer elem = iter.next();
+            actual[i++] = elem;
         }
 
         assertArrayEquals(arr, actual);

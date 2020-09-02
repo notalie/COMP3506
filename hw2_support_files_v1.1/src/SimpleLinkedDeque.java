@@ -107,12 +107,12 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
             throw new RuntimeException();
         }
 
-        DequeNode newNode = new DequeNode(this.tail, null, e);
+        DequeNode newNode = new DequeNode(null, this.tail, e);
 
         if (this.head == null) {
             this.head = newNode;
         } else {
-            this.tail.next = newNode;
+            this.tail.next = null;
         }
 
         newNode.prev = this.tail;
@@ -127,7 +127,7 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
         if (isFull()) {
             throw new RuntimeException();
         }
-        DequeNode newNode = new DequeNode(null, this.head, e);
+        DequeNode newNode = new DequeNode(this.head, null, e);
 
         if (this.tail == null) {
             this.tail = newNode;
@@ -135,7 +135,6 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
             this.head.prev = newNode;
         }
 
-        newNode.next = this.head;
         this.head = newNode;
         this.size++;
     }
@@ -182,30 +181,30 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
 
     @Override
     public Iterator<T> iterator() {
-//        T[] iteratingArray = this.dequeArray.clone();
-//        int backIndex = this.backIndex;
-//        return new Iterator<T>() {
-//            int index = 0;
-//
-//            @Override
-//            public boolean hasNext() {
-//                return index <= backIndex;
-//            }
-//
-//            @Override
-//            public T next() {
-//                if (hasNext()) {
-//                    T elem = iteratingArray[index++];
-//                    return elem;
-//                }
-//                throw new NoSuchElementException();
-//            }
-//            @Override
-//            public void remove() {
-//                // Does nothing
-//            }
-//        };
-        return null;
+        DequeNode leftNode = this.tail;
+
+        return new Iterator<T>() {
+            DequeNode currentNode = leftNode;
+
+            @Override
+            public boolean hasNext() {
+                return currentNode != null;
+            }
+
+            @Override
+            public T next() {
+                if (hasNext()) {
+                    T elem = currentNode.data;
+                    currentNode = currentNode.prev;
+                    return elem;
+                }
+                throw new NoSuchElementException();
+            }
+            @Override
+            public void remove() {
+                // Does nothing
+            }
+        };
     }
 
     @Override
