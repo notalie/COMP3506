@@ -109,15 +109,12 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
 
         DequeNode newNode = new DequeNode(null, this.tail, e);
 
-        if (this.head == null) {
+        if (this.tail == null) {
             this.head = newNode;
         } else {
-            this.tail.next = null;
+            this.tail.next = newNode;
         }
-
-        newNode.prev = this.tail;
         this.tail = newNode;
-
         this.size++;
     }
 
@@ -129,12 +126,11 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
         }
         DequeNode newNode = new DequeNode(this.head, null, e);
 
-        if (this.tail == null) {
+        if (this.head == null) {
             this.tail = newNode;
         } else {
             this.head.prev = newNode;
         }
-
         this.head = newNode;
         this.size++;
     }
