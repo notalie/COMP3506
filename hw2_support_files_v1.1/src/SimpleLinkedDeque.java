@@ -74,6 +74,9 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
      */
     public SimpleLinkedDeque(int capacity, SimpleDeque<? extends T> otherDeque) 
             throws IllegalArgumentException {
+        if (capacity <= 0 || otherDeque.size() > capacity) {
+            throw new IllegalArgumentException();
+        }
         this.capacity = capacity;
         Iterator<?> otherDequeIterator = otherDeque.iterator();
         while(otherDequeIterator.hasNext()) {
@@ -206,6 +209,29 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
 
     @Override
     public Iterator<T> reverseIterator() {
-        return null;
+        DequeNode rightNode = this.head;
+
+        return new Iterator<T>() {
+            DequeNode currentNode = rightNode;
+
+            @Override
+            public boolean hasNext() {
+                return currentNode != null;
+            }
+
+            @Override
+            public T next() {
+                if (hasNext()) {
+                    T elem = currentNode.data;
+                    currentNode = currentNode.next;
+                    return elem;
+                }
+                throw new NoSuchElementException();
+            }
+            @Override
+            public void remove() {
+                // Does nothing
+            }
+        };
     }
 }

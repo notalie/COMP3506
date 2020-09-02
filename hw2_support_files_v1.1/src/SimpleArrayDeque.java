@@ -31,6 +31,12 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         this.dequeArray = (T[])new Object[this.capacity];
     }
 
+    //TODO : take out
+    public T[] getArr() {
+        return this.dequeArray;
+    }
+
+
     /**
      * Constructs a new array based deque with limited capacity, and initially populates the deque
      * with the elements of another SimpleDeque.
@@ -128,7 +134,7 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
             throw new NoSuchElementException();
         }
         T elem = this.dequeArray[this.backIndex];
-        this.dequeArray[this.backIndex] = null;
+        this.dequeArray[this.backIndex--] = null;
         this.size--;
         return elem;
     }
@@ -139,7 +145,7 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
             throw new NoSuchElementException();
         }
         T elem = this.dequeArray[this.frontIndex];
-        this.dequeArray[this.frontIndex] = null;
+        this.dequeArray[this.frontIndex++] = null;
         this.size--;
         return elem;
     }
