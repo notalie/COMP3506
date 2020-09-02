@@ -175,6 +175,7 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
         }
         DequeNode headVal = this.head;
         this.head = headVal.next;
+
         this.size--;
         return headVal.data;
     }
