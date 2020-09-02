@@ -11,14 +11,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="SimpleLinkedDeque.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SimpleArrayDeque.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="198" column="5" lean-forward="true" selection-start-line="175" selection-start-column="8" selection-end-line="198" selection-end-column="5" />
+              <folding>
+                <element signature="e#2035#2036#0" expanded="true" />
+                <element signature="e#2084#2085#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrayTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/tst/ArrayTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="136" column="41" selection-start-line="136" selection-start-column="41" selection-end-line="136" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1301#1302#0" expanded="true" />
+                <element signature="e#1337#1338#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleLinkedDeque.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleLinkedDeque.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="109" column="57" selection-start-line="109" selection-start-column="57" selection-end-line="109" selection-end-column="57" />
+            <state relative-caret-position="243">
+              <caret line="207" column="20" selection-start-line="207" selection-start-column="20" selection-end-line="207" selection-end-column="20" />
               <folding>
-                <element signature="e#4961#4962#0" expanded="true" />
-                <element signature="e#4988#4989#0" expanded="true" />
                 <element signature="e#5046#5047#0" expanded="true" />
                 <element signature="e#5073#5074#0" expanded="true" />
               </folding>
@@ -29,8 +54,8 @@
       <file leaf-file-name="LinkedTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/tst/LinkedTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-14">
-              <caret line="48" column="6" lean-forward="true" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+            <state relative-caret-position="225">
+              <caret line="52" selection-start-line="52" selection-end-line="64" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -80,9 +105,9 @@
         <option value="$PROJECT_DIR$/hw2_support_files_v1.1/src/SortingAlgorithms.java" />
         <option value="$PROJECT_DIR$/hw2_support_files_v1.1/src/TimedSorting.java" />
         <option value="$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java" />
-        <option value="$PROJECT_DIR$/hw2_support_files_v1.1/tst/ArrayTest.java" />
         <option value="$PROJECT_DIR$/hw2_support_files_v1.1/tst/LinkedTest.java" />
         <option value="$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleLinkedDeque.java" />
+        <option value="$PROJECT_DIR$/hw2_support_files_v1.1/tst/ArrayTest.java" />
       </list>
     </option>
   </component>
@@ -159,13 +184,30 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="ArrayTest.pushTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="COMP3506" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ArrayTest" />
-      <option name="METHOD_NAME" value="pushTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ArrayTest.weird" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="COMP3506" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ArrayTest" />
+      <option name="METHOD_NAME" value="weird" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -184,23 +226,6 @@
       <option name="MAIN_CLASS_NAME" value="LinkedTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="LinkedTest.pushTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="COMP3506" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LinkedTest" />
-      <option name="METHOD_NAME" value="pushTests" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -285,18 +310,18 @@
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="JUnit.LinkedTest" />
-      <item itemvalue="JUnit.LinkedTest.pushTests" />
-      <item itemvalue="JUnit.ArrayTest.pushTests" />
       <item itemvalue="JUnit.LinkedTest.weird" />
       <item itemvalue="JUnit.LinkedTest.weird2" />
+      <item itemvalue="JUnit.ArrayTest" />
+      <item itemvalue="JUnit.ArrayTest.weird" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LinkedTest" />
+        <item itemvalue="JUnit.ArrayTest" />
+        <item itemvalue="JUnit.ArrayTest.weird" />
         <item itemvalue="JUnit.LinkedTest.weird2" />
         <item itemvalue="JUnit.LinkedTest.weird" />
-        <item itemvalue="JUnit.LinkedTest.pushTests" />
-        <item itemvalue="JUnit.ArrayTest.pushTests" />
       </list>
     </recent_temporary>
   </component>
@@ -314,24 +339,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedTest_weird - 2020.09.02 at 18h 13m 33s.xml">
-      <configuration name="LinkedTest.weird" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedTest_weird - 2020.09.02 at 18h 14m 34s.xml">
-      <configuration name="LinkedTest.weird" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedTest_weird - 2020.09.02 at 18h 15m 19s.xml">
-      <configuration name="LinkedTest.weird" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedTest_weird - 2020.09.02 at 18h 15m 40s.xml">
-      <configuration name="LinkedTest.weird" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedTest_weird - 2020.09.02 at 18h 17m 48s.xml">
-      <configuration name="LinkedTest.weird" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedTest_weird - 2020.09.02 at 18h 18m 18s.xml">
-      <configuration name="LinkedTest.weird" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LinkedTest_weird - 2020.09.02 at 18h 18m 29s.xml">
       <configuration name="LinkedTest.weird" configurationId="JUnit" />
     </history-entry>
@@ -344,6 +351,24 @@
     <history-entry file="LinkedTest_weird2 - 2020.09.02 at 18h 19m 03s.xml">
       <configuration name="LinkedTest.weird2" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LinkedTest_weird2 - 2020.09.02 at 18h 20m 39s.xml">
+      <configuration name="LinkedTest.weird2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedTest - 2020.09.02 at 18h 20m 46s.xml">
+      <configuration name="LinkedTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayTest - 2020.09.02 at 18h 21m 55s.xml">
+      <configuration name="ArrayTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayTest_weird - 2020.09.02 at 18h 22m 45s.xml">
+      <configuration name="ArrayTest.weird" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayTest_weird - 2020.09.02 at 18h 23m 22s.xml">
+      <configuration name="ArrayTest.weird" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayTest_weird - 2020.09.02 at 18h 24m 38s.xml">
+      <configuration name="ArrayTest.weird" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -351,13 +376,13 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.32946146" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32946146" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.15839493" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4181626" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
@@ -606,10 +631,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleLinkedDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="207" column="20" selection-start-line="207" selection-start-column="20" selection-end-line="207" selection-end-column="20" />
+          <folding>
+            <element signature="e#5046#5047#0" expanded="true" />
+            <element signature="e#5073#5074#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/tst/LinkedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="52" selection-start-line="52" selection-end-line="64" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleArrayDeque.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-129">
-          <caret line="112" column="9" lean-forward="true" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
+        <state relative-caret-position="423">
+          <caret line="198" column="5" lean-forward="true" selection-start-line="175" selection-start-column="8" selection-end-line="198" selection-end-column="5" />
           <folding>
             <element signature="e#2035#2036#0" expanded="true" />
             <element signature="e#2084#2085#0" expanded="true" />
@@ -619,32 +662,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/tst/ArrayTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="89" column="5" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+        <state relative-caret-position="369">
+          <caret line="136" column="41" selection-start-line="136" selection-start-column="41" selection-end-line="136" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1301#1302#0" expanded="true" />
             <element signature="e#1337#1338#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/tst/LinkedTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="48" column="6" lean-forward="true" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw2_support_files_v1.1/src/SimpleLinkedDeque.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="109" column="57" selection-start-line="109" selection-start-column="57" selection-end-line="109" selection-end-column="57" />
-          <folding>
-            <element signature="e#4961#4962#0" expanded="true" />
-            <element signature="e#4988#4989#0" expanded="true" />
-            <element signature="e#5046#5047#0" expanded="true" />
-            <element signature="e#5073#5074#0" expanded="true" />
           </folding>
         </state>
       </provider>

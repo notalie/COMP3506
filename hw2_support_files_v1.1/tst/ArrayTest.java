@@ -108,6 +108,40 @@ public class ArrayTest {
     }
 
     @Test
+    public void weird() {
+        SimpleArrayDeque help = new SimpleArrayDeque<>(10);
+        Integer[] nums = {1, 2, 3, 4};
+
+        for (int i = 0; i < nums.length; i++) {
+            help.pushRight(nums[i]);
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            Object elem = help.popLeft();
+            if (elem != null) {
+                Assert.assertEquals(elem, nums[i]);
+            }
+        }
+    }
+
+    @Test
+    public void weird2() {
+        SimpleArrayDeque help = new SimpleArrayDeque<>(10);
+        Integer[] nums = {1, 2, 3, 4};
+
+        for (int i = 0; i < nums.length; i++) {
+            help.pushLeft(nums[i]);
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            Object elem = help.popRight();
+            if (elem != null) {
+                Assert.assertEquals(elem, nums[i]);
+            }
+        }
+    }
+
+    @Test
     public void reverseIterator() {
         Integer[] nums = {1, 2, 3, 4};
         arrayDeque.pushRight(1);

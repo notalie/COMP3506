@@ -182,6 +182,29 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
 
     @Override
     public Iterator<T> iterator() {
+//        T[] iteratingArray = this.dequeArray.clone();
+//        int backIndex = this.backIndex;
+//        return new Iterator<T>() {
+//            int index = 0;
+//
+//            @Override
+//            public boolean hasNext() {
+//                return index <= backIndex;
+//            }
+//
+//            @Override
+//            public T next() {
+//                if (hasNext()) {
+//                    T elem = iteratingArray[index++];
+//                    return elem;
+//                }
+//                throw new NoSuchElementException();
+//            }
+//            @Override
+//            public void remove() {
+//                // Does nothing
+//            }
+//        };
         return null;
     }
 
