@@ -88,9 +88,6 @@ public class ReverseTest {
             arr[i++] = deque.popRight();
         }
 
-        System.out.println("expected: " + Arrays.toString(expected));
-        System.out.println("got " + Arrays.toString(arr));
-
         assertArrayEquals(expected, arr);
     }
 

@@ -17,7 +17,15 @@ public class ReversibleDeque<T> implements SimpleDeque<T> {
     }
 
     public void reverse() {
+        T[] elements = (T[]) new Object[size()];
+        int i = 0;
+        while (size() > 0) {
+            elements[i++] = popRight();
+        }
 
+        while (i > 0) {
+            pushLeft(elements[--i]);
+        }
     }
 
     @Override

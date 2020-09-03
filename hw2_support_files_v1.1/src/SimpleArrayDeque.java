@@ -133,8 +133,7 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         if (isEmpty()) {
             throw new NoSuchElementException();
         }
-        T elem = this.dequeArray[this.backIndex];
-        this.dequeArray[this.backIndex--] = null;
+        T elem = this.dequeArray[this.backIndex--];
         this.size--;
         return elem;
     }
@@ -144,8 +143,7 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         if (isEmpty()) {
             throw new NoSuchElementException();
         }
-        T elem = this.dequeArray[this.frontIndex];
-        this.dequeArray[this.frontIndex++] = null;
+        T elem = this.dequeArray[this.frontIndex++];
         this.size--;
         return elem;
     }
