@@ -12,13 +12,15 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
     /* The maximum capacity for the */
     private int capacity;
 
+    /* The index for the right side of the arraydeque */
     private int rightIndex;
 
+    /* The index for the left side of the arraydeque */
     private int leftIndex;
 
     /**
      * Constructs a new array based deque with limited capacity.
-     * 
+     * Memory Complexity: O(n) where n is the given capacity
      * @param capacity the capacity
      * @throws IllegalArgumentException if capacity <= 0
      */
@@ -33,16 +35,10 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         this.dequeArray = (T[])new Object[this.capacity];
     }
 
-    //TODO : take out
-    public T[] getArr() {
-        return this.dequeArray;
-    }
-
-
     /**
      * Constructs a new array based deque with limited capacity, and initially populates the deque
      * with the elements of another SimpleDeque.
-     *
+     * Memory Complexity: O(n) where n is the given capacity
      * @param otherDeque the other deque to copy elements from. otherDeque should be left intact.
      * @param capacity the capacity
      * @throws IllegalArgumentException if capacity <= 0 or size of otherDeque is > capacity
@@ -67,21 +63,42 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         }
     }
 
+    /**
+     * @return the size of the deque array
+     * Big-O: O(1) to return a single number
+     * Memory Complexity: O(1) because nothing is created
+     */
     @Override
     public boolean isEmpty() {
         return this.size == 0;
     }
 
+    /**
+     * @return a boolean indicating if the deque array is full or not
+     * Big-O: O(1) to return a single number
+     * Memory Complexity: O(1) because nothing is created
+     */
     @Override
     public boolean isFull() {
         return this.size == this.capacity;
     }
 
+    /**
+     * @return the size of the deque array
+     * Big-O: O(1) to return a single number
+     * Memory Complexity: O(1) because nothing is created
+     */
     @Override
     public int size() {
         return this.size;
     }
 
+    /**
+     * @param e Element to push into the array
+     * @throws RuntimeException - if the array deque is full
+     * Big-O: O(1) to place the element in constant time
+     * Memory Complexity: O(1) because nothing is created
+     */
     @Override
     public void pushLeft(T e) throws RuntimeException {
         if (isFull()) {
@@ -99,6 +116,12 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         this.dequeArray[leftIndex] = e;
     }
 
+    /**
+     * @param e Element to push into the array
+     * @throws RuntimeException - if the array deque is full
+     * Big-O: O(1) to place the element in constant time
+     * Memory Complexity: O(1) because nothing is created
+     */
     @Override
     public void pushRight(T e) throws RuntimeException {
         if (isFull()) {
@@ -114,6 +137,12 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         this.dequeArray[this.rightIndex] = e;
     }
 
+    /**
+     * @return - The Element on the Left Side
+     * @throws NoSuchElementException - if the array deque is empty
+     * Big-O: O(1) constant time to find the element and return it
+     * Memory Complexity: O(1) because nothing is created
+     */
     @Override
     public T peekLeft() throws NoSuchElementException {
         if (isEmpty()) {
@@ -122,6 +151,12 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         return this.dequeArray[this.leftIndex];
     }
 
+    /**
+     * @return - The Element on the Right Side
+     * @throws NoSuchElementException - if the array deque is empty
+     * Big-O: O(1) constant time to find the element and return it
+     * Memory Complexity: O(1) because nothing is created
+     */
     @Override
     public T peekRight() throws NoSuchElementException {
         if (isEmpty()) {
@@ -130,6 +165,13 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         return this.dequeArray[this.rightIndex];
     }
 
+    /**
+     * Pops the leftmost element
+     * @return - The element that has been popped from the left side
+     * @throws NoSuchElementException if the deque is empty
+     * Big-O: O(1) constant time to find the element and return it
+     * Memory Complexity: O(1) because only the element is created to return
+     */
     @Override
     public T popLeft() throws NoSuchElementException {
         if (isEmpty()) {
@@ -143,6 +185,13 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         return elem;
     }
 
+    /**
+     * Pops the rightmost element
+     * @return - The element that has been popped from the right side
+     * @throws NoSuchElementException if the deque is empty
+     * Big-O: O(1) constant time to find the element and return it
+     * Memory Complexity: O(1) because only the element is created to return
+     */
     @Override
     public T popRight() throws NoSuchElementException {
         if (isEmpty()) {
@@ -155,7 +204,15 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         this.size--;
         return elem;
     }
-    
+
+    /**
+     * For some reason I had to reverse the way that the deque went.
+     * This was because of how I had implemented my array and the tests were failing
+     *  if I didn't change this. But it works :D
+     *  Big-O: O(n) with n representing the size of the array deque
+     *  Memory Complexity: The size of the iterator which can be created in O(1) time
+     * @return - an iterator that goes from the left side to right side
+     */
     @Override
     public Iterator<T> iterator() {
         T[] iteratingArray = this.dequeArray.clone();
@@ -183,6 +240,14 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         };
     }
 
+    /**
+     * For some reason I had to reverse the way that the deque went.
+     * This was because of how I had implemented my array and the tests were failing
+     *  if I didn't change this. But it works :D
+     *  Big-O: O(n) with n representing the size of the array deque
+     *  Memory Complexity: The size of the iterator which can be created in O(1) time
+     * @return - an iterator that goes from the
+     */
     @Override
     public Iterator<T> reverseIterator() {
         T[] iteratingArray = this.dequeArray.clone();
