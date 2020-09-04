@@ -35,6 +35,16 @@ public class LinkedTest {
         deque.peekLeft();
     }
 
+    @Test
+    public void peekLeft() {
+        SimpleLinkedDeque<Integer> deque = new SimpleLinkedDeque<>();
+        deque.pushLeft(1);
+        deque.pushLeft(2);
+        deque.pushLeft(3);
+
+        Assert.assertEquals(deque.peekLeft(), Integer.valueOf(3));
+    }
+
 
     @Test
     public void pushTests() {
@@ -129,7 +139,7 @@ public class LinkedTest {
         Iterator<Integer> iter = deque.iterator();
         Integer[] actual = new Integer[arr.length];
         int i = 0;
-//        System.out.println(Arrays.toString(arr));
+
         while (i < 3) {
             Integer elem = iter.next();
             actual[i++] = elem;
