@@ -3,16 +3,18 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class SimpleArrayDeque<T> implements SimpleDeque<T> {
-
+    /* Deque Array for storing elements */
     private T[] dequeArray;
 
+    /* The size of the deque array */
     private int size;
 
+    /* The maximum capacity for the */
     private int capacity;
 
-    private int frontIndex;
+    private int rightIndex;
 
-    private int backIndex;
+    private int leftIndex;
 
     /**
      * Constructs a new array based deque with limited capacity.
@@ -25,8 +27,8 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
             throw new IllegalArgumentException();
         }
         this.capacity = capacity;
-        this.frontIndex = this.capacity; // Indicator for start of array deque
-        this.backIndex = 0;
+        this.rightIndex = this.capacity; // Indicator for start of array deque
+        this.leftIndex = 0;
 
         this.dequeArray = (T[])new Object[this.capacity];
     }
@@ -52,8 +54,8 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         }
 
         this.capacity = capacity;
-        this.frontIndex = this.capacity;
-        this.backIndex = 0;
+        this.rightIndex = this.capacity;
+        this.leftIndex = 0;
 
         this.dequeArray = (T[])new Object[this.capacity];
         Iterator<?> otherDequeIterator = otherDeque.iterator();
@@ -85,16 +87,16 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         if (isFull()) {
             throw new RuntimeException();
         }
-        if (this.frontIndex == this.capacity) { // First initialisation
-            this.frontIndex = 0;
-            this.backIndex = 0;
+        if (this.rightIndex == this.capacity) { // First initialisation
+            this.rightIndex = 0;
+            this.leftIndex = 0;
         } else {
-            this.backIndex = (this.backIndex + 1) % this.capacity;
+            this.leftIndex = (this.leftIndex + 1) % this.capacity;
         }
 
         this.size++;
 
-        this.dequeArray[backIndex] = e;
+        this.dequeArray[leftIndex] = e;
     }
 
     @Override
@@ -104,12 +106,12 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         }
         this.size++;
 
-        if (this.frontIndex == 0) {
-            this.frontIndex = this.capacity - 1;
+        if (this.rightIndex == 0) {
+            this.rightIndex = this.capacity - 1;
         } else {
-            this.frontIndex--;
+            this.rightIndex--;
         }
-        this.dequeArray[this.frontIndex] = e;
+        this.dequeArray[this.rightIndex] = e;
     }
 
     @Override
@@ -117,7 +119,7 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         if (isEmpty()) {
             throw new NoSuchElementException();
         }
-        return this.dequeArray[this.backIndex];
+        return this.dequeArray[this.leftIndex];
     }
 
     @Override
@@ -125,7 +127,7 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         if (isEmpty()) {
             throw new NoSuchElementException();
         }
-        return this.dequeArray[this.frontIndex];
+        return this.dequeArray[this.rightIndex];
     }
 
     @Override
@@ -133,7 +135,10 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         if (isEmpty()) {
             throw new NoSuchElementException();
         }
-        T elem = this.dequeArray[this.backIndex--];
+        T elem = this.dequeArray[this.leftIndex];
+        if (leftIndex > 0) {
+            leftIndex--;
+        }
         this.size--;
         return elem;
     }
@@ -143,7 +148,10 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         if (isEmpty()) {
             throw new NoSuchElementException();
         }
-        T elem = this.dequeArray[this.frontIndex++];
+        T elem = this.dequeArray[this.rightIndex];
+        if (rightIndex < this.capacity - 1) {
+            this.rightIndex++;
+        }
         this.size--;
         return elem;
     }
@@ -151,13 +159,13 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
     @Override
     public Iterator<T> iterator() {
         T[] iteratingArray = this.dequeArray.clone();
-        int frontIndex = this.frontIndex;
+        int rightIndex = this.rightIndex;
         return new Iterator<T>() {
             int index = iteratingArray.length - 1;
 
             @Override
             public boolean hasNext() {
-                return index >= frontIndex;
+                return index >= rightIndex;
             }
 
             @Override
@@ -178,13 +186,13 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
     @Override
     public Iterator<T> reverseIterator() {
         T[] iteratingArray = this.dequeArray.clone();
-        int backIndex = this.backIndex;
+        int leftIndex = this.leftIndex;
         return new Iterator<T>() {
             int index = 0;
 
             @Override
             public boolean hasNext() {
-                return index <= backIndex;
+                return index <= leftIndex;
             }
 
             @Override

@@ -51,9 +51,7 @@ public class DequeSampleTest {
 
     @Test
     public void validConstructorArrayDequeSameType() {
-        System.out.println(arrayDeque.size());
         SimpleArrayDeque<Integer> other = new SimpleArrayDeque<>(arrayDeque.size(), arrayDeque);
-
         assertTrue(other.isFull());
     }
 
