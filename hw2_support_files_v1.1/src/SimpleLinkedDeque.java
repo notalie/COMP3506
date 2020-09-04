@@ -228,7 +228,6 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
         }
         DequeNode tailVal = this.tail;
         this.tail = tailVal.prev;
-
         this.size--;
         return tailVal.data;
     }
