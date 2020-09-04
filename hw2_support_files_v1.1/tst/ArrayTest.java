@@ -142,6 +142,17 @@ public class ArrayTest {
     }
 
     @Test
+    public void pushSizeTest() {
+        arrayDeque.pushRight(1);
+        arrayDeque.pushRight(2);
+        arrayDeque.pushRight(3);
+        arrayDeque.popRight();
+        arrayDeque.popLeft();
+        arrayDeque.pushLeft(4);
+        System.out.println(Arrays.toString(arrayDeque.aa()));
+    }
+
+    @Test
     public void reverseIterator() {
         Integer[] nums = {1, 2, 3, 4};
         arrayDeque.pushRight(1);
