@@ -101,6 +101,35 @@ public class LinkedTest {
     }
 
     @Test
+    public void testUnmodifiedLinkedDeque() {
+        SimpleLinkedDeque<Integer> temp = new SimpleLinkedDeque<>(4);
+        temp.pushRight(2);
+        temp.pushRight(3);
+        temp.pushRight(4);
+        temp.pushLeft(1);
+
+        SimpleLinkedDeque<Integer> temp2 = new SimpleLinkedDeque<>(4, temp);
+        Iterator<Integer> it = temp.iterator();
+        Integer[] temp3 = new Integer[4];
+        int i = 0;
+        while (it.hasNext()) {
+            temp3[i++] = it.next();
+        }
+
+        assertArrayEquals(new Integer[]{1,2,3,4}, temp3);
+
+        it = temp2.iterator();
+        temp3 = new Integer[4];
+        i = 0;
+        while (it.hasNext()) {
+            temp3[i++] = it.next();
+            System.out.println(Arrays.toString(temp3));
+        }
+
+        assertArrayEquals(new Integer[]{1,2,3,4}, temp3);
+    }
+
+    @Test
     public void reverseIteratorLinkedDeque() {
         Integer[] arr = new Integer[15];
         SimpleLinkedDeque<Integer> deque = new SimpleLinkedDeque<>();

@@ -156,8 +156,6 @@ public class ArrayTest {
         while (it.hasNext()) {
             temp3[i++] = it.next();
         }
-        System.out.println(temp2.size());
-        System.out.println(Arrays.toString(temp3));
         assertArrayEquals(new Integer[]{1,2,3,4}, temp3);
 
         it = temp2.iterator();

@@ -102,7 +102,7 @@ public class SimpleLinkedDeque<T> implements SimpleDeque<T> {
         while(otherDequeIterator.hasNext()) {
             T elem = (T)otherDequeIterator.next();
             if (elem != null) {
-                pushLeft(elem);
+                pushRight(elem);
             }
         }
     }
