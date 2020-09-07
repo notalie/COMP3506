@@ -120,6 +120,17 @@
       <module name="a1_q3_files" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CartesianPlaneTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CartesianPlaneTest.testInvalidConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="a1_q3_files" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CartesianPlaneTest" />
+      <option name="METHOD_NAME" value="testInvalidConstructor" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -147,6 +158,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CartesianPlaneTest" />
+        <item itemvalue="JUnit.CartesianPlaneTest.testInvalidConstructor" />
         <item itemvalue="JUnit.CartesianPlaneTest.testResize" />
         <item itemvalue="JUnit.CartesianPlaneTest.testInvalidResizeExistingElement" />
       </list>

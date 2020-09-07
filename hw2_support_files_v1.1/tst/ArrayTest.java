@@ -142,6 +142,35 @@ public class ArrayTest {
     }
 
     @Test
+    public void testUnmodifiedArrayDeque() {
+        SimpleArrayDeque<Integer> temp = new SimpleArrayDeque<>(4);
+        temp.pushRight(2);
+        temp.pushRight(3);
+        temp.pushRight(4);
+        temp.pushLeft(1);
+
+        SimpleArrayDeque<Integer> temp2 = new SimpleArrayDeque<>(4, temp);
+        Iterator<Integer> it = temp.iterator();
+        Integer[] temp3 = new Integer[4];
+        int i = 0;
+        while (it.hasNext()) {
+            temp3[i++] = it.next();
+        }
+        System.out.println(temp2.size());
+        System.out.println(Arrays.toString(temp3));
+        assertArrayEquals(new Integer[]{1,2,3,4}, temp3);
+
+        it = temp2.iterator();
+        temp3 = new Integer[4];
+        i = 0;
+        while (it.hasNext()) {
+            temp3[i++] = it.next();
+        }
+
+        assertArrayEquals(new Integer[]{1,2,3,4}, temp3);
+    }
+
+    @Test
     public void pushSizeTest() {
         arrayDeque.pushRight(1);
         arrayDeque.pushRight(2);
@@ -149,7 +178,6 @@ public class ArrayTest {
         arrayDeque.popRight();
         arrayDeque.popLeft();
         arrayDeque.pushLeft(4);
-        System.out.println(Arrays.toString(arrayDeque.aa()));
     }
 
     @Test

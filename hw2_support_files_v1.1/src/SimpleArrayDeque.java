@@ -207,10 +207,6 @@ public class SimpleArrayDeque<T> implements SimpleDeque<T> {
         return elem;
     }
 
-    public T[] aa() {
-        return this.dequeArray;
-    }
-
     /**
      * For some reason I had to reverse the way that the deque went.
      * This was because of how I had implemented my array and the tests were failing
