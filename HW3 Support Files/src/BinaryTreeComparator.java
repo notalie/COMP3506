@@ -13,19 +13,19 @@ public class BinaryTreeComparator<E extends Comparable<E>> implements Comparator
             return 1;
         }
 
-        if (tree1.getValue().compareTo(tree2.getValue()) != 0) { // see if the values are the same, if not - return
-            return tree1.getValue().compareTo(tree2.getValue());
-        }
-
-        if (tree1.getLeft() != null && tree2.getLeft() != null) { // Left exists for both
+        if (tree1.getLeft() != null && tree2.getLeft() != null && tree1.getValue().compareTo(tree2.getValue()) == 0) { // Left exists for both
             counter += compareRecurse(tree1.getLeft(), tree2.getLeft(), counter);
         } else if (tree1.getLeft() == null && tree2.getLeft() != null) { // Check for non existent left
-            return -1; //
+            return -1;
         } else if (tree1.getLeft() != null && tree2.getLeft() == null) { // Check for non existent left
             return 1;
         }
 
-        if (tree1.getRight() != null && tree2.getRight() != null) { // Right exists for both
+        if (tree1.getValue().compareTo(tree2.getValue()) != 0) { // see if the values are the same, if not - return
+            return tree1.getValue().compareTo(tree2.getValue());
+        }
+
+        if (tree1.getRight() != null && tree2.getRight() != null && tree1.getValue().compareTo(tree2.getValue()) == 0) { // Right exists for both
             counter += compareRecurse(tree1.getRight(), tree2.getRight(), counter);
         } else if (tree1.getRight() == null && tree2.getRight() != null) { // Check for non existent right
             return -1;
