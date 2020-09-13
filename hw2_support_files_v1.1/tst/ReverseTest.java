@@ -41,6 +41,34 @@ public class ReverseTest {
         assertEquals(Integer.valueOf(5), deque.popLeft());
     }
 
+    @Test
+    public void testUnmodifiedLinkedDeque() {
+        SimpleLinkedDeque<Integer> temp = new SimpleLinkedDeque<>(4);
+        temp.pushRight(2);
+        temp.pushRight(3);
+        temp.pushRight(4);
+        temp.pushLeft(1);
+
+        ReversibleDeque<Integer> temp2 = new ReversibleDeque<>( temp);
+        Iterator<Integer> it = temp.iterator();
+        Integer[] temp3 = new Integer[4];
+        int i = 0;
+        while (it.hasNext()) {
+            temp3[i++] = it.next();
+        }
+
+        assertArrayEquals(new Integer[]{1,2,3,4}, temp3);
+
+        it = temp2.iterator();
+        temp3 = new Integer[4];
+        i = 0;
+        while (it.hasNext()) {
+            temp3[i++] = it.next();
+        }
+
+        assertArrayEquals(new Integer[]{1,2,3,4}, temp3);
+    }
+
     @Test(expected = NoSuchElementException.class)
     public void testInvalidPeekLeftReversibleDeque() {
         ReversibleDeque<Integer> deque = new ReversibleDeque<>(emptyDeque);
