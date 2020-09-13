@@ -25,11 +25,11 @@ public class QuaternaryHeapsortTest {
     
     @Test
     public void testDownHeap2() {
-        Integer[] input = {1, 2, 3, 4, 0, 10, 20, 30, 40};
+        Integer[] input = {1, 0, 2, 3, 4, 10, 20, 30, 40};
         
-        QuaternaryHeapsort.quaternaryDownheap(input, 4);
+        QuaternaryHeapsort.quaternaryDownheap(input, 1);
         
-        assertArrayEquals(new Integer[] { 1, 2, 3, 4, 40, 10, 20, 30, 0 }, input);
+        assertArrayEquals(new Integer[] { 1, 40, 2, 3, 4, 10, 20, 30, 0 }, input);
     }
     
 }

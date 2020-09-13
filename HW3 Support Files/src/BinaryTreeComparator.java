@@ -6,23 +6,40 @@ import java.util.Comparator;
  */
 public class BinaryTreeComparator<E extends Comparable<E>> implements Comparator<BinaryTree<E>> {
 
-    public int compareRecurse(BinaryTree<E> tree1, BinaryTree<E> tree2) {
+    public int compareRecurse(BinaryTree<E> tree1, BinaryTree<E> tree2, int counter) {
         if (tree1 == null) { // Error checking if any are null
             return -1;
-        } else if (tree2 == null) {
+        } else if (tree2 == null) { // Checks to see if the node is null
             return 1;
         }
 
-        if (tree1.getValue().compareTo(tree2.getValue()) != 0) { // tree1 < tree2 or tree1 < tree2
+        if (tree1.getValue().compareTo(tree2.getValue()) != 0) { // see if the values are the same, if not - return
             return tree1.getValue().compareTo(tree2.getValue());
         }
 
-        // We know that the values are equal. Now recuse I think?
-        if (compareRecurse(tree1.getLeft(), tree2.getLeft()) != 0 &&
-                compareRecurse(tree1.getRight(), tree2.getRight()) != 0) {
+        if (tree1.getLeft() != null && tree2.getLeft() != null) { // Left exists for both
+            counter += compareRecurse(tree1.getLeft(), tree2.getLeft(), counter);
+        } else if (tree1.getLeft() == null && tree2.getLeft() != null) { // Check for non existent left
+            return -1; //
+        } else if (tree1.getLeft() != null && tree2.getLeft() == null) { // Check for non existent left
+            return 1;
+        }
+
+        if (tree1.getRight() != null && tree2.getRight() != null) { // Right exists for both
+            counter += compareRecurse(tree1.getRight(), tree2.getRight(), counter);
+        } else if (tree1.getRight() == null && tree2.getRight() != null) { // Check for non existent right
+            return -1;
+        } else if (tree1.getRight() != null && tree2.getRight() == null) { // Check for non existent right
+            return 1;
+        }
+
+        if (counter < 0) {
+            return -1;
+        } else if (counter > 0) {
+            return 1;
+        } else {
             return 0;
         }
-        return -1;
     }
 
     /**
@@ -37,9 +54,6 @@ public class BinaryTreeComparator<E extends Comparable<E>> implements Comparator
      */
     @Override
     public int compare(BinaryTree<E> tree1, BinaryTree<E> tree2) {
-        int leftSide = 0;
-        int rightSide = 0;
-
-        return compareRecurse(tree1, tree2);
+        return compareRecurse(tree1, tree2, 0);
     }
 }

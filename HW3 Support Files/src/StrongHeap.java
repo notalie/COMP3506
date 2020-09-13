@@ -11,7 +11,6 @@ public class StrongHeap {
      * @return true if the tree is a strong heap, otherwise false.
      */
     public static boolean isStrongHeap(BinaryTree<Integer> root) {
-
         return false; // TODO: implement question 2
     }
 }
