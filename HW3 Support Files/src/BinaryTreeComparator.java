@@ -1,9 +1,29 @@
+import java.awt.*;
 import java.util.Comparator;
 
 /**
  * A comparator for Binary Trees.
  */
 public class BinaryTreeComparator<E extends Comparable<E>> implements Comparator<BinaryTree<E>> {
+
+    public int compareRecurse(BinaryTree<E> tree1, BinaryTree<E> tree2) {
+        if (tree1 == null) { // Error checking if any are null
+            return -1;
+        } else if (tree2 == null) {
+            return 1;
+        }
+
+        if (tree1.getValue().compareTo(tree2.getValue()) != 0) { // tree1 < tree2 or tree1 < tree2
+            return tree1.getValue().compareTo(tree2.getValue());
+        }
+
+        // We know that the values are equal. Now recuse I think?
+        if (compareRecurse(tree1.getLeft(), tree2.getLeft()) != 0 &&
+                compareRecurse(tree1.getRight(), tree2.getRight()) != 0) {
+            return 0;
+        }
+        return -1;
+    }
 
     /**
      * Compares two binary trees with the given root nodes.
@@ -17,7 +37,9 @@ public class BinaryTreeComparator<E extends Comparable<E>> implements Comparator
      */
     @Override
     public int compare(BinaryTree<E> tree1, BinaryTree<E> tree2) {
-        // TODO: implement question 3 here
-        return 0;
+        int leftSide = 0;
+        int rightSide = 0;
+
+        return compareRecurse(tree1, tree2);
     }
 }
