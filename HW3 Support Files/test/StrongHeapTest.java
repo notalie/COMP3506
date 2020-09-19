@@ -49,6 +49,7 @@ public class StrongHeapTest {
         assertFalse(StrongHeap.isStrongHeap(
                 left(leaf(100), 10)
         ));
+//        StrongHeap.isStrongHeap(left(leaf(100), 10));
     }
 
     @Test
