@@ -98,4 +98,28 @@ public class StrongHeapTest {
         ));
     }
 
+    @Test
+    public void testExample1() {
+        // Example From the Sheet
+        assertTrue(StrongHeap.isStrongHeap(
+                tree(tree(leaf(4), 5,leaf(3)), 10, leaf(6))
+        ));
+    }
+
+    @Test
+    public void testExample2() {
+        // Example From the Sheet
+        assertFalse(StrongHeap.isStrongHeap(
+                tree(tree(leaf(5), 5,leaf(3)), 10, leaf(6))
+        ));
+    }
+
+    @Test
+    public void testExample3() {
+        // Example From the Sheet
+        assertFalse(StrongHeap.isStrongHeap(
+                tree(right(5,leaf(3)), 10, leaf(6))
+        ));
+    }
+
 }
