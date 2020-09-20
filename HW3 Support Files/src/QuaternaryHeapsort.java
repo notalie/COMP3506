@@ -17,8 +17,9 @@ public class QuaternaryHeapsort {
      *
      * @param input array representing a quaternary max heap.
      * @param start position in the array to start the downheap from.
+     * @param size the size of the heap in the input array, starting from index 0
      */
-    public static <T extends Comparable<T>> void quaternaryDownheap(T[] input, int start) {
+    public static <T extends Comparable<T>> void quaternaryDownheap(T[] input, int start, int size) {
         // TODO: implement question 1 here
     }
 

@@ -76,4 +76,46 @@ public class BinaryTreeComparatorTest {
         ));
     }
 
+    @Test
+    public void fuckingExtreme() {
+        assertEquals(-1, c.compare(tree(tree(tree(leaf(12),25,leaf(12)),
+                50,
+                tree(leaf(12),25,leaf(12))),
+                100,
+                tree(tree(leaf(12),25,leaf(12)),50,tree(leaf(12),25,null))),
+                tree(tree(tree(leaf(12),25,leaf(12)),
+                        50,
+                        tree(leaf(12),25,leaf(12))),
+                        100,
+                        tree(tree(leaf(12),25,leaf(12)),50,tree(leaf(12),25,leaf(12))))));
+    }
+
+    @Test
+    public void fuckingExtreme2() {
+        assertEquals(0, c.compare(tree(tree(tree(leaf(12),25,leaf(12)),
+                50,
+                tree(leaf(12),25,leaf(12))),
+                100,
+                tree(tree(leaf(12),25,leaf(12)),50,tree(leaf(12),25,leaf(12)))),
+                tree(tree(tree(leaf(12),25,leaf(12)),
+                        50,
+                        tree(leaf(12),25,leaf(12))),
+                        100,
+                        tree(tree(leaf(12),25,leaf(12)),50,tree(leaf(12),25,leaf(12))))));
+    }
+
+    @Test
+    public void fuckingExtreme3() {
+        assertEquals(1, c.compare(tree(tree(tree(leaf(12),25,leaf(12)),
+                50,
+                tree(leaf(12),25,leaf(12))),
+                100,
+                tree(tree(leaf(12),25,leaf(12)),50,tree(leaf(12),25,leaf(12)))),
+                tree(tree(tree(leaf(12),25,leaf(12)),
+                        50,
+                        tree(leaf(12),25,leaf(12))),
+                        100,
+                        tree(tree(leaf(12),25,leaf(12)),50,tree(leaf(12),25,null)))));
+    }
+
 }
