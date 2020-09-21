@@ -9,6 +9,9 @@ public class QuaternaryHeapsort {
         // TODO: implement question 1 here
     }
 
+
+    //Return 4*index + 1
+
     /**
      * Performs a downheap from the element in the given position on the given max heap array.
      *
@@ -21,6 +24,7 @@ public class QuaternaryHeapsort {
      */
     public static <T extends Comparable<T>> void quaternaryDownheap(T[] input, int start, int size) {
         // TODO: implement question 1 here
+
     }
 
 }

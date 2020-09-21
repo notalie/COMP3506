@@ -49,6 +49,7 @@ public class StrongHeapTest {
         assertFalse(StrongHeap.isStrongHeap(
                 left(leaf(100), 10)
         ));
+//        StrongHeap.isStrongHeap(left(leaf(100), 10));
     }
 
     @Test
@@ -94,6 +95,30 @@ public class StrongHeapTest {
         // not a complete tree
         assertFalse(StrongHeap.isStrongHeap(
                 right(100, leaf(0))
+        ));
+    }
+
+    @Test
+    public void testExample1() {
+        // Example From the Sheet
+        assertTrue(StrongHeap.isStrongHeap(
+                tree(tree(leaf(4), 5,leaf(3)), 10, leaf(6))
+        ));
+    }
+
+    @Test
+    public void testExample2() {
+        // Example From the Sheet
+        assertFalse(StrongHeap.isStrongHeap(
+                tree(tree(leaf(5), 5,leaf(3)), 10, leaf(6))
+        ));
+    }
+
+    @Test
+    public void testExample3() {
+        // Example From the Sheet
+        assertFalse(StrongHeap.isStrongHeap(
+                tree(right(5,leaf(3)), 10, leaf(6))
         ));
     }
 
