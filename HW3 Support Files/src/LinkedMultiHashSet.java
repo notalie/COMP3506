@@ -33,14 +33,6 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
             this.value = value;
             this.occurences = occurences;
         }
-
-        private void remove(int amountToRemove) {
-            occurences -= amountToRemove;
-        }
-
-        private void add(int amountToAdd) {
-            occurences += amountToAdd;
-        }
     }
 
     private int initialCapacity;
@@ -51,17 +43,14 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
 
     private int distinctCount;
 
-    private T[] addArray;
-
-    private int addArrayIndex;
+    private T[] occurenceArray;
 
     public LinkedMultiHashSet(int initialCapacity) {
         this.initialCapacity = initialCapacity;
         this.setArray =  new Object[initialCapacity];
         this.size = 0;
         this.distinctCount = 0;
-        this.addArray = (T[]) new Object[initialCapacity];
-        this.addArrayIndex = 0;
+        this.occurenceArray = (T[]) new Object[initialCapacity];
     }
 
     private int getHash(T element) {
@@ -75,6 +64,19 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
             } else {
                 hash = (hash + 1) % internalCapacity();
             }
+        }
+    }
+
+    public void checkCapacity() {
+        // Would Cause Overflow
+        if (this.initialCapacity < this.distinctCount + 1) {
+            Object[] newArray = new Object[initialCapacity * 2];
+
+            for (int i = 0; i < this.size; i++) {
+                newArray[i] = this.setArray[i];
+            }
+            initialCapacity *= 2;
+            this.setArray = newArray;
         }
     }
 
@@ -92,10 +94,10 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
             existingElem.occurences += 1;
         } else {
             this.setArray[getHash(element)] = new Node(element, 1);
-            this.addArray[this.addArrayIndex++] = element;
             distinctCount++;
         }
         this.size++;
+        checkCapacity();
     }
 
     /**
@@ -112,9 +114,9 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         } else {
             this.setArray[getHash(element)] = new Node(element, count);
             distinctCount++;
-            this.addArray[this.addArrayIndex++] = element;
         }
         this.size += count;
+        checkCapacity();
     }
 
     /**

@@ -2,6 +2,8 @@ import static org.junit.Assert.*;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+
+import org.junit.Assert;
 import org.junit.Test;
 
 public class LinkedMultiHashSetTest {
@@ -91,6 +93,18 @@ public class LinkedMultiHashSetTest {
         assertEquals(3, (int) it.next());
         
         assertFalse(it.hasNext());
+    }
+
+    @Test
+    public void testResize() {
+        LinkedMultiHashSet<Integer> set = new LinkedMultiHashSet<>(3);
+
+        set.add(1);
+        set.add(2);
+        Assert.assertEquals(set.internalCapacity(), 3);
+        set.add(3);
+        set.add(4);
+        Assert.assertEquals(set.internalCapacity(), 6);
     }
 
 
