@@ -22,8 +22,8 @@
       <file leaf-file-name="LinkedMultiHashSet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LinkedMultiHashSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
+            <state relative-caret-position="252">
+              <caret line="199" column="28" selection-start-line="199" selection-start-column="28" selection-end-line="199" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#checkAndResize#0;class#LinkedMultiHashSet#0" />
@@ -46,8 +46,8 @@
       <file leaf-file-name="LinkedMultiHashSetTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/LinkedMultiHashSetTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="95" column="33" lean-forward="true" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
+            <state relative-caret-position="180">
+              <caret line="57" column="8" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -275,10 +275,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LinkedMultiHashSetTest" />
+        <item itemvalue="JUnit.LinkedMultiHashSetTest.testRemovals" />
         <item itemvalue="JUnit.LinkedMultiHashSetTest.testIteratorSimple" />
         <item itemvalue="JUnit.StrongHeapTest" />
         <item itemvalue="JUnit.LinkedMultiHashSetTest.testRearrangeArray" />
-        <item itemvalue="JUnit.LinkedMultiHashSetTest.testRemovals" />
       </list>
     </recent_temporary>
   </component>
@@ -297,35 +297,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.22 at 23h 51m 41s.xml">
+    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 01h 23m 28s.xml">
       <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.22 at 23h 53m 11s.xml">
+    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 01h 24m 02s.xml">
       <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 00h 01m 15s.xml">
+    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 01h 24m 21s.xml">
       <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 00h 02m 01s.xml">
+    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 01h 24m 50s.xml">
       <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 00h 02m 41s.xml">
+    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 01h 24m 51s.xml">
       <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 00h 02m 43s.xml">
+    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 01h 25m 49s.xml">
       <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 00h 35m 51s.xml">
+    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 01h 26m 27s.xml">
       <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StrongHeapTest - 2020.09.23 at 00h 35m 54s.xml">
-      <configuration name="StrongHeapTest" configurationId="JUnit" />
+    <history-entry file="LinkedMultiHashSetTest_testRemovals - 2020.09.23 at 01h 26m 32s.xml">
+      <configuration name="LinkedMultiHashSetTest.testRemovals" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 00h 42m 56s.xml">
-      <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
+    <history-entry file="LinkedMultiHashSetTest_testRemovals - 2020.09.23 at 01h 27m 04s.xml">
+      <configuration name="LinkedMultiHashSetTest.testRemovals" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedMultiHashSetTest_testIteratorSimple - 2020.09.23 at 00h 43m 01s.xml">
-      <configuration name="LinkedMultiHashSetTest.testIteratorSimple" configurationId="JUnit" />
+    <history-entry file="LinkedMultiHashSetTest_testRemovals - 2020.09.23 at 01h 27m 24s.xml">
+      <configuration name="LinkedMultiHashSetTest.testRemovals" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -340,7 +340,7 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31151003" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31151003" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
@@ -350,7 +350,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39872068" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39809927" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -404,7 +404,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -466,15 +466,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/LinkedMultiHashSetTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="95" column="33" lean-forward="true" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
+        <state relative-caret-position="180">
+          <caret line="57" column="8" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedMultiHashSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
+        <state relative-caret-position="252">
+          <caret line="199" column="28" selection-start-line="199" selection-start-column="28" selection-end-line="199" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#checkAndResize#0;class#LinkedMultiHashSet#0" />

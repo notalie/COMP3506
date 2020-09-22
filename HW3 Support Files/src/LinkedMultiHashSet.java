@@ -107,7 +107,17 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         if (contains(element)) {
             modifyNode(element, 1);
         } else {
-            this.setArray[getHash(element)] =  new Node(element, 1);
+            Node temp = this.head;
+            if (temp != null) {
+                while(temp.next != null) {
+                    temp = temp.next;
+                }
+                temp.next = new Node(element, 1);
+            } else { // head hasn't been initalised
+                this.head = new Node(element, 1);
+            }
+
+            this.setArray[getHash(element)] = new Node(element, 1);
             distinctCount++;
             this.size++;
         }
@@ -125,6 +135,16 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         if (contains(element)) {
             modifyNode(element, count);
         } else {
+            Node temp = this.head;
+            if (this.head != null) {
+                while(temp.next != null) {
+                    temp = temp.next;
+                }
+                temp.next = new Node(element, count);
+            } else { // head hasn't been initalised
+                this.head.next = new Node(element, count);
+            }
+
             this.setArray[getHash(element)] = new Node(element, count);
             distinctCount++;
             this.size += count;
@@ -176,6 +196,18 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
     public void remove(T element) throws NoSuchElementException {
         if (contains(element)) {
             modifyNode(element, -1);
+            Node temp = this.head;
+            Node prev = temp;
+
+            if (temp != null) {
+                while(!temp.value.equals(element)) {
+
+                    System.out.println(temp);
+                    prev = temp;
+                    temp = temp.next;
+                }
+                prev.next = temp.next;
+            }
         } else {
             throw new NoSuchElementException();
         }
@@ -197,6 +229,18 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
             if ( existingElem.occurences < count) {
                 throw new NoSuchElementException();
             }
+            modifyNode(element, -1 * count);
+            Node temp = this.head;
+            Node prev = null;
+
+            if (this.head != null) {
+                while(temp.next.value.equals(element)) {
+                    prev = temp;
+                    temp = temp.next;
+                }
+                prev.next = temp.next;
+            }
+
         } else {
             throw new NoSuchElementException();
         }
