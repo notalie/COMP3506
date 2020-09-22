@@ -33,7 +33,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="JUnit.LinkedMultiHashSetTest">
+  <component name="RunManager" selected="JUnit.LinkedMultiHashSetTest.testRearrangeArray">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -51,11 +51,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedMultiHashSetTest.testBasicUsage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LinkedMultiHashSetTest.testIteratorSimple" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW3 Support Files" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LinkedMultiHashSetTest" />
-      <option name="METHOD_NAME" value="testBasicUsage" />
+      <option name="METHOD_NAME" value="testIteratorSimple" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -63,11 +63,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedMultiHashSetTest.testHashes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LinkedMultiHashSetTest.testRearrangeArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW3 Support Files" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LinkedMultiHashSetTest" />
-      <option name="METHOD_NAME" value="testHashes" />
+      <option name="METHOD_NAME" value="testRearrangeArray" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedMultiHashSetTest.testRemovals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW3 Support Files" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LinkedMultiHashSetTest" />
+      <option name="METHOD_NAME" value="testRemovals" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -81,17 +93,6 @@
       <option name="MAIN_CLASS_NAME" value="LinkedMultiHashSetTest" />
       <option name="METHOD_NAME" value="testResize" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StrongHeapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HW3 Support Files" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="StrongHeapTest" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -117,19 +118,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.LinkedMultiHashSetTest.testHashes" />
-      <item itemvalue="JUnit.StrongHeapTest" />
       <item itemvalue="JUnit.LinkedMultiHashSetTest" />
-      <item itemvalue="JUnit.LinkedMultiHashSetTest.testBasicUsage" />
       <item itemvalue="JUnit.LinkedMultiHashSetTest.testResize" />
+      <item itemvalue="JUnit.LinkedMultiHashSetTest.testIteratorSimple" />
+      <item itemvalue="JUnit.LinkedMultiHashSetTest.testRemovals" />
+      <item itemvalue="JUnit.LinkedMultiHashSetTest.testRearrangeArray" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LinkedMultiHashSetTest.testRearrangeArray" />
         <item itemvalue="JUnit.LinkedMultiHashSetTest" />
+        <item itemvalue="JUnit.LinkedMultiHashSetTest.testRemovals" />
+        <item itemvalue="JUnit.LinkedMultiHashSetTest.testIteratorSimple" />
         <item itemvalue="JUnit.LinkedMultiHashSetTest.testResize" />
-        <item itemvalue="JUnit.LinkedMultiHashSetTest.testBasicUsage" />
-        <item itemvalue="JUnit.LinkedMultiHashSetTest.testHashes" />
-        <item itemvalue="JUnit.StrongHeapTest" />
       </list>
     </recent_temporary>
   </component>
@@ -148,38 +149,38 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="239" key="GridCell.Tab.0.bottom" timestamp="1600766648279">
+    <state width="1398" height="247" key="GridCell.Tab.0.bottom" timestamp="1600772784436">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="239" key="GridCell.Tab.0.bottom/0.23.1440.782@0.23.1440.782" timestamp="1600766648279" />
-    <state width="1398" height="239" key="GridCell.Tab.0.center" timestamp="1600766648278">
+    <state width="1398" height="247" key="GridCell.Tab.0.bottom/0.23.1440.782@0.23.1440.782" timestamp="1600772784436" />
+    <state width="1398" height="247" key="GridCell.Tab.0.center" timestamp="1600772784435">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="239" key="GridCell.Tab.0.center/0.23.1440.782@0.23.1440.782" timestamp="1600766648278" />
-    <state width="1398" height="239" key="GridCell.Tab.0.left" timestamp="1600766648277">
+    <state width="1398" height="247" key="GridCell.Tab.0.center/0.23.1440.782@0.23.1440.782" timestamp="1600772784435" />
+    <state width="1398" height="247" key="GridCell.Tab.0.left" timestamp="1600772784434">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="239" key="GridCell.Tab.0.left/0.23.1440.782@0.23.1440.782" timestamp="1600766648277" />
-    <state width="1398" height="239" key="GridCell.Tab.0.right" timestamp="1600766648278">
+    <state width="1398" height="247" key="GridCell.Tab.0.left/0.23.1440.782@0.23.1440.782" timestamp="1600772784434" />
+    <state width="1398" height="247" key="GridCell.Tab.0.right" timestamp="1600772784435">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="239" key="GridCell.Tab.0.right/0.23.1440.782@0.23.1440.782" timestamp="1600766648278" />
-    <state width="1398" height="247" key="GridCell.Tab.1.bottom" timestamp="1600766347889">
+    <state width="1398" height="247" key="GridCell.Tab.0.right/0.23.1440.782@0.23.1440.782" timestamp="1600772784435" />
+    <state width="1398" height="247" key="GridCell.Tab.1.bottom" timestamp="1600772784438">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.1.bottom/0.23.1440.782@0.23.1440.782" timestamp="1600766347889" />
-    <state width="1398" height="247" key="GridCell.Tab.1.center" timestamp="1600766347888">
+    <state width="1398" height="247" key="GridCell.Tab.1.bottom/0.23.1440.782@0.23.1440.782" timestamp="1600772784438" />
+    <state width="1398" height="247" key="GridCell.Tab.1.center" timestamp="1600772784436">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.1.center/0.23.1440.782@0.23.1440.782" timestamp="1600766347888" />
-    <state width="1398" height="247" key="GridCell.Tab.1.left" timestamp="1600766347888">
+    <state width="1398" height="247" key="GridCell.Tab.1.center/0.23.1440.782@0.23.1440.782" timestamp="1600772784436" />
+    <state width="1398" height="247" key="GridCell.Tab.1.left" timestamp="1600772784436">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.1.left/0.23.1440.782@0.23.1440.782" timestamp="1600766347888" />
-    <state width="1398" height="247" key="GridCell.Tab.1.right" timestamp="1600766347889">
+    <state width="1398" height="247" key="GridCell.Tab.1.left/0.23.1440.782@0.23.1440.782" timestamp="1600772784436" />
+    <state width="1398" height="247" key="GridCell.Tab.1.right" timestamp="1600772784437">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.1.right/0.23.1440.782@0.23.1440.782" timestamp="1600766347889" />
+    <state width="1398" height="247" key="GridCell.Tab.1.right/0.23.1440.782@0.23.1440.782" timestamp="1600772784437" />
     <state x="208" y="23" key="SettingsEditor" timestamp="1600612187847">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
@@ -188,6 +189,17 @@
       <screen x="0" y="23" width="1440" height="782" />
     </state>
     <state x="385" y="129" key="search.everywhere.popup/0.23.1440.782@0.23.1440.782" timestamp="1600763784688" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/LinkedMultiHashSetTest.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>

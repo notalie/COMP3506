@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -45,12 +46,15 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
 
     private T[] occurenceArray;
 
+    private int occurenceIndex;
+
     public LinkedMultiHashSet(int initialCapacity) {
         this.initialCapacity = initialCapacity;
         this.setArray =  new Object[initialCapacity];
         this.size = 0;
         this.distinctCount = 0;
         this.occurenceArray = (T[]) new Object[initialCapacity];
+        this.occurenceIndex = 0;
     }
 
     private int getHash(T element) {
@@ -67,17 +71,45 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         }
     }
 
-    public void checkCapacity() {
+    private void checkAndResize() {
         // Would Cause Overflow
         if (this.initialCapacity < this.distinctCount + 1) {
             Object[] newArray = new Object[initialCapacity * 2];
+            T[] newOccurrenceArray = (T[]) new Object[initialCapacity * 2];
 
-            for (int i = 0; i < this.size; i++) {
+            for (int i = 0; i < this.initialCapacity; i++) {
                 newArray[i] = this.setArray[i];
+                newOccurrenceArray[i] = this.occurenceArray[i];
             }
             initialCapacity *= 2;
             this.setArray = newArray;
+            this.occurenceArray = newOccurrenceArray;
         }
+    }
+
+    private void rearrangeOccurrenceArray(T element) {
+        // remove the element
+        // shuffle everything down
+        int elemIndex = 0;
+        while(!this.occurenceArray[elemIndex].equals(element)) {
+            elemIndex++;
+        }
+        this.occurenceArray[elemIndex] = null;
+//        this.occurenceArray[occurenceIndex--] = element;
+        System.out.println(Arrays.toString( this.occurenceArray));
+    }
+
+    private void modifyNode(T element, int amount) {
+        Node existingElem = (Node) this.setArray[getHash(element)];
+        existingElem.occurences += amount;
+
+        if (existingElem.occurences == 0) {
+            this.setArray[getHash(element)] = null;
+            distinctCount--;
+            rearrangeOccurrenceArray(element);
+        }
+
+        this.size += amount;
     }
 
     /**
@@ -90,14 +122,14 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
     @Override
     public void add(T element) {
         if (contains(element)) {
-            Node existingElem = (Node) this.setArray[getHash(element)];
-            existingElem.occurences += 1;
+            modifyNode(element, 1);
         } else {
             this.setArray[getHash(element)] = new Node(element, 1);
             distinctCount++;
+            this.occurenceArray[occurenceIndex++] = element;
+            this.size++;
         }
-        this.size++;
-        checkCapacity();
+        checkAndResize();
     }
 
     /**
@@ -109,14 +141,14 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
     @Override
     public void add(T element, int count) {
         if (contains(element)) {
-            Node existingElem = (Node)this.setArray[getHash(element)];
-            existingElem.occurences += count;
+            modifyNode(element, count);
         } else {
             this.setArray[getHash(element)] = new Node(element, count);
             distinctCount++;
+            this.occurenceArray[occurenceIndex++] = element;
+            this.size += count;
         }
-        this.size += count;
-        checkCapacity();
+        checkAndResize();
     }
 
     /**
@@ -162,13 +194,7 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
     @Override
     public void remove(T element) throws NoSuchElementException {
         if (contains(element)) {
-            Node existingElem = (Node)this.setArray[getHash(element)];
-            existingElem.occurences -= 1;
-            if (existingElem.occurences == 0) {
-                this.setArray[getHash(element)] = null;
-                distinctCount--;
-            }
-            this.size--;
+            modifyNode(element, -1);
         } else {
             throw new NoSuchElementException();
         }
@@ -190,13 +216,6 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
             if ( existingElem.occurences < count) {
                 throw new NoSuchElementException();
             }
-
-            existingElem.occurences -= count;
-            if (existingElem.occurences == 0) {
-                this.setArray[getHash(element)] = null;
-                distinctCount--;
-            }
-            this.size--;
         } else {
             throw new NoSuchElementException();
         }

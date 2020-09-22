@@ -9,6 +9,16 @@ import org.junit.Test;
 public class LinkedMultiHashSetTest {
 
     @Test
+    public void testRearrangeArray() {
+        LinkedMultiHashSet<Integer> set = new LinkedMultiHashSet<>(5);
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        set.add(4);
+        set.remove(2);
+    }
+
+    @Test
     public void testBasicUsage() {
         LinkedMultiHashSet<Integer> set = new LinkedMultiHashSet<>(5);
         
