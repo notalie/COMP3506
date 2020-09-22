@@ -28,6 +28,8 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
 
         private T value;
 
+        private Node next;
+
         private int occurences;
 
         private Node(T value, int occurences) {
@@ -44,17 +46,12 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
 
     private int distinctCount;
 
-    private T[] occurenceArray;
-
-    private int occurenceIndex;
 
     public LinkedMultiHashSet(int initialCapacity) {
         this.initialCapacity = initialCapacity;
         this.setArray =  new Object[initialCapacity];
         this.size = 0;
         this.distinctCount = 0;
-        this.occurenceArray = (T[]) new Object[initialCapacity];
-        this.occurenceIndex = 0;
     }
 
     private int getHash(T element) {
@@ -79,24 +76,10 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
 
             for (int i = 0; i < this.initialCapacity; i++) {
                 newArray[i] = this.setArray[i];
-                newOccurrenceArray[i] = this.occurenceArray[i];
             }
             initialCapacity *= 2;
             this.setArray = newArray;
-            this.occurenceArray = newOccurrenceArray;
         }
-    }
-
-    private void rearrangeOccurrenceArray(T element) {
-        // remove the element
-        // shuffle everything down
-        int elemIndex = 0;
-        while(!this.occurenceArray[elemIndex].equals(element)) {
-            elemIndex++;
-        }
-        this.occurenceArray[elemIndex] = null;
-//        this.occurenceArray[occurenceIndex--] = element;
-        System.out.println(Arrays.toString( this.occurenceArray));
     }
 
     private void modifyNode(T element, int amount) {
@@ -106,7 +89,6 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         if (existingElem.occurences == 0) {
             this.setArray[getHash(element)] = null;
             distinctCount--;
-            rearrangeOccurrenceArray(element);
         }
 
         this.size += amount;
@@ -126,7 +108,6 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         } else {
             this.setArray[getHash(element)] = new Node(element, 1);
             distinctCount++;
-            this.occurenceArray[occurenceIndex++] = element;
             this.size++;
         }
         checkAndResize();
@@ -145,7 +126,6 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         } else {
             this.setArray[getHash(element)] = new Node(element, count);
             distinctCount++;
-            this.occurenceArray[occurenceIndex++] = element;
             this.size += count;
         }
         checkAndResize();
