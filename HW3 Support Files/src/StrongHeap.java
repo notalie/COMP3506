@@ -1,4 +1,3 @@
-import java.math.*;
 public class StrongHeap {
     /*
     * 1. Find depth of the tree (simple algorithm).

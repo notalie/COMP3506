@@ -22,15 +22,65 @@ import java.util.NoSuchElementException;
  */
 public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
 
-    // TODO: implement question 4 in this file
-    
-    public LinkedMultiHashSet(int initialCapacity) {
-        
+
+    private class Node {
+
+        private T value;
+
+        private int occurences;
+
+        private Node(T value, int occurences) {
+            this.value = value;
+            this.occurences = occurences;
+        }
+
+        private void remove(int amountToRemove) {
+            occurences -= amountToRemove;
+        }
+
+        private void add(int amountToAdd) {
+            occurences += amountToAdd;
+        }
     }
 
+    // TODO: implement question 4 in this file
+    private int initialCapacity;
+
+    private Object[] setArray;
+
+    public LinkedMultiHashSet(int initialCapacity) {
+        this.initialCapacity = initialCapacity;
+        setArray =  new Object[initialCapacity];
+    }
+
+    private int getHash(T element) {
+        int hash = element.hashCode() % internalCapacity();
+        while(true) {
+            Node value = (Node) this.setArray[hash];
+            // Need to fix to account for null pointers
+            if (this.setArray[hash] != null && value.value == element) {
+                return hash;
+            } else if (this.setArray[hash] == null) {
+                return hash;
+            } else {
+                hash = (hash + 1) % internalCapacity();
+            }
+        }
+    }
+
+    /**
+     * Adds the element to the set. If an equal element is already in the set,
+     * increases its occurrence count by 1.
+     *
+     * @param element to add
+     * @require element != null
+     */
     @Override
     public void add(T element) {
-        
+        System.out.println(getHash(element));
+        this.setArray[getHash(element)] = new Node(element, 1);
+        System.out.println(getHash(element));
+        System.out.println(this.setArray);
     }
 
     @Override
@@ -65,7 +115,7 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
 
     @Override
     public int internalCapacity() {
-        return 0;
+        return this.initialCapacity;
     }
 
     @Override
