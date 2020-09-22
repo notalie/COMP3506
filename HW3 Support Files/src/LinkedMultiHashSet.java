@@ -142,7 +142,7 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
                 }
                 temp.next = new Node(element, count);
             } else { // head hasn't been initalised
-                this.head.next = new Node(element, count);
+                this.head = new Node(element, count);
             }
 
             this.setArray[getHash(element)] = new Node(element, count);
@@ -282,22 +282,33 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
 
     @Override
     public Iterator<T> iterator() {
-        /*DequeNode rightNode = this.tail;
+        Node headNode = this.head;
 
         return new Iterator<T>() {
-            DequeNode currentNode = rightNode;
+            Node node = headNode;
+            // TODO Next need to factor in double ups
+            int occurences = node.occurences;
 
             @Override
             public boolean hasNext() {
-                return currentNode != null;
+                return node != null;
             }
 
             @Override
             public T next() {
+
                 if (hasNext()) {
-                    T elem = currentNode.data;
-                    currentNode = currentNode.prev;
-                    return elem;
+                    if (occurences > 0) {
+                        occurences--;
+
+                        return node.value;
+                    } else {
+                        node = node.next;
+                        occurences = node.occurences;
+                        System.out.println("OCC " + occurences);
+                        System.out.println("VALUE " + node.value);
+                        return node.value;
+                    }
                 }
                 throw new NoSuchElementException();
             }
@@ -305,7 +316,6 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
             public void remove() {
                 // Does nothing
             }
-        };*/
-        return null;
+        };
     }
 }

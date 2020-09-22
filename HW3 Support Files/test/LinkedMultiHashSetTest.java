@@ -101,7 +101,7 @@ public class LinkedMultiHashSetTest {
 
         assertTrue(it.hasNext());
         assertEquals(3, (int) it.next());
-        
+
         assertFalse(it.hasNext());
     }
 
