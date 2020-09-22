@@ -136,4 +136,58 @@ public class StrongHeapTest {
     public void testStrong3() {
         assertFalse(StrongHeap.isStrongHeap(tree(left(leaf(2),4),9,left(leaf(1),3))));
     }
+    @Test
+    public void fuckingStrongHeap() {
+        // not a complete tree
+        assertFalse(StrongHeap.isStrongHeap(
+                tree(tree(tree(leaf(12),25,leaf(12)),
+                        50,
+                        tree(leaf(12),25,leaf(12))),
+                        100,
+                        tree(tree(leaf(12),25,leaf(12)),50,tree(null,25,leaf(12)))))
+        );
+        assertFalse(StrongHeap.isStrongHeap(right(25, leaf(10))));
+        assertTrue(StrongHeap.isStrongHeap(
+                tree(tree(tree(leaf(12),25,leaf(12)),
+                        50,
+                        tree(leaf(12),25,leaf(12))),
+                        100,
+                        tree(tree(leaf(12),25,leaf(12)),50,tree(leaf(12),25, null))))
+        );
+    }
+    @Test
+    public void fuckingStrongHeap2() {
+        assertTrue(StrongHeap.isStrongHeap(
+                tree(tree(tree(leaf(12),25,leaf(12)),
+                        50,
+                        tree(leaf(12),25,leaf(12))),
+                        100,
+                        tree(tree(leaf(12),25,leaf(12)),50,tree(leaf(12),25,leaf(12)))))
+        );
+        assertTrue(StrongHeap.isStrongHeap(
+                tree(tree(tree(leaf(12),25,leaf(12)),
+                        50,
+                        tree(leaf(12),25,leaf(12))),
+                        100,
+                        tree(tree(leaf(12),25,leaf(12)),50,tree(leaf(12),25, null))))
+        );
+        assertFalse(StrongHeap.isStrongHeap(
+                tree(tree(tree(leaf(12),25,leaf(12)),
+                        80,
+                        tree(leaf(12),25,leaf(12))),
+                        100,
+                        tree(tree(leaf(12),25,leaf(12)),50,tree(leaf(12),25, null))))
+        );
+    }
+
+    @Test
+    public void fuckingExtreme() {
+        // a complex complete tree
+        assertTrue(StrongHeap.isStrongHeap(
+                tree(tree(tree(leaf(12),25,leaf(12)),
+                        50,
+                        tree(leaf(12),25,leaf(12))),
+                        100,
+                        tree(tree(leaf(12),25,leaf(12)),50,tree(leaf(12),25,leaf(12))))));
+    }
 }

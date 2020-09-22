@@ -22,19 +22,22 @@
       <file leaf-file-name="LinkedMultiHashSet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LinkedMultiHashSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+            <state relative-caret-position="212">
+              <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#checkAndResize#0;class#LinkedMultiHashSet#0" />
+                <element signature="method#modifyNode#0;class#LinkedMultiHashSet#0" />
+                <element signature="docComment;method#add#0;class#LinkedMultiHashSet#0" />
                 <element signature="docComment;method#size#0;class#LinkedMultiHashSet#0" />
-                <element signature="e#6487#6488#0" expanded="true" />
-                <element signature="e#6519#6520#0" expanded="true" />
+                <element signature="e#6425#6426#0" expanded="true" />
+                <element signature="e#6457#6458#0" expanded="true" />
                 <element signature="docComment;method#internalCapacity#0;class#LinkedMultiHashSet#0" />
-                <element signature="e#6756#6757#0" expanded="true" />
-                <element signature="e#6799#6800#0" expanded="true" />
+                <element signature="e#6694#6695#0" expanded="true" />
+                <element signature="e#6737#6738#0" expanded="true" />
                 <element signature="docComment;method#distinctCount#0;class#LinkedMultiHashSet#0" />
-                <element signature="e#6999#7000#0" expanded="true" />
-                <element signature="e#7040#7041#0" expanded="true" />
+                <element signature="e#6937#6938#0" expanded="true" />
+                <element signature="e#6978#6979#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -44,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/test/LinkedMultiHashSetTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <caret line="95" column="33" lean-forward="true" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -58,14 +61,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/test/LinkedMultiHashSetTest.java" />
+        <option value="$PROJECT_DIR$/test/StrongHeapTest.java" />
         <option value="$PROJECT_DIR$/src/LinkedMultiHashSet.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-967" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-308" />
+    <option name="y" value="-21" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectId" id="1hqSScSTRCtD4DjDRuQlU2hj6gk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -199,14 +204,14 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="LinkedMultiHashSetTest.testResize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StrongHeapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW3 Support Files" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LinkedMultiHashSetTest" />
-      <option name="METHOD_NAME" value="testResize" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="StrongHeapTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -262,18 +267,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.LinkedMultiHashSetTest" />
-      <item itemvalue="JUnit.LinkedMultiHashSetTest.testResize" />
       <item itemvalue="JUnit.LinkedMultiHashSetTest.testIteratorSimple" />
       <item itemvalue="JUnit.LinkedMultiHashSetTest.testRemovals" />
       <item itemvalue="JUnit.LinkedMultiHashSetTest.testRearrangeArray" />
+      <item itemvalue="JUnit.StrongHeapTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LinkedMultiHashSetTest" />
+        <item itemvalue="JUnit.LinkedMultiHashSetTest.testIteratorSimple" />
+        <item itemvalue="JUnit.StrongHeapTest" />
         <item itemvalue="JUnit.LinkedMultiHashSetTest.testRearrangeArray" />
         <item itemvalue="JUnit.LinkedMultiHashSetTest.testRemovals" />
-        <item itemvalue="JUnit.LinkedMultiHashSetTest.testIteratorSimple" />
-        <item itemvalue="JUnit.LinkedMultiHashSetTest.testResize" />
       </list>
     </recent_temporary>
   </component>
@@ -292,18 +297,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedMultiHashSetTest_testRearrangeArray - 2020.09.22 at 21h 47m 32s.xml">
-      <configuration name="LinkedMultiHashSetTest.testRearrangeArray" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest_testRearrangeArray - 2020.09.22 at 23h 33m 30s.xml">
-      <configuration name="LinkedMultiHashSetTest.testRearrangeArray" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest_testRearrangeArray - 2020.09.22 at 23h 51m 05s.xml">
-      <configuration name="LinkedMultiHashSetTest.testRearrangeArray" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.22 at 23h 51m 09s.xml">
-      <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LinkedMultiHashSetTest - 2020.09.22 at 23h 51m 41s.xml">
       <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
     </history-entry>
@@ -322,9 +315,21 @@
     <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 00h 02m 43s.xml">
       <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 00h 35m 51s.xml">
+      <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StrongHeapTest - 2020.09.23 at 00h 35m 54s.xml">
+      <configuration name="StrongHeapTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 00h 42m 56s.xml">
+      <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedMultiHashSetTest_testIteratorSimple - 2020.09.23 at 00h 43m 01s.xml">
+      <configuration name="LinkedMultiHashSetTest.testIteratorSimple" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-967" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -335,7 +340,7 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31449893" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31151003" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
@@ -452,28 +457,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/StrongHeapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/LinkedMultiHashSetTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <caret line="95" column="33" lean-forward="true" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedMultiHashSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        <state relative-caret-position="212">
+          <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#checkAndResize#0;class#LinkedMultiHashSet#0" />
+            <element signature="method#modifyNode#0;class#LinkedMultiHashSet#0" />
+            <element signature="docComment;method#add#0;class#LinkedMultiHashSet#0" />
             <element signature="docComment;method#size#0;class#LinkedMultiHashSet#0" />
-            <element signature="e#6487#6488#0" expanded="true" />
-            <element signature="e#6519#6520#0" expanded="true" />
+            <element signature="e#6425#6426#0" expanded="true" />
+            <element signature="e#6457#6458#0" expanded="true" />
             <element signature="docComment;method#internalCapacity#0;class#LinkedMultiHashSet#0" />
-            <element signature="e#6756#6757#0" expanded="true" />
-            <element signature="e#6799#6800#0" expanded="true" />
+            <element signature="e#6694#6695#0" expanded="true" />
+            <element signature="e#6737#6738#0" expanded="true" />
             <element signature="docComment;method#distinctCount#0;class#LinkedMultiHashSet#0" />
-            <element signature="e#6999#7000#0" expanded="true" />
-            <element signature="e#7040#7041#0" expanded="true" />
+            <element signature="e#6937#6938#0" expanded="true" />
+            <element signature="e#6978#6979#0" expanded="true" />
           </folding>
         </state>
       </provider>

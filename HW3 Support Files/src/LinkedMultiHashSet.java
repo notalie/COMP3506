@@ -46,12 +46,15 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
 
     private int distinctCount;
 
+    private Node head;
+
 
     public LinkedMultiHashSet(int initialCapacity) {
         this.initialCapacity = initialCapacity;
         this.setArray =  new Object[initialCapacity];
         this.size = 0;
         this.distinctCount = 0;
+        this.head = null;
     }
 
     private int getHash(T element) {
@@ -72,8 +75,6 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         // Would Cause Overflow
         if (this.initialCapacity < this.distinctCount + 1) {
             Object[] newArray = new Object[initialCapacity * 2];
-            T[] newOccurrenceArray = (T[]) new Object[initialCapacity * 2];
-
             for (int i = 0; i < this.initialCapacity; i++) {
                 newArray[i] = this.setArray[i];
             }
@@ -106,7 +107,7 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         if (contains(element)) {
             modifyNode(element, 1);
         } else {
-            this.setArray[getHash(element)] = new Node(element, 1);
+            this.setArray[getHash(element)] =  new Node(element, 1);
             distinctCount++;
             this.size++;
         }
