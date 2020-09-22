@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b26255e-5b06-453c-9833-4eab881faba4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW3 Support Files.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HW3 Support Files/LinkedMultiHashSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW3 Support Files/LinkedMultiHashSet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW3 Support Files/QuaternaryHeapsort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW3 Support Files/QuaternaryHeapsort.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/HW3 Support Files/LinkedMultiHashSetTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/HW3 Support Files/LinkedMultiHashSetTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/HW3 Support Files/QuaternaryHeapsortTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/HW3 Support Files/QuaternaryHeapsortTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/HW3 Support Files/StrongHeapTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/HW3 Support Files/StrongHeapTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LinkedMultiHashSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedMultiHashSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StrongHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StrongHeap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/LinkedMultiHashSetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/LinkedMultiHashSetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/QuaternaryHeapsortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/QuaternaryHeapsortTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/StrongHeapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/StrongHeapTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +33,20 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="JUnit.LinkedMultiHashSetTest.testHashes">
+  <component name="RunManager" selected="JUnit.LinkedMultiHashSetTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedMultiHashSetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW3 Support Files" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LinkedMultiHashSetTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -65,18 +68,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LinkedMultiHashSetTest" />
       <option name="METHOD_NAME" value="testHashes" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuaternaryHeapsortTest.testDownHeap6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HW3 Support Files" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="QuaternaryHeapsortTest" />
-      <option name="METHOD_NAME" value="testDownHeap6" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -126,19 +117,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.LinkedMultiHashSetTest.testBasicUsage" />
       <item itemvalue="JUnit.LinkedMultiHashSetTest.testHashes" />
-      <item itemvalue="JUnit.QuaternaryHeapsortTest.testDownHeap6" />
       <item itemvalue="JUnit.QuaternaryHeapsortTest.testDownHeap7" />
       <item itemvalue="JUnit.StrongHeapTest" />
+      <item itemvalue="JUnit.LinkedMultiHashSetTest" />
+      <item itemvalue="JUnit.LinkedMultiHashSetTest.testBasicUsage" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LinkedMultiHashSetTest" />
+        <item itemvalue="JUnit.LinkedMultiHashSetTest.testBasicUsage" />
         <item itemvalue="JUnit.LinkedMultiHashSetTest.testHashes" />
         <item itemvalue="JUnit.StrongHeapTest" />
         <item itemvalue="JUnit.QuaternaryHeapsortTest.testDownHeap7" />
-        <item itemvalue="JUnit.QuaternaryHeapsortTest.testDownHeap6" />
-        <item itemvalue="JUnit.LinkedMultiHashSetTest.testBasicUsage" />
       </list>
     </recent_temporary>
   </component>
@@ -157,53 +148,42 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="247" key="GridCell.Tab.0.bottom" timestamp="1600759519312">
+    <state width="1398" height="239" key="GridCell.Tab.0.bottom" timestamp="1600760242282">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.0.bottom/0.23.1440.782@0.23.1440.782" timestamp="1600759519312" />
-    <state width="1398" height="247" key="GridCell.Tab.0.center" timestamp="1600759519312">
+    <state width="1398" height="239" key="GridCell.Tab.0.bottom/0.23.1440.782@0.23.1440.782" timestamp="1600760242282" />
+    <state width="1398" height="239" key="GridCell.Tab.0.center" timestamp="1600760242281">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.0.center/0.23.1440.782@0.23.1440.782" timestamp="1600759519312" />
-    <state width="1398" height="247" key="GridCell.Tab.0.left" timestamp="1600759519311">
+    <state width="1398" height="239" key="GridCell.Tab.0.center/0.23.1440.782@0.23.1440.782" timestamp="1600760242281" />
+    <state width="1398" height="239" key="GridCell.Tab.0.left" timestamp="1600760242281">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.0.left/0.23.1440.782@0.23.1440.782" timestamp="1600759519311" />
-    <state width="1398" height="247" key="GridCell.Tab.0.right" timestamp="1600759519312">
+    <state width="1398" height="239" key="GridCell.Tab.0.left/0.23.1440.782@0.23.1440.782" timestamp="1600760242281" />
+    <state width="1398" height="239" key="GridCell.Tab.0.right" timestamp="1600760242282">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.0.right/0.23.1440.782@0.23.1440.782" timestamp="1600759519312" />
-    <state width="1398" height="247" key="GridCell.Tab.1.bottom" timestamp="1600759519913">
+    <state width="1398" height="239" key="GridCell.Tab.0.right/0.23.1440.782@0.23.1440.782" timestamp="1600760242282" />
+    <state width="1398" height="247" key="GridCell.Tab.1.bottom" timestamp="1600759635571">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.1.bottom/0.23.1440.782@0.23.1440.782" timestamp="1600759519913" />
-    <state width="1398" height="247" key="GridCell.Tab.1.center" timestamp="1600759519912">
+    <state width="1398" height="247" key="GridCell.Tab.1.bottom/0.23.1440.782@0.23.1440.782" timestamp="1600759635571" />
+    <state width="1398" height="247" key="GridCell.Tab.1.center" timestamp="1600759635570">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.1.center/0.23.1440.782@0.23.1440.782" timestamp="1600759519912" />
-    <state width="1398" height="247" key="GridCell.Tab.1.left" timestamp="1600759519912">
+    <state width="1398" height="247" key="GridCell.Tab.1.center/0.23.1440.782@0.23.1440.782" timestamp="1600759635570" />
+    <state width="1398" height="247" key="GridCell.Tab.1.left" timestamp="1600759635569">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.1.left/0.23.1440.782@0.23.1440.782" timestamp="1600759519912" />
-    <state width="1398" height="247" key="GridCell.Tab.1.right" timestamp="1600759519912">
+    <state width="1398" height="247" key="GridCell.Tab.1.left/0.23.1440.782@0.23.1440.782" timestamp="1600759635569" />
+    <state width="1398" height="247" key="GridCell.Tab.1.right" timestamp="1600759635570">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.1.right/0.23.1440.782@0.23.1440.782" timestamp="1600759519912" />
+    <state width="1398" height="247" key="GridCell.Tab.1.right/0.23.1440.782@0.23.1440.782" timestamp="1600759635570" />
     <state x="208" y="23" key="SettingsEditor" timestamp="1600612187847">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
     <state x="208" y="23" key="SettingsEditor/0.23.1440.782@0.23.1440.782" timestamp="1600612187847" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/LinkedMultiHashSet.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>

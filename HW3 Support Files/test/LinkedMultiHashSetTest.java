@@ -7,13 +7,6 @@ import org.junit.Test;
 public class LinkedMultiHashSetTest {
 
     @Test
-    public void testHashes() {
-        LinkedMultiHashSet<Integer> set = new LinkedMultiHashSet<>(5);
-        set.add(5);
-        set.add(10);
-    }
-
-    @Test
     public void testBasicUsage() {
         LinkedMultiHashSet<Integer> set = new LinkedMultiHashSet<>(5);
         

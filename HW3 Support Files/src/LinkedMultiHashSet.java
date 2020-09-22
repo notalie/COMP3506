@@ -43,21 +43,22 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         }
     }
 
-    // TODO: implement question 4 in this file
     private int initialCapacity;
 
     private Object[] setArray;
 
+    private int size;
+
     public LinkedMultiHashSet(int initialCapacity) {
         this.initialCapacity = initialCapacity;
         setArray =  new Object[initialCapacity];
+        this.size = 0;
     }
 
     private int getHash(T element) {
         int hash = element.hashCode() % internalCapacity();
         while(true) {
             Node value = (Node) this.setArray[hash];
-            // Need to fix to account for null pointers
             if (this.setArray[hash] != null && value.value == element) {
                 return hash;
             } else if (this.setArray[hash] == null) {
@@ -77,25 +78,45 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
      */
     @Override
     public void add(T element) {
-        System.out.println(getHash(element));
-        this.setArray[getHash(element)] = new Node(element, 1);
-        System.out.println(getHash(element));
-        System.out.println(this.setArray);
+        int elemHash = getHash(element);
+        if (this.setArray[elemHash] != null) {
+            Node existingElem = (Node)this.setArray[elemHash];
+            existingElem.occurences += 1;
+        } else {
+            this.setArray[elemHash] = new Node(element, 1);
+        }
+        this.size++;
     }
 
     @Override
     public void add(T element, int count) {
-        
+        if (contains(element)) {
+            Node existingElem = (Node)this.setArray[getHash(element)];
+            existingElem.occurences += count;
+        } else {
+            this.setArray[getHash(element)] = new Node(element, count);
+        }
+        this.size += count;
     }
 
     @Override
     public boolean contains(T element) {
-        return false;
+        int elemHash = getHash(element);
+        if (this.setArray[elemHash] != null) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
     public int count(T element) {
-        return 0;
+        if (contains(element)) {
+            Node node = (Node) this.setArray[getHash(element)];
+            return node.occurences;
+        } else {
+            return 0;
+        }
     }
 
     @Override
@@ -110,7 +131,7 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
 
     @Override
     public int size() {
-        return -1;
+        return this.size;
     }
 
     @Override
