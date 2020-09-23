@@ -77,8 +77,7 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
             initialCapacity *= 2;
             this.setArray = new Object[initialCapacity];
             Node current = this.head;
-            while (current.next != null) {
-                // get each node from head
+            while (current != null) {
                 this.setArray[hash(current.value)] = current;
                 current = current.next;
             }

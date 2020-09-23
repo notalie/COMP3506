@@ -23,8 +23,8 @@
       <file leaf-file-name="LinkedMultiHashSet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LinkedMultiHashSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="143" lean-forward="true" selection-start-line="143" selection-end-line="143" />
+            <state relative-caret-position="171">
+              <caret line="76" column="33" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5528#5529#0" expanded="true" />
@@ -125,23 +125,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="LinkedMultiHashSetTest.testIteratorSimple" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HW3 Support Files" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LinkedMultiHashSetTest" />
-      <option name="METHOD_NAME" value="testIteratorSimple" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
     <configuration name="LinkedMultiHashSetTest.testRearrangeArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW3 Support Files" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -183,6 +166,23 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LinkedMultiHashSetTest" />
       <option name="METHOD_NAME" value="testResize" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="LinkedMultiHashSetTest.testSimpleResize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW3 Support Files" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LinkedMultiHashSetTest" />
+      <option name="METHOD_NAME" value="testSimpleResize" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -239,18 +239,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.LinkedMultiHashSetTest" />
-      <item itemvalue="JUnit.LinkedMultiHashSetTest.testIteratorSimple" />
       <item itemvalue="JUnit.LinkedMultiHashSetTest.testRearrangeArray" />
       <item itemvalue="JUnit.LinkedMultiHashSetTest.testResize" />
       <item itemvalue="JUnit.LinkedMultiHashSetTest.testRemovals" />
+      <item itemvalue="JUnit.LinkedMultiHashSetTest.testSimpleResize" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LinkedMultiHashSetTest" />
+        <item itemvalue="JUnit.LinkedMultiHashSetTest.testSimpleResize" />
         <item itemvalue="JUnit.LinkedMultiHashSetTest.testRemovals" />
         <item itemvalue="JUnit.LinkedMultiHashSetTest.testRearrangeArray" />
         <item itemvalue="JUnit.LinkedMultiHashSetTest.testResize" />
-        <item itemvalue="JUnit.LinkedMultiHashSetTest.testIteratorSimple" />
       </list>
     </recent_temporary>
   </component>
@@ -269,40 +269,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 14h 10m 22s.xml">
+    <history-entry file="LinkedMultiHashSetTest_testSimpleResize - 2020.09.23 at 14h 22m 19s.xml">
+      <configuration name="LinkedMultiHashSetTest.testSimpleResize" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedMultiHashSetTest_testResize - 2020.09.23 at 14h 23m 56s.xml">
+      <configuration name="LinkedMultiHashSetTest.testResize" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 14h 23m 56s.xml">
       <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedMultiHashSetTest_testRemovals - 2020.09.23 at 14h 12m 02s.xml">
+    <history-entry file="LinkedMultiHashSetTest_testRearrangeArray - 2020.09.23 at 14h 23m 56s.xml">
+      <configuration name="LinkedMultiHashSetTest.testRearrangeArray" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedMultiHashSetTest_testRemovals - 2020.09.23 at 14h 23m 56s.xml">
       <configuration name="LinkedMultiHashSetTest.testRemovals" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedMultiHashSetTest_testRemovals - 2020.09.23 at 14h 13m 48s.xml">
+    <history-entry file="LinkedMultiHashSetTest_testSimpleResize - 2020.09.23 at 14h 23m 56s.xml">
+      <configuration name="LinkedMultiHashSetTest.testSimpleResize" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedMultiHashSetTest_testRemovals - 2020.09.23 at 14h 23m 57s.xml">
       <configuration name="LinkedMultiHashSetTest.testRemovals" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedMultiHashSetTest_testRemovals - 2020.09.23 at 14h 14m 23s.xml">
-      <configuration name="LinkedMultiHashSetTest.testRemovals" configurationId="JUnit" />
+    <history-entry file="LinkedMultiHashSetTest_testSimpleResize - 2020.09.23 at 14h 23m 57s.xml">
+      <configuration name="LinkedMultiHashSetTest.testSimpleResize" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedMultiHashSetTest_testRemovals - 2020.09.23 at 14h 15m 09s.xml">
-      <configuration name="LinkedMultiHashSetTest.testRemovals" configurationId="JUnit" />
+    <history-entry file="LinkedMultiHashSetTest_testSimpleResize - 2020.09.23 at 14h 24m 19s.xml">
+      <configuration name="LinkedMultiHashSetTest.testSimpleResize" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedMultiHashSetTest_testRemovals - 2020.09.23 at 14h 16m 17s.xml">
-      <configuration name="LinkedMultiHashSetTest.testRemovals" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest_testRemovals - 2020.09.23 at 14h 16m 45s.xml">
-      <configuration name="LinkedMultiHashSetTest.testRemovals" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest_testRemovals - 2020.09.23 at 14h 17m 11s.xml">
-      <configuration name="LinkedMultiHashSetTest.testRemovals" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest_testRemovals - 2020.09.23 at 14h 17m 49s.xml">
-      <configuration name="LinkedMultiHashSetTest.testRemovals" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 14h 17m 52s.xml">
+    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 14h 24m 27s.xml">
       <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -404,8 +403,14 @@
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/LinkedMultiHashSetTest.java</url>
+          <line>231</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="10" />
+      <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -601,8 +606,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedMultiHashSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="143" lean-forward="true" selection-start-line="143" selection-end-line="143" />
+        <state relative-caret-position="171">
+          <caret line="76" column="33" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5528#5529#0" expanded="true" />
