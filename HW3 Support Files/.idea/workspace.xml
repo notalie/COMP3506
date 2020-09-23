@@ -23,20 +23,20 @@
       <file leaf-file-name="LinkedMultiHashSet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LinkedMultiHashSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="180">
+              <caret line="86" column="75" selection-start-line="86" selection-start-column="75" selection-end-line="86" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5434#5435#0" expanded="true" />
-                <element signature="e#5489#5490#0" expanded="true" />
-                <element signature="e#5528#5529#0" expanded="true" />
-                <element signature="e#5559#5560#0" expanded="true" />
-                <element signature="e#5794#5795#0" expanded="true" />
-                <element signature="e#5826#5827#0" expanded="true" />
-                <element signature="e#5877#5878#0" expanded="true" />
-                <element signature="e#5920#5921#0" expanded="true" />
-                <element signature="e#5968#5969#0" expanded="true" />
-                <element signature="e#6009#6010#0" expanded="true" />
+                <element signature="e#5451#5452#0" expanded="true" />
+                <element signature="e#5506#5507#0" expanded="true" />
+                <element signature="e#6248#6249#0" expanded="true" />
+                <element signature="e#6279#6280#0" expanded="true" />
+                <element signature="e#6433#6434#0" expanded="true" />
+                <element signature="e#6465#6466#0" expanded="true" />
+                <element signature="e#6516#6517#0" expanded="true" />
+                <element signature="e#6559#6560#0" expanded="true" />
+                <element signature="e#6607#6608#0" expanded="true" />
+                <element signature="e#6648#6649#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -276,15 +276,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 14h 33m 23s.xml">
-      <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 14h 34m 41s.xml">
-      <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest_testIteratorSimple - 2020.09.23 at 14h 34m 51s.xml">
-      <configuration name="LinkedMultiHashSetTest.testIteratorSimple" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LinkedMultiHashSetTest_testIteratorSimple - 2020.09.23 at 14h 35m 25s.xml">
       <configuration name="LinkedMultiHashSetTest.testIteratorSimple" configurationId="JUnit" />
     </history-entry>
@@ -305,6 +296,15 @@
     </history-entry>
     <history-entry file="LinkedMultiHashSetTest_testSimpleResize - 2020.09.23 at 14h 38m 35s.xml">
       <configuration name="LinkedMultiHashSetTest.testSimpleResize" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 14h 57m 25s.xml">
+      <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 14h 58m 06s.xml">
+      <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 15h 10m 09s.xml">
+      <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -422,16 +422,16 @@
           <caret line="300" column="36" selection-start-line="300" selection-start-column="36" selection-end-line="300" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5434#5435#0" expanded="true" />
-            <element signature="e#5489#5490#0" expanded="true" />
-            <element signature="e#5528#5529#0" expanded="true" />
-            <element signature="e#5559#5560#0" expanded="true" />
-            <element signature="e#5794#5795#0" expanded="true" />
-            <element signature="e#5826#5827#0" expanded="true" />
-            <element signature="e#5877#5878#0" expanded="true" />
-            <element signature="e#5920#5921#0" expanded="true" />
-            <element signature="e#5968#5969#0" expanded="true" />
-            <element signature="e#6009#6010#0" expanded="true" />
+            <element signature="e#5451#5452#0" expanded="true" />
+            <element signature="e#5506#5507#0" expanded="true" />
+            <element signature="e#6248#6249#0" expanded="true" />
+            <element signature="e#6279#6280#0" expanded="true" />
+            <element signature="e#6433#6434#0" expanded="true" />
+            <element signature="e#6465#6466#0" expanded="true" />
+            <element signature="e#6516#6517#0" expanded="true" />
+            <element signature="e#6559#6560#0" expanded="true" />
+            <element signature="e#6607#6608#0" expanded="true" />
+            <element signature="e#6648#6649#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -512,16 +512,16 @@
           <caret line="191" selection-start-line="191" selection-end-line="191" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5434#5435#0" expanded="true" />
-            <element signature="e#5489#5490#0" expanded="true" />
-            <element signature="e#5528#5529#0" expanded="true" />
-            <element signature="e#5559#5560#0" expanded="true" />
-            <element signature="e#5794#5795#0" expanded="true" />
-            <element signature="e#5826#5827#0" expanded="true" />
-            <element signature="e#5877#5878#0" expanded="true" />
-            <element signature="e#5920#5921#0" expanded="true" />
-            <element signature="e#5968#5969#0" expanded="true" />
-            <element signature="e#6009#6010#0" expanded="true" />
+            <element signature="e#5451#5452#0" expanded="true" />
+            <element signature="e#5506#5507#0" expanded="true" />
+            <element signature="e#6248#6249#0" expanded="true" />
+            <element signature="e#6279#6280#0" expanded="true" />
+            <element signature="e#6433#6434#0" expanded="true" />
+            <element signature="e#6465#6466#0" expanded="true" />
+            <element signature="e#6516#6517#0" expanded="true" />
+            <element signature="e#6559#6560#0" expanded="true" />
+            <element signature="e#6607#6608#0" expanded="true" />
+            <element signature="e#6648#6649#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -612,20 +612,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedMultiHashSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="180">
+          <caret line="86" column="75" selection-start-line="86" selection-start-column="75" selection-end-line="86" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5434#5435#0" expanded="true" />
-            <element signature="e#5489#5490#0" expanded="true" />
-            <element signature="e#5528#5529#0" expanded="true" />
-            <element signature="e#5559#5560#0" expanded="true" />
-            <element signature="e#5794#5795#0" expanded="true" />
-            <element signature="e#5826#5827#0" expanded="true" />
-            <element signature="e#5877#5878#0" expanded="true" />
-            <element signature="e#5920#5921#0" expanded="true" />
-            <element signature="e#5968#5969#0" expanded="true" />
-            <element signature="e#6009#6010#0" expanded="true" />
+            <element signature="e#5451#5452#0" expanded="true" />
+            <element signature="e#5506#5507#0" expanded="true" />
+            <element signature="e#6248#6249#0" expanded="true" />
+            <element signature="e#6279#6280#0" expanded="true" />
+            <element signature="e#6433#6434#0" expanded="true" />
+            <element signature="e#6465#6466#0" expanded="true" />
+            <element signature="e#6516#6517#0" expanded="true" />
+            <element signature="e#6559#6560#0" expanded="true" />
+            <element signature="e#6607#6608#0" expanded="true" />
+            <element signature="e#6648#6649#0" expanded="true" />
           </folding>
         </state>
       </provider>

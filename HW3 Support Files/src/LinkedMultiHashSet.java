@@ -24,14 +24,26 @@ import java.util.NoSuchElementException;
 public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
 
 
+    /**
+     * A node representing a value within the bag.
+     * Each node is linked using the next property
+     */
     private class Node {
 
+        /* The value/element within the bag */
         private T value;
 
+        /* The next value of the node */
         private Node next;
 
+        /* The number of times that the value appears/occurs within the bag */
         private int occurences;
 
+        /**
+         * Constructor for a node
+         * @param value - the value for the node
+         * @param occurences - the number of times that the node occurs within the bag
+         */
         private Node(T value, int occurences) {
             this.value = value;
             this.occurences = occurences;
@@ -39,14 +51,19 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         }
     }
 
+    /* The initial/max capacity of the bag */
     private int initialCapacity;
 
+    /* Array that tracks elements within the bag */
     private Object[] setArray;
 
+    /* The size of the bag, counts each occurrence individually */
     private int size;
 
+    /* The start of the linked node list */
     private Node head;
 
+    /* The number of distinct elements */
     private int distinctCount;
 
 
@@ -58,11 +75,16 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         this.distinctCount = 0;
     }
 
+    /**
+     * Finds a hash value for a corresponding element
+     * @param element - the element to find a hash for
+     * @return an int responding to a hash value for the element
+     */
     private int hash(T element) {
         int hash = element.hashCode() % this.initialCapacity;
         while(true) {
             Node value = (Node) this.setArray[hash];
-            if (this.setArray[hash] != null && value.value == element) {
+            if (this.setArray[hash] != null && value.value.equals(element)) {
                 return hash;
             } else if (this.setArray[hash] == null) {
                 return hash;
@@ -72,8 +94,13 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         }
     }
 
+    /**
+     * Checks if the recently added item has has made the bag full
+     * If it has, double the initial capacity size and rehash all the values in
+     */
     private void checkAndResize() {
-        if (this.initialCapacity < distinctCount() + 1) {
+        // Bag is full
+        if (this.initialCapacity == distinctCount()) {
             initialCapacity *= 2;
             this.setArray = new Object[initialCapacity];
             Node current = this.head;
@@ -141,6 +168,7 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
             Node temp = head;
             Node prev = null;
 
+            // Special case for if the value getting removed is the head
             if (temp != null && temp.value.equals(element) && elem.occurences == 0) {
                 this.setArray[hash(element)] = null;
                 this.size -= count;
@@ -153,18 +181,18 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
                 return;
             }
 
-            while(temp != null && !temp.value.equals(element)) {
-                prev = temp;
-                temp = temp.next;
-            }
-
+            // If the occurrences have hit 0, remove the item.
             if (elem.occurences == 0) {
+                // Find value starting from the head until it is found
+                while(temp != null && !temp.value.equals(element)) {
+                    prev = temp;
+                    temp = temp.next;
+                }
+
                 prev.next = temp.next;
                 distinctCount--;
                 this.setArray[hash(element)] = null;
             }
-
-            // Need to fully remove item here I think
             this.size -= count;
 
         } else {
