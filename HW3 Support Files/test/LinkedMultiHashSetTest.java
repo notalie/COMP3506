@@ -17,12 +17,6 @@ public class LinkedMultiHashSetTest {
         set.add(4);
 
         set.remove(2);
-
-        LinkedMultiHashSet.Node test2 = set.head;
-        while(test2 != null) {
-            System.out.println(test2.value);
-            test2 = test2.next;
-        }
     }
 
     @Test

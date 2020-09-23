@@ -24,11 +24,11 @@ import java.util.NoSuchElementException;
 public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
 
 
-    public class Node {
+    private class Node {
 
-        public T value;
+        private T value;
 
-        public Node next;
+        private Node next;
 
         private int occurences;
 
@@ -45,7 +45,7 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
 
     private int size;
 
-    public Node head;
+    private Node head;
 
     private int distinctCount;
 
@@ -174,22 +174,30 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
 
     @Override
     public Iterator<T> iterator() {
-        /*DequeNode rightNode = this.tail;
-
+        Node currentNode = this.head;
         return new Iterator<T>() {
-            DequeNode currentNode = rightNode;
+            Node current = currentNode;
+            int occurences = current.occurences;
+            int counter = 0;
 
             @Override
             public boolean hasNext() {
-                return currentNode != null;
+                return counter < size();
             }
 
             @Override
             public T next() {
                 if (hasNext()) {
-                    T elem = currentNode.data;
-                    currentNode = currentNode.prev;
-                    return elem;
+                    if  (occurences == 0) {
+                        current = current.next;
+                        occurences = current.occurences - 1;
+                        counter++;
+                        return current.value;
+                    } else {
+                        occurences--;
+                        counter++;
+                        return current.value;
+                    }
                 }
                 throw new NoSuchElementException();
             }
@@ -197,8 +205,7 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
             public void remove() {
                 // Does nothing
             }
-        };*/
-        return null;
+        };
     }
 
     @Override
