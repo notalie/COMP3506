@@ -24,17 +24,18 @@ import java.util.NoSuchElementException;
 public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
 
 
-    private class Node {
+    public class Node {
 
-        private T value;
+        public T value;
 
-        private Node next;
+        public Node next;
 
         private int occurences;
 
         private Node(T value, int occurences) {
             this.value = value;
             this.occurences = occurences;
+            this.next = null;
         }
     }
 
@@ -44,21 +45,21 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
 
     private int size;
 
-    private int distinctCount;
+    public Node head;
 
-    private Node head;
+    private int distinctCount;
 
 
     public LinkedMultiHashSet(int initialCapacity) {
         this.initialCapacity = initialCapacity;
-        this.setArray =  new Object[initialCapacity];
+        this.setArray = new Object[initialCapacity];
+        this.head = null;
         this.size = 0;
         this.distinctCount = 0;
-        this.head = null;
     }
 
-    private int getHash(T element) {
-        int hash = element.hashCode() % internalCapacity();
+    private int hash(T element) {
+        int hash = element.hashCode() % this.initialCapacity;
         while(true) {
             Node value = (Node) this.setArray[hash];
             if (this.setArray[hash] != null && value.value == element) {
@@ -66,174 +67,110 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
             } else if (this.setArray[hash] == null) {
                 return hash;
             } else {
-                hash = (hash + 1) % internalCapacity();
+                hash = (hash + 1) % this.initialCapacity;
             }
         }
     }
 
     private void checkAndResize() {
-        // Would Cause Overflow
-        if (this.initialCapacity < this.distinctCount + 1) {
-            Object[] newArray = new Object[initialCapacity * 2];
-            for (int i = 0; i < this.initialCapacity; i++) {
-                newArray[i] = this.setArray[i];
-            }
+        if (this.initialCapacity < distinctCount() + 1) {
             initialCapacity *= 2;
-            this.setArray = newArray;
+            this.setArray = new Object[initialCapacity];
+            Node current = this.head;
+            while (current.next != null) {
+                // get each node from head
+                this.setArray[hash(current.value)] = current;
+                current = current.next;
+            }
         }
     }
 
-    private void modifyNode(T element, int amount) {
-        Node existingElem = (Node) this.setArray[getHash(element)];
-        existingElem.occurences += amount;
-
-        if (existingElem.occurences == 0) {
-            this.setArray[getHash(element)] = null;
-            distinctCount--;
-        }
-
-        this.size += amount;
-    }
-
-    /**
-     * Adds the element to the set. If an equal element is already in the set,
-     * increases its occurrence count by 1.
-     *
-     * @param element to add
-     * @require element != null
-     */
-    @Override
-    public void add(T element) {
-        if (contains(element)) {
-            modifyNode(element, 1);
-        } else {
-            this.setArray[getHash(element)] =  new Node(element, 1);
-            distinctCount++;
-            this.size++;
-        }
-        checkAndResize();
-    }
-
-    /**
-     * Adds count to the number of occurrences of the element in set.
-     *
-     * @param element to add
-     * @require element != null && count >= 0
-     */
     @Override
     public void add(T element, int count) {
         if (contains(element)) {
-            modifyNode(element, count);
+            Node elem = (Node) this.setArray[hash(element)];
+            elem.occurences += count;
         } else {
-            this.setArray[getHash(element)] = new Node(element, count);
+            Node toAdd = new Node(element, count);
+            if (this.head == null) {
+                this.head = toAdd;
+            } else { // adding to the end of the linked list
+                toAdd.next = null;
+
+                Node last = this.head;
+                while(last.next != null) {
+                    last = last.next;
+                }
+
+                last.next = toAdd;
+            }
             distinctCount++;
-            this.size += count;
+            this.setArray[hash(element)] = toAdd;
         }
+        size += count;
         checkAndResize();
     }
 
-    /**
-     * Checks if the element is in the set (at least once).
-     *
-     * @param element to check
-     * @return true if the element is in the set, else false.
-     */
     @Override
     public boolean contains(T element) {
-        if (this.setArray[getHash(element)] != null) {
+        if (this.setArray[hash(element)] != null) {
             return true;
         } else {
             return false;
         }
     }
 
-    /**
-     * Returns the count of how many occurrences of the given elements there
-     * are currently in the set.
-     *
-     * @param element to check
-     * @return the count of occurrences of element
-     */
     @Override
     public int count(T element) {
-        if (contains(element)) {
-            Node node = (Node) this.setArray[getHash(element)];
-            return node.occurences;
+        Node elem = (Node) this.setArray[hash(element)];
+        if (elem != null) {
+            return elem.occurences;
         } else {
             return 0;
         }
     }
 
-    /**
-     * Removes a single occurrence of element from the set.
-     *
-     * @param element to remove
-     * @throws NoSuchElementException if the set doesn't currently
-     *         contain the given element
-     * @require element != null
-     */
-    @Override
-    public void remove(T element) throws NoSuchElementException {
-        if (contains(element)) {
-            modifyNode(element, -1);
-        } else {
-            throw new NoSuchElementException();
-        }
-    }
-
-    /**
-     * Removes several occurrences of the element from the set.
-     *
-     * @param element to remove
-     * @param count the number of occurrences of element to remove
-     * @throws NoSuchElementException if the set contains less than
-     *         count occurrences of the given element
-     * @require element != null && count >= 0
-     */
     @Override
     public void remove(T element, int count) throws NoSuchElementException {
+        Node elem = (Node) this.setArray[hash(element)];
         if (contains(element)) {
-            Node existingElem = (Node)this.setArray[getHash(element)];
-            if ( existingElem.occurences < count) {
+            if (count > elem.occurences) {
                 throw new NoSuchElementException();
             }
+            elem.occurences -= count;
+
+            Node temp = head;
+            Node prev = null;
+
+            if (temp != null && temp.value.equals(element) && elem.occurences == 0) {
+                this.setArray[hash(element)] = null;
+                this.size -= count;
+                distinctCount--;
+                if (temp.next != null) {
+                    this.head = temp.next;
+                } else {
+                    this.head = null;
+                }
+                return;
+            }
+
+            while(temp != null && !temp.value.equals(element)) {
+                prev = temp;
+                temp = temp.next;
+            }
+
+            if (elem.occurences == 0) {
+                prev.next = temp.next;
+                distinctCount--;
+                this.setArray[hash(element)] = null;
+            }
+
+            // Need to fully remove item here I think
+            this.size -= count;
+
         } else {
             throw new NoSuchElementException();
         }
-
-    }
-
-    /**
-     * Returns the total count of all elements in the multiset.
-     *
-     * Note that duplicates of an element all contribute to the count here.
-     *
-     * @return total count of elements in the collection
-     */
-    @Override
-    public int size() {
-        return this.size;
-    }
-
-    /**
-     * Returns the maximum number of *distinct* elements the internal data
-     * structure can contain before resizing.
-     *
-     * @return capacity of internal array
-     */
-    @Override
-    public int internalCapacity() {
-        return this.initialCapacity;
-    }
-
-    /**
-     * Returns the number of distinct elements currently stored in the set.
-     *
-     * @return count of distinct elements in the set
-     */
-    @Override
-    public int distinctCount() {
-        return this.distinctCount;
     }
 
     @Override
@@ -263,5 +200,30 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
             }
         };*/
         return null;
+    }
+
+    @Override
+    public void add(T element) {
+        add(element, 1);
+    }
+
+    @Override
+    public void remove(T element) throws NoSuchElementException {
+        remove(element, 1);
+    }
+
+    @Override
+    public int size() {
+        return this.size;
+    }
+
+    @Override
+    public int internalCapacity() {
+        return this.initialCapacity;
+    }
+
+    @Override
+    public int distinctCount() {
+        return this.distinctCount;
     }
 }
