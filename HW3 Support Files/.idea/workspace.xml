@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9b26255e-5b06-453c-9833-4eab881faba4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW3 Support Files/LinkedMultiHashSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW3 Support Files/LinkedMultiHashSet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/HW3 Support Files/LinkedMultiHashSetTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/HW3 Support Files/LinkedMultiHashSetTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinkedMultiHashSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedMultiHashSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/LinkedMultiHashSetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/LinkedMultiHashSetTest.java" afterDir="false" />
     </list>
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,56 +12,8 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/HW3_Support_Files$StrongHeapTest_testFourNodesFalse.ic" NAME="StrongHeapTest.testFourNodesFalse Coverage Results" MODIFIED="1600518074960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="LinkedMultiHashSet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/LinkedMultiHashSet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="300" column="36" selection-start-line="300" selection-start-column="36" selection-end-line="300" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#checkAndResize#0;class#LinkedMultiHashSet#0" />
-                <element signature="method#modifyNode#0;class#LinkedMultiHashSet#0" />
-                <element signature="docComment;method#add#0;class#LinkedMultiHashSet#0" />
-                <element signature="docComment;method#size#0;class#LinkedMultiHashSet#0" />
-                <element signature="e#6425#6426#0" expanded="true" />
-                <element signature="e#6457#6458#0" expanded="true" />
-                <element signature="docComment;method#internalCapacity#0;class#LinkedMultiHashSet#0" />
-                <element signature="e#6694#6695#0" expanded="true" />
-                <element signature="e#6737#6738#0" expanded="true" />
-                <element signature="docComment;method#distinctCount#0;class#LinkedMultiHashSet#0" />
-                <element signature="e#6937#6938#0" expanded="true" />
-                <element signature="e#6978#6979#0" expanded="true" />
-                <element signature="e#8456#8457#0" expanded="true" />
-                <element signature="e#8514#8515#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LinkedMultiHashSetTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/LinkedMultiHashSetTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="98" column="30" lean-forward="true" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/test/StrongHeapTest.java" />
-        <option value="$PROJECT_DIR$/test/LinkedMultiHashSetTest.java" />
-        <option value="$PROJECT_DIR$/src/LinkedMultiHashSet.java" />
-      </list>
-    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-308" />
@@ -76,37 +23,6 @@
   </component>
   <component name="ProjectId" id="1hqSScSTRCtD4DjDRuQlU2hj6gk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="HW3 Support Files" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HW3 Support Files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HW3 Support Files" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HW3 Support Files" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HW3 Support Files" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HW3 Support Files" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -119,151 +35,86 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="JUnit.LinkedMultiHashSetTest.testIteratorSimple">
+  <component name="RunManager" selected="JUnit.LinkedMultiHashSetTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="LinkedMultiHashSetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW3 Support Files" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LinkedMultiHashSetTest" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="LinkedMultiHashSetTest.testIteratorSimple" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW3 Support Files" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LinkedMultiHashSetTest" />
       <option name="METHOD_NAME" value="testIteratorSimple" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="LinkedMultiHashSetTest.testRearrangeArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW3 Support Files" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LinkedMultiHashSetTest" />
       <option name="METHOD_NAME" value="testRearrangeArray" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="LinkedMultiHashSetTest.testRemovals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW3 Support Files" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LinkedMultiHashSetTest" />
       <option name="METHOD_NAME" value="testRemovals" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="StrongHeapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HW3 Support Files" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="StrongHeapTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
+    <configuration name="StrongHeapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW3 Support Files" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StrongHeapTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -276,15 +127,15 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LinkedMultiHashSetTest.testIteratorSimple" />
         <item itemvalue="JUnit.LinkedMultiHashSetTest" />
+        <item itemvalue="JUnit.LinkedMultiHashSetTest.testIteratorSimple" />
         <item itemvalue="JUnit.LinkedMultiHashSetTest.testRemovals" />
         <item itemvalue="JUnit.StrongHeapTest" />
         <item itemvalue="JUnit.LinkedMultiHashSetTest.testRearrangeArray" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -298,103 +149,39 @@
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="LinkedMultiHashSetTest_testIteratorSimple - 2020.09.23 at 01h 35m 21s.xml">
-      <configuration name="LinkedMultiHashSetTest.testIteratorSimple" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 01h 35m 25s.xml">
-      <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 01h 37m 09s.xml">
-      <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 01h 37m 41s.xml">
-      <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 01h 37m 58s.xml">
-      <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 01h 38m 48s.xml">
-      <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 01h 39m 25s.xml">
-      <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest - 2020.09.23 at 01h 39m 53s.xml">
-      <configuration name="LinkedMultiHashSetTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest_testIteratorSimple - 2020.09.23 at 01h 40m 00s.xml">
-      <configuration name="LinkedMultiHashSetTest.testIteratorSimple" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedMultiHashSetTest_testIteratorSimple - 2020.09.23 at 01h 40m 40s.xml">
-      <configuration name="LinkedMultiHashSetTest.testIteratorSimple" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3284055" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31151003" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.35490605" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39809927" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-    </layout>
-  </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="247" key="GridCell.Tab.0.bottom" timestamp="1600772784436">
+    <state width="1398" height="247" key="GridCell.Tab.0.bottom" timestamp="1600792211115">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.0.bottom/0.23.1440.782@0.23.1440.782" timestamp="1600772784436" />
-    <state width="1398" height="247" key="GridCell.Tab.0.center" timestamp="1600772784435">
+    <state width="1398" height="247" key="GridCell.Tab.0.bottom/0.23.1440.782@0.23.1440.782" timestamp="1600792211115" />
+    <state width="1398" height="247" key="GridCell.Tab.0.center" timestamp="1600792211115">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.0.center/0.23.1440.782@0.23.1440.782" timestamp="1600772784435" />
-    <state width="1398" height="247" key="GridCell.Tab.0.left" timestamp="1600772784434">
+    <state width="1398" height="247" key="GridCell.Tab.0.center/0.23.1440.782@0.23.1440.782" timestamp="1600792211115" />
+    <state width="1398" height="247" key="GridCell.Tab.0.left" timestamp="1600792211114">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.0.left/0.23.1440.782@0.23.1440.782" timestamp="1600772784434" />
-    <state width="1398" height="247" key="GridCell.Tab.0.right" timestamp="1600772784435">
+    <state width="1398" height="247" key="GridCell.Tab.0.left/0.23.1440.782@0.23.1440.782" timestamp="1600792211114" />
+    <state width="1398" height="247" key="GridCell.Tab.0.right" timestamp="1600792211115">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.0.right/0.23.1440.782@0.23.1440.782" timestamp="1600772784435" />
-    <state width="1398" height="247" key="GridCell.Tab.1.bottom" timestamp="1600772784438">
+    <state width="1398" height="247" key="GridCell.Tab.0.right/0.23.1440.782@0.23.1440.782" timestamp="1600792211115" />
+    <state width="1398" height="247" key="GridCell.Tab.1.bottom" timestamp="1600792211117">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.1.bottom/0.23.1440.782@0.23.1440.782" timestamp="1600772784438" />
-    <state width="1398" height="247" key="GridCell.Tab.1.center" timestamp="1600772784436">
+    <state width="1398" height="247" key="GridCell.Tab.1.bottom/0.23.1440.782@0.23.1440.782" timestamp="1600792211117" />
+    <state width="1398" height="247" key="GridCell.Tab.1.center" timestamp="1600792211116">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.1.center/0.23.1440.782@0.23.1440.782" timestamp="1600772784436" />
-    <state width="1398" height="247" key="GridCell.Tab.1.left" timestamp="1600772784436">
+    <state width="1398" height="247" key="GridCell.Tab.1.center/0.23.1440.782@0.23.1440.782" timestamp="1600792211116" />
+    <state width="1398" height="247" key="GridCell.Tab.1.left" timestamp="1600792211116">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.1.left/0.23.1440.782@0.23.1440.782" timestamp="1600772784436" />
-    <state width="1398" height="247" key="GridCell.Tab.1.right" timestamp="1600772784437">
+    <state width="1398" height="247" key="GridCell.Tab.1.left/0.23.1440.782@0.23.1440.782" timestamp="1600792211116" />
+    <state width="1398" height="247" key="GridCell.Tab.1.right" timestamp="1600792211116">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.1.right/0.23.1440.782@0.23.1440.782" timestamp="1600772784437" />
+    <state width="1398" height="247" key="GridCell.Tab.1.right/0.23.1440.782@0.23.1440.782" timestamp="1600792211116" />
     <state x="208" y="23" key="SettingsEditor" timestamp="1600612187847">
       <screen x="0" y="23" width="1440" height="782" />
     </state>
@@ -403,100 +190,6 @@
       <screen x="0" y="23" width="1440" height="782" />
     </state>
     <state x="385" y="129" key="search.everywhere.popup/0.23.1440.782@0.23.1440.782" timestamp="1600763784688" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="8" />
-    </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/QuaternaryHeapsort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/QuaternaryHeapsortTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StrongHeap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinaryTreeComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/QuaternaryHeapsort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/QuaternaryHeapsortTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StrongHeap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/StrongHeapTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="136" selection-start-line="136" selection-end-line="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/LinkedMultiHashSetTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="98" column="30" lean-forward="true" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkedMultiHashSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="300" column="36" selection-start-line="300" selection-start-column="36" selection-end-line="300" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#checkAndResize#0;class#LinkedMultiHashSet#0" />
-            <element signature="method#modifyNode#0;class#LinkedMultiHashSet#0" />
-            <element signature="docComment;method#add#0;class#LinkedMultiHashSet#0" />
-            <element signature="docComment;method#size#0;class#LinkedMultiHashSet#0" />
-            <element signature="e#6425#6426#0" expanded="true" />
-            <element signature="e#6457#6458#0" expanded="true" />
-            <element signature="docComment;method#internalCapacity#0;class#LinkedMultiHashSet#0" />
-            <element signature="e#6694#6695#0" expanded="true" />
-            <element signature="e#6737#6738#0" expanded="true" />
-            <element signature="docComment;method#distinctCount#0;class#LinkedMultiHashSet#0" />
-            <element signature="e#6937#6938#0" expanded="true" />
-            <element signature="e#6978#6979#0" expanded="true" />
-            <element signature="e#8456#8457#0" expanded="true" />
-            <element signature="e#8514#8515#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>
