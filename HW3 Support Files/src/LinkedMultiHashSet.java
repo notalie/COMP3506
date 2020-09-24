@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -79,6 +78,8 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
      * Finds a hash value for a corresponding element
      * @param element - the element to find a hash for
      * @return an int responding to a hash value for the element
+     * Time Complexity: O(n) (worse case) - where n is the initial capacity
+     * Space Complexity: O(1)
      */
     private int hash(T element) {
         int hash = element.hashCode() % this.initialCapacity;
@@ -97,6 +98,8 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
     /**
      * Checks if the recently added item has has made the bag full
      * If it has, double the initial capacity size and rehash all the values in
+     * Time Complexity: O(n) - where n the size of the new initial capacity
+     * Space Complexity: O(n) - where n the size of the new initial capacity
      */
     private void checkAndResize() {
         // Bag is full
@@ -111,6 +114,15 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         }
     }
 
+
+    /**
+     * Adds count to the number of occurrences of the element in set.
+     *
+     * @param element to add
+     * @require element != null && count >= 0
+     * Time Complexity: O(n) - where n the size of initial capacity
+     * Space Complexity: O(1)
+     */
     @Override
     public void add(T element, int count) {
         if (contains(element)) {
@@ -137,6 +149,14 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         checkAndResize();
     }
 
+    /**
+     * Checks if the element is in the set (at least once).
+     *
+     * @param element to check
+     * @return true if the element is in the set, else false.
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
+     */
     @Override
     public boolean contains(T element) {
         if (this.setArray[hash(element)] != null) {
@@ -146,6 +166,15 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         }
     }
 
+    /**
+     * Returns the count of how many occurrences of the given elements there
+     * are currently in the set.
+     *
+     * @param element to check
+     * @return the count of occurrences of element
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
+     */
     @Override
     public int count(T element) {
         Node elem = (Node) this.setArray[hash(element)];
@@ -156,6 +185,17 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         }
     }
 
+    /**
+     * Removes several occurrences of the element from the set.
+     *
+     * @param element to remove
+     * @param count the number of occurrences of element to remove
+     * @throws NoSuchElementException if the set contains less than
+     *         count occurrences of the given element
+     * @require element != null && count >= 0
+     * Time Complexity: O(n) - where n is the number of nodes
+     * Space Complexity: O(1)
+     */
     @Override
     public void remove(T element, int count) throws NoSuchElementException {
         Node elem = (Node) this.setArray[hash(element)];
@@ -195,11 +235,15 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
             }
             this.size -= count;
 
-        } else {
+        } else { // element is not in the bag/set
             throw new NoSuchElementException();
         }
     }
 
+    /**
+     * Returns an iterator that iterates through the multiset
+     * @return - an iterator that starts from the start of the multiset
+     */
     @Override
     public Iterator<T> iterator() {
         Node currentNode = this.head;
@@ -208,11 +252,23 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
             int occurences = current.occurences;
             int counter = 0;
 
+            /**
+             * Determines if the iterator can continue iterating
+             * @return - a boolean indicating if there is a next element to iterate over
+             * Time Complexity: O(1)
+             * Space Complexity: O(1)
+             */
             @Override
             public boolean hasNext() {
                 return counter < size();
             }
 
+            /**
+             * Returns the next element in the iterator
+             * @return - the next element in the list
+             * Time Complexity: O(1)
+             * Space Complexity: O(1)
+             */
             @Override
             public T next() {
                 if (hasNext()) {
@@ -236,26 +292,70 @@ public class LinkedMultiHashSet<T> implements MultiSet<T>, Iterable<T> {
         };
     }
 
+    /**
+     * Adds the element to the set. If an equal element is already in the set,
+     * increases its occurrence count by 1.
+     *
+     * @param element to add
+     * @require element != null
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
+     */
     @Override
     public void add(T element) {
         add(element, 1);
     }
 
+    /**
+     * Removes a single occurrence of element from the set.
+     *
+     * @param element to remove
+     * @throws NoSuchElementException if the set doesn't currently
+     *         contain the given element
+     * @require element != null
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
+     */
     @Override
     public void remove(T element) throws NoSuchElementException {
         remove(element, 1);
     }
 
+    /**
+     * Returns the total count of all elements in the multiset.
+     *
+     * Note that duplicates of an element all contribute to the count here.
+     *
+     * @return total count of elements in the collection
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
+     */
     @Override
     public int size() {
         return this.size;
     }
 
+
+    /**
+     * Returns the maximum number of *distinct* elements the internal data
+     * structure can contain before resizing.
+     *
+     * @return capacity of internal array
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
+     */
     @Override
     public int internalCapacity() {
         return this.initialCapacity;
     }
 
+    /**
+     * Returns the number of distinct elements currently stored in the set.
+     *
+     * @return count of distinct elements in the set
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
+     */
     @Override
     public int distinctCount() {
         return this.distinctCount;

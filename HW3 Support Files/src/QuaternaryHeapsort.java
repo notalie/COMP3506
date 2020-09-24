@@ -3,6 +3,8 @@ public class QuaternaryHeapsort {
      * Gets the left index of a quaternary heap based on what was passed in
      * @param j - the index to find the left side for
      * @return an index responding to the left most index
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
      */
     private static int left(int j) {
         return 4 * j + 1;
@@ -12,6 +14,8 @@ public class QuaternaryHeapsort {
      * Gets the middle left index of a quaternary heap based on what was passed in
      * @param j - the index to find the middle left side for
      * @return an index responding to the middle left most index
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
      */
     private static int midLeft(int j) {
         return 4 * j + 2;
@@ -21,6 +25,8 @@ public class QuaternaryHeapsort {
      * Gets the middle right index of a quaternary heap based on what was passed in
      * @param j - the index to find the middle right side for
      * @return an index responding to the middle right most index
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
      */
     private static int midRight(int j) {
         return 4 * j + 3;
@@ -30,6 +36,8 @@ public class QuaternaryHeapsort {
      * Gets the right index of a quaternary heap based on what was passed in
      * @param j - the index to find the right side for
      * @return an index responding to the right most index
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
      */
     private static int right(int j) {
         return 4 * j + 4;
@@ -40,6 +48,8 @@ public class QuaternaryHeapsort {
      * @param j - the index to check
      * @param size - the size of the heap
      * @return if there exists a leftmost element
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
      */
     private static boolean hasLeft(int j, int size) {
         return left(j) < size;
@@ -50,6 +60,8 @@ public class QuaternaryHeapsort {
      * @param j - the index to check
      * @param size - the size of the heap
      * @return if there exists a leftmost element
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
      */
     private static boolean hasMidLeft(int j, int size) {
         return midLeft(j) < size;
@@ -60,6 +72,8 @@ public class QuaternaryHeapsort {
      * @param j - the index to check
      * @param size - the size of the heap
      * @return if there exists a middle leftmost element
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
      */
     private static boolean hasMidRight(int j, int size) {
         return midRight(j) < size;
@@ -70,6 +84,8 @@ public class QuaternaryHeapsort {
      * @param j - the index to check
      * @param size - the size of the heap
      * @return if there exists a rightmost element
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
      */
     private static boolean hasRight(int j, int size) {
         return right(j) < size;
@@ -80,8 +96,11 @@ public class QuaternaryHeapsort {
      * @param i - the first element to switch
      * @param j - the second element to switch
      * @param heap - the heap array to change
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
      */
     private static <T extends Comparable<T>> void swap(int i, int j, T heap[]) {
+        // Temp value to swap
         T temp = heap[i];
         heap[i] = heap[j];
         heap[j] = temp;
@@ -91,6 +110,8 @@ public class QuaternaryHeapsort {
      * Sorts the input array, in-place, using a quaternary heap sort.
      *
      * @param input to be sorted (modified in place)
+     * Time Complexity: O(n(log(n)) - where n is the size of the heap/input
+     * Space Complexity: O(1) - nothing is created
      */
     public static <T extends Comparable<T>> void quaternaryHeapsort(T[] input) {
 
@@ -116,6 +137,8 @@ public class QuaternaryHeapsort {
      * @param input array representing a quaternary max heap.
      * @param start position in the array to start the downheap from.
      * @param size the size of the heap in the input array, starting from index 0
+     * Time Complexity: O(n) where n = size - start
+     * Space Complexity: O(1) - nothing is created
      */
     public static <T extends Comparable<T>> void quaternaryDownheap(T[] input, int start, int size) {
         while(hasLeft(start, size)) {
