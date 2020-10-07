@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.util.Comparator;
 
 /**
@@ -6,6 +5,15 @@ import java.util.Comparator;
  */
 public class BinaryTreeComparator<E extends Comparable<E>> implements Comparator<BinaryTree<E>> {
 
+    /**
+     * Compares two binary trees and recurses on each node until all nodes have been visited or there is a difference between nodes
+     * @param counter - a counter that keeps track of the values returned from each recurse
+     * @param tree1 root of the first binary tree, may be null.
+     * @param tree2 root of the second binary tree, may be null.
+     * @return -1, 0, +1 if tree1 is less than, equal to, or greater than tree2, respectively.
+     * Time Complexity: O(h) - where h is the height of the smallest tree
+     * Space Complexity: O(n) - the number of nodes within the smallest tree
+     */
     public int compareRecurse(BinaryTree<E> tree1, BinaryTree<E> tree2, int counter) {
         if (tree1 == null) { // Error checking if any are null
             return -1;
@@ -51,6 +59,8 @@ public class BinaryTreeComparator<E extends Comparable<E>> implements Comparator
      * @param tree1 root of the first binary tree, may be null.
      * @param tree2 root of the second binary tree, may be null.
      * @return -1, 0, +1 if tree1 is less than, equal to, or greater than tree2, respectively.
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
      */
     @Override
     public int compare(BinaryTree<E> tree1, BinaryTree<E> tree2) {
