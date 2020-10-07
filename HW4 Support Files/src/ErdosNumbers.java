@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
@@ -20,6 +21,13 @@ public class ErdosNumbers {
      * @param papers List of papers and their authors
      */
     public ErdosNumbers(List<String> papers) {
+        for(String paper : papers) {
+            String [] collaborators = paper.split(":")[1].split("[|]"); // gets list of collaborators with | splits
+            // need to add weights and create each node
+            for (String collaborator: collaborators) {
+                System.out.println(collaborator);
+            }
+        }
         // TODO: implement this
     }
     

@@ -20,7 +20,6 @@ public class ErdosNumbersTest {
     @Test
     public void basicTest() {
         ErdosNumbers nums = new ErdosNumbers(SIMPLE_TEST_SET);
-
         assertEquals(Set.of("Vertex‐distinguishing edge colorings of graphs", "Adjacent vertex distinguishing edge-colorings"), nums.getPapers("Balister, P. N."));
         assertEquals(Set.of("Riordan, O. M.", "Gyori, E.", "Lehel, J.", "Schelp, R. H."), nums.getCollaborators("Balister, P. N."));
     }
