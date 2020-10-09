@@ -25,7 +25,7 @@ public class ErdosNumbers {
             if (collaborators.containsKey(name)) { // name exists in collaborators
                 Integer numPapers = collaborators.get(name);
                 collaborators.put(name, ++numPapers);
-            } else {
+            } else if (!name.equals(this.name)){
                 collaborators.put(name, 1);
             }
         }
@@ -85,8 +85,6 @@ public class ErdosNumbers {
      * @return the unique co-authors the author has written with.
      */
     public Set<String> getCollaborators(String author) {
-        // TODO: implement this
-
         return authors.get(author).collaborators.keySet();
     }
 

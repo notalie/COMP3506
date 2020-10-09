@@ -19,9 +19,19 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="JUnit.ErdosNumbersTest.basicTest2">
+  <component name="RunManager" selected="JUnit.ErdosNumbersTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ErdosNumbersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW4 Support Files" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -66,6 +76,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ErdosNumbersTest" />
         <item itemvalue="JUnit.ErdosNumbersTest.basicTest2" />
         <item itemvalue="JUnit.ErdosNumbersTest.basicTest" />
       </list>
@@ -96,22 +107,22 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="198" key="GridCell.Tab.0.bottom" timestamp="1602240346856">
+    <state width="1398" height="198" key="GridCell.Tab.0.bottom" timestamp="1602240353252">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="198" key="GridCell.Tab.0.bottom/0.23.1440.778@0.23.1440.778" timestamp="1602240346856" />
-    <state width="1398" height="198" key="GridCell.Tab.0.center" timestamp="1602240346855">
+    <state width="1398" height="198" key="GridCell.Tab.0.bottom/0.23.1440.778@0.23.1440.778" timestamp="1602240353252" />
+    <state width="1398" height="198" key="GridCell.Tab.0.center" timestamp="1602240353251">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="198" key="GridCell.Tab.0.center/0.23.1440.778@0.23.1440.778" timestamp="1602240346855" />
-    <state width="1398" height="198" key="GridCell.Tab.0.left" timestamp="1602240346854">
+    <state width="1398" height="198" key="GridCell.Tab.0.center/0.23.1440.778@0.23.1440.778" timestamp="1602240353251" />
+    <state width="1398" height="198" key="GridCell.Tab.0.left" timestamp="1602240353251">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="198" key="GridCell.Tab.0.left/0.23.1440.778@0.23.1440.778" timestamp="1602240346854" />
-    <state width="1398" height="198" key="GridCell.Tab.0.right" timestamp="1602240346855">
+    <state width="1398" height="198" key="GridCell.Tab.0.left/0.23.1440.778@0.23.1440.778" timestamp="1602240353251" />
+    <state width="1398" height="198" key="GridCell.Tab.0.right" timestamp="1602240353252">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="198" key="GridCell.Tab.0.right/0.23.1440.778@0.23.1440.778" timestamp="1602240346855" />
+    <state width="1398" height="198" key="GridCell.Tab.0.right/0.23.1440.778@0.23.1440.778" timestamp="1602240353252" />
     <state width="1398" height="195" key="GridCell.Tab.1.bottom" timestamp="1602237305850">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
