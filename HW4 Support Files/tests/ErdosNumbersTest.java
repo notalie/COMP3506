@@ -23,6 +23,16 @@ public class ErdosNumbersTest {
         assertEquals(Set.of("Vertex‐distinguishing edge colorings of graphs", "Adjacent vertex distinguishing edge-colorings"), nums.getPapers("Balister, P. N."));
         assertEquals(Set.of("Riordan, O. M.", "Gyori, E.", "Lehel, J.", "Schelp, R. H."), nums.getCollaborators("Balister, P. N."));
     }
+
+    @Test
+    public void basicTest2() {
+        ErdosNumbers nums = new ErdosNumbers(List.of(
+                "Adjacent vertex distinguishing edge-colorings:Balister, P. N.|Gyori, E.|Lehel, J.|Schelp, R. H.",
+                "Vertex‐distinguishing edge colorings of graphs:Balister, P. N.|Riordan, O. M.|Schelp, R. H."
+        ));
+        assertEquals(Set.of("Vertex‐distinguishing edge colorings of graphs", "Adjacent vertex distinguishing edge-colorings"), nums.getPapers("Balister, P. N."));
+        assertEquals(Set.of("Riordan, O. M.", "Gyori, E.", "Lehel, J.", "Schelp, R. H."), nums.getCollaborators("Balister, P. N."));
+    }
     
     @Test
     public void simpleNumberTest() {
