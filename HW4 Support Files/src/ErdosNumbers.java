@@ -1,12 +1,41 @@
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class ErdosNumbers {
     /**
      * String representing Paul Erdos's name to check against
      */
     public static final String ERDOS = "Paul Erdös";
+
+    private class Author {
+
+        Set<String> papers; // list of papers worked on
+
+        HashMap<String, Integer> collaborators; // e.g. AuthorName:AmountOfPapers worked on
+
+        String name;
+
+        private Author(String name) {
+            this.name = name;
+            papers = new HashSet<>();
+            collaborators = new HashMap<>();
+        }
+
+        private void addAuthor(String name, String paperTitle) {
+            papers.add(paperTitle);
+            if (collaborators.containsKey(name)) { // name exists in collaborators
+                Integer numPapers = collaborators.get(name);
+                collaborators.put(name, ++numPapers);
+            } else {
+                collaborators.put(name, 1);
+            }
+        }
+
+        private void addAuthors(String[] authorNames, String paperTitle) {
+            for (String name: authorNames) {
+                addAuthor(name, paperTitle);
+            }
+        }
+    }
 
     /**
      * Initialises the class with a list of papers and authors.
@@ -20,12 +49,18 @@ public class ErdosNumbers {
      * 
      * @param papers List of papers and their authors
      */
+    HashMap<String, Author> authors; // Name, AuthorObject //TODO: comment properly
     public ErdosNumbers(List<String> papers) {
+        this.authors = new HashMap<>();
         for(String paper : papers) {
             String [] collaborators = paper.split(":")[1].split("[|]"); // gets list of collaborators with | splits
-            // need to add weights and create each node
+            String paperTitle = paper.split(":")[0];
             for (String collaborator: collaborators) {
-                System.out.println(collaborator);
+                // add each collaborator if they don't exist and if they do exist you need to update the collaborator
+                if (!authors.containsKey(collaborator)) {
+                    authors.put(collaborator, new Author(collaborator));
+                }
+                authors.get(collaborator).addAuthors(collaborators, paperTitle);
             }
         }
         // TODO: implement this
@@ -40,8 +75,7 @@ public class ErdosNumbers {
      */
     public Set<String> getPapers(String author) {
         // TODO: implement this
-        
-        return Set.of();
+        return authors.get(author).papers;
     }
 
     /**
@@ -52,8 +86,8 @@ public class ErdosNumbers {
      */
     public Set<String> getCollaborators(String author) {
         // TODO: implement this
-        
-        return Set.of();
+
+        return authors.get(author).collaborators.keySet();
     }
 
     /**
