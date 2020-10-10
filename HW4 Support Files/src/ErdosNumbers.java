@@ -50,11 +50,16 @@ public class ErdosNumbers {
      * @param papers List of papers and their authors
      */
     HashMap<String, Author> authors; // Name, AuthorObject //TODO: comment properly
+    HashMap<String, String[]> paperCollaborators; //PaperName, Authors
+
     public ErdosNumbers(List<String> papers) {
         this.authors = new HashMap<>();
+        this.paperCollaborators = new HashMap<>();
+
         for(String paper : papers) {
             String [] collaborators = paper.split(":")[1].split("[|]"); // gets list of collaborators with | splits
             String paperTitle = paper.split(":")[0];
+            paperCollaborators.put(paperTitle, collaborators);
             for (String collaborator: collaborators) {
                 // add each collaborator if they don't exist and if they do exist you need to update the collaborator
                 if (!authors.containsKey(collaborator)) {
@@ -135,13 +140,39 @@ public class ErdosNumbers {
      * @return authors' Erdos number or otherwise Integer.MAX_VALUE
      */
     public int calculateErdosNumber(String author) {
-        PriorityQueue<String> queue = new PriorityQueue<>();
+        Queue<String> toVisit = new LinkedList<>();
         Set<String> visited = new HashSet<>();
 
-        queue.add(author);
+        String current;
+        toVisit.add(author); // level 1
+        toVisit.add(null);
+
+        int distance = 0;
 
         while(!toVisit.isEmpty()) {
+            current = toVisit.poll();
 
+            if (current == null) { // reached a new level
+                distance++;
+                toVisit.add(null); // add indicator for next level
+                if (toVisit.peek() == null) {
+                    return Integer.MAX_VALUE; // end of the search
+                }
+                continue;
+            }
+
+            if (current.equals(ERDOS)) {
+                return distance;
+            }
+
+            if (!visited.contains(current)) {
+                for (String collaborator: getCollaborators(current)) {
+                    if (!visited.contains(collaborator)) {
+                        toVisit.add(collaborator);
+                    }
+                }
+            }
+            visited.add(current);
         }
         return Integer.MAX_VALUE; // If nothing else is returned
     }
@@ -156,9 +187,12 @@ public class ErdosNumbers {
      * @return average Erdos number of paper's authors
      */
     public double averageErdosNumber(String paper) {
-        // TODO: implement this
-        
-        return 0;
+        String[] authorsInPaper = paperCollaborators.get(paper);
+        int totalNumbers = 0;
+        for (String author: authorsInPaper) {
+            totalNumbers += calculateErdosNumber(author);
+        }
+        return (double)totalNumbers/authorsInPaper.length;
     }
 
     /**

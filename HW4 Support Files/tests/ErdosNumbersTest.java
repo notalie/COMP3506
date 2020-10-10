@@ -37,7 +37,6 @@ public class ErdosNumbersTest {
     @Test
     public void simpleNumberTest() {
         ErdosNumbers nums = new ErdosNumbers(SIMPLE_TEST_SET);
-        
         assertEquals(1, nums.calculateErdosNumber("Schelp, R. H."));
         assertEquals(2, nums.calculateErdosNumber("Burris, A. C."));
         assertEquals(2, nums.calculateErdosNumber("Riordan, O. M."));
