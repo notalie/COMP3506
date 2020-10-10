@@ -51,7 +51,6 @@ public class ErdosNumbersTest {
         
         List<String> unconnectedSet = new ArrayList<String>(SIMPLE_TEST_SET);
         unconnectedSet.add("On Computable Numbers, with an Application to the Entscheidungsproblem:Turing A. M.");
-        
         ErdosNumbers nums2 = new ErdosNumbers(unconnectedSet);
         assertFalse(nums2.isErdosConnectedToAll());
     }
@@ -117,7 +116,9 @@ public class ErdosNumbersTest {
         );
         
         ErdosNumbers nums = new ErdosNumbers(papers);
-        
+
+        //assertEquals(Integer.MAX_VALUE, nums.calculateErdosNumber("AAAAAAA BBBBBB"));
+
         assertEquals(3, nums.calculateErdosNumber("Mahsa Baktashmotlagh"));
         assertEquals(4, nums.calculateErdosNumber("Richard Thomas"));
         assertEquals(3, nums.calculateErdosNumber("Yufei Tao"));

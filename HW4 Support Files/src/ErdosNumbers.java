@@ -63,7 +63,6 @@ public class ErdosNumbers {
                 authors.get(collaborator).addAuthors(collaborators, paperTitle);
             }
         }
-        // TODO: implement this
     }
     
     /**
@@ -85,7 +84,11 @@ public class ErdosNumbers {
      * @return the unique co-authors the author has written with.
      */
     public Set<String> getCollaborators(String author) {
-        return authors.get(author).collaborators.keySet();
+        if (authors.get(author) != null) {
+            return authors.get(author).collaborators.keySet();
+        } else {
+            return Set.of();
+        }
     }
 
     /**
@@ -97,9 +100,24 @@ public class ErdosNumbers {
      * @return the connectivity of Erdos to all other authors.
      */
     public boolean isErdosConnectedToAll() {
-        // TODO: implement this
-        
-        return false;
+        Stack<String> toVisit = new Stack<>();
+        Set<String> visited = new HashSet<>();
+
+        String current = ERDOS;
+        toVisit.add(current); // Start with Erdos
+
+        while(!toVisit.isEmpty()) {
+            current = toVisit.pop();
+
+            for (String collaborator: getCollaborators(current)) {
+                if (!visited.contains(collaborator)) { // Has not been visited
+                    toVisit.push(collaborator);
+                }
+            }
+            visited.add(current); // Mark as visited
+        }
+
+        return visited.size() == this.authors.size();
     }
 
     /**
@@ -117,9 +135,15 @@ public class ErdosNumbers {
      * @return authors' Erdos number or otherwise Integer.MAX_VALUE
      */
     public int calculateErdosNumber(String author) {
-        // TODO: implement this
-        
-        return 0;
+        PriorityQueue<String> queue = new PriorityQueue<>();
+        Set<String> visited = new HashSet<>();
+
+        queue.add(author);
+
+        while(!toVisit.isEmpty()) {
+
+        }
+        return Integer.MAX_VALUE; // If nothing else is returned
     }
 
     /**

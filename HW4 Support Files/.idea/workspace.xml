@@ -18,8 +18,9 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.ErdosNumbersTest">
+  <component name="RunManager" selected="JUnit.ErdosNumbersTest.simpleNumberTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -36,22 +37,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ErdosNumbersTest.basicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ErdosNumbersTest.basicTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW4 Support Files" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
-      <option name="METHOD_NAME" value="basicTest" />
+      <option name="METHOD_NAME" value="basicTest2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ErdosNumbersTest.basicTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ErdosNumbersTest.simpleNumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW4 Support Files" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
-      <option name="METHOD_NAME" value="basicTest2" />
+      <option name="METHOD_NAME" value="simpleNumberTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ErdosNumbersTest.testConnectivity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW4 Support Files" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
+      <option name="METHOD_NAME" value="testConnectivity" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ErdosNumbersTest.uqTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW4 Support Files" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
+      <option name="METHOD_NAME" value="uqTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -76,9 +99,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ErdosNumbersTest.simpleNumberTest" />
+        <item itemvalue="JUnit.ErdosNumbersTest.uqTest" />
         <item itemvalue="JUnit.ErdosNumbersTest" />
+        <item itemvalue="JUnit.ErdosNumbersTest.testConnectivity" />
         <item itemvalue="JUnit.ErdosNumbersTest.basicTest2" />
-        <item itemvalue="JUnit.ErdosNumbersTest.basicTest" />
       </list>
     </recent_temporary>
   </component>
@@ -107,38 +132,38 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="198" key="GridCell.Tab.0.bottom" timestamp="1602240353252">
+    <state width="1398" height="309" key="GridCell.Tab.0.bottom" timestamp="1602301468698">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="198" key="GridCell.Tab.0.bottom/0.23.1440.778@0.23.1440.778" timestamp="1602240353252" />
-    <state width="1398" height="198" key="GridCell.Tab.0.center" timestamp="1602240353251">
+    <state width="1398" height="309" key="GridCell.Tab.0.bottom/0.23.1440.778@0.23.1440.778" timestamp="1602301468698" />
+    <state width="1398" height="309" key="GridCell.Tab.0.center" timestamp="1602301468697">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="198" key="GridCell.Tab.0.center/0.23.1440.778@0.23.1440.778" timestamp="1602240353251" />
-    <state width="1398" height="198" key="GridCell.Tab.0.left" timestamp="1602240353251">
+    <state width="1398" height="309" key="GridCell.Tab.0.center/0.23.1440.778@0.23.1440.778" timestamp="1602301468697" />
+    <state width="1398" height="309" key="GridCell.Tab.0.left" timestamp="1602301468697">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="198" key="GridCell.Tab.0.left/0.23.1440.778@0.23.1440.778" timestamp="1602240353251" />
-    <state width="1398" height="198" key="GridCell.Tab.0.right" timestamp="1602240353252">
+    <state width="1398" height="309" key="GridCell.Tab.0.left/0.23.1440.778@0.23.1440.778" timestamp="1602301468697" />
+    <state width="1398" height="309" key="GridCell.Tab.0.right" timestamp="1602301468698">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="198" key="GridCell.Tab.0.right/0.23.1440.778@0.23.1440.778" timestamp="1602240353252" />
-    <state width="1398" height="195" key="GridCell.Tab.1.bottom" timestamp="1602237305850">
+    <state width="1398" height="309" key="GridCell.Tab.0.right/0.23.1440.778@0.23.1440.778" timestamp="1602301468698" />
+    <state width="1398" height="309" key="GridCell.Tab.1.bottom" timestamp="1602301468699">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="195" key="GridCell.Tab.1.bottom/0.23.1440.778@0.23.1440.778" timestamp="1602237305850" />
-    <state width="1398" height="195" key="GridCell.Tab.1.center" timestamp="1602237305850">
+    <state width="1398" height="309" key="GridCell.Tab.1.bottom/0.23.1440.778@0.23.1440.778" timestamp="1602301468699" />
+    <state width="1398" height="309" key="GridCell.Tab.1.center" timestamp="1602301468699">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="195" key="GridCell.Tab.1.center/0.23.1440.778@0.23.1440.778" timestamp="1602237305850" />
-    <state width="1398" height="195" key="GridCell.Tab.1.left" timestamp="1602237305850">
+    <state width="1398" height="309" key="GridCell.Tab.1.center/0.23.1440.778@0.23.1440.778" timestamp="1602301468699" />
+    <state width="1398" height="309" key="GridCell.Tab.1.left" timestamp="1602301468698">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="195" key="GridCell.Tab.1.left/0.23.1440.778@0.23.1440.778" timestamp="1602237305850" />
-    <state width="1398" height="195" key="GridCell.Tab.1.right" timestamp="1602237305850">
+    <state width="1398" height="309" key="GridCell.Tab.1.left/0.23.1440.778@0.23.1440.778" timestamp="1602301468698" />
+    <state width="1398" height="309" key="GridCell.Tab.1.right" timestamp="1602301468699">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="195" key="GridCell.Tab.1.right/0.23.1440.778@0.23.1440.778" timestamp="1602237305850" />
+    <state width="1398" height="309" key="GridCell.Tab.1.right/0.23.1440.778@0.23.1440.778" timestamp="1602301468699" />
   </component>
   <component name="masterDetails">
     <states>
