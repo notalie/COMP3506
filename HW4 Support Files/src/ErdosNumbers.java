@@ -195,6 +195,13 @@ public class ErdosNumbers {
         return (double)totalNumbers/authorsInPaper.length;
     }
 
+
+    private double calculateWeight(LinkedList<String> visited, int distance) {
+        System.out.println(visited);
+        System.out.println(distance);
+        return 0;
+    }
+
     /**
      * Calculates the "weighted Erdos number" of an author.
      * 
@@ -207,8 +214,40 @@ public class ErdosNumbers {
      * @return author's weighted Erdos number
      */
     public double calculateWeightedErdosNumber(String author) {
-        // TODO: implement this
+        Queue<String> toVisit = new LinkedList<>();
+        LinkedList<String> visited = new LinkedList<>();
 
-        return 0;
+        String current;
+        toVisit.add(author); // level 1
+        toVisit.add(null);
+        int distance = 0;
+
+        while(!toVisit.isEmpty()) {
+            current = toVisit.poll();
+
+            if (current == null) { // reached a new level
+                visited.add(null);
+                distance++;
+                toVisit.add(null); // add indicator for next level
+                if (toVisit.peek() == null) {
+                    return Integer.MAX_VALUE; // end of the search
+                }
+                continue;
+            }
+
+            if (current.equals(ERDOS)) {
+                return calculateWeight(visited, distance);
+            }
+
+            if (!visited.contains(current)) {
+                for (String collaborator: getCollaborators(current)) {
+                    if (!visited.contains(collaborator)) {
+                        toVisit.add(collaborator);
+                    }
+                }
+            }
+            visited.add(current);
+        }
+        return Integer.MAX_VALUE; // If nothing else is returned
     }
 }

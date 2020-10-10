@@ -37,6 +37,7 @@ public class ErdosNumbersTest {
     @Test
     public void simpleNumberTest() {
         ErdosNumbers nums = new ErdosNumbers(SIMPLE_TEST_SET);
+        assertEquals(0, nums.calculateErdosNumber("Paul Erdös"));
         assertEquals(1, nums.calculateErdosNumber("Schelp, R. H."));
         assertEquals(2, nums.calculateErdosNumber("Burris, A. C."));
         assertEquals(2, nums.calculateErdosNumber("Riordan, O. M."));
@@ -69,6 +70,19 @@ public class ErdosNumbersTest {
         assertEquals(2.0, nums.calculateWeightedErdosNumber("Burris, A. C."), 0.001);
         assertEquals(2.0, nums.calculateWeightedErdosNumber("Riordan, O. M."), 0.001);
         assertEquals(1.5, nums.calculateWeightedErdosNumber("Balister, P. N."), 0.001);
+    }
+
+    @Test
+    public void simpleWeightedTest2() {
+        ErdosNumbers nums = new ErdosNumbers(List.of(
+                "Title 1:A|B|C",
+                "Title 1.5:A|D",
+                "Title 2:B|C",
+                "Title 3:A|C",
+                "Title 4:C|Paul Erdös"
+        ));
+
+        assertEquals(1.0, nums.calculateWeightedErdosNumber("A"), 0.001);
     }
     
     @Test
@@ -116,7 +130,7 @@ public class ErdosNumbersTest {
         
         ErdosNumbers nums = new ErdosNumbers(papers);
 
-        //assertEquals(Integer.MAX_VALUE, nums.calculateErdosNumber("AAAAAAA BBBBBB"));
+        assertEquals(Integer.MAX_VALUE, nums.calculateErdosNumber("AAAAAAA BBBBBB"));
 
         assertEquals(3, nums.calculateErdosNumber("Mahsa Baktashmotlagh"));
         assertEquals(4, nums.calculateErdosNumber("Richard Thomas"));

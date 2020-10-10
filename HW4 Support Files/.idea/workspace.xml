@@ -10,31 +10,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ErdosNumbers.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ErdosNumbers.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ErdosNumbers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3056">
-              <caret line="209" column="31" lean-forward="true" selection-start-line="209" selection-start-column="31" selection-end-line="209" selection-end-column="31" />
+            <state relative-caret-position="249">
+              <caret line="229" column="27" selection-start-line="229" selection-start-column="27" selection-end-line="229" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ErdosNumbersTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ErdosNumbersTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/ErdosNumbersTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+            <state relative-caret-position="160">
+              <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>erd</find>
+    </findStrings>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tests/ErdosNumbersTest.java" />
         <option value="$PROJECT_DIR$/src/ErdosNumbers.java" />
+        <option value="$PROJECT_DIR$/tests/ErdosNumbersTest.java" />
       </list>
     </option>
   </component>
@@ -89,7 +94,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ErdosNumbersTest">
+  <component name="RunManager" selected="JUnit.ErdosNumbersTest.simpleWeightedTest2">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method>
@@ -104,23 +109,6 @@
       <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="ErdosNumbersTest.basicTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HW4 Support Files" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
-      <option name="METHOD_NAME" value="basicTest2" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -147,13 +135,30 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ErdosNumbersTest.testConnectivity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ErdosNumbersTest.simpleWeightedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW4 Support Files" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
-      <option name="METHOD_NAME" value="testConnectivity" />
+      <option name="METHOD_NAME" value="simpleWeightedTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ErdosNumbersTest.simpleWeightedTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW4 Support Files" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
+      <option name="METHOD_NAME" value="simpleWeightedTest2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -227,18 +232,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.ErdosNumbersTest" />
-      <item itemvalue="JUnit.ErdosNumbersTest.basicTest2" />
       <item itemvalue="JUnit.ErdosNumbersTest.simpleNumberTest" />
-      <item itemvalue="JUnit.ErdosNumbersTest.testConnectivity" />
       <item itemvalue="JUnit.ErdosNumbersTest.uqTest" />
+      <item itemvalue="JUnit.ErdosNumbersTest.simpleWeightedTest" />
+      <item itemvalue="JUnit.ErdosNumbersTest.simpleWeightedTest2" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ErdosNumbersTest" />
-        <item itemvalue="JUnit.ErdosNumbersTest.simpleNumberTest" />
-        <item itemvalue="JUnit.ErdosNumbersTest.testConnectivity" />
+        <item itemvalue="JUnit.ErdosNumbersTest.simpleWeightedTest2" />
+        <item itemvalue="JUnit.ErdosNumbersTest.simpleWeightedTest" />
         <item itemvalue="JUnit.ErdosNumbersTest.uqTest" />
-        <item itemvalue="JUnit.ErdosNumbersTest.basicTest2" />
+        <item itemvalue="JUnit.ErdosNumbersTest.simpleNumberTest" />
+        <item itemvalue="JUnit.ErdosNumbersTest" />
       </list>
     </recent_temporary>
   </component>
@@ -256,35 +261,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ErdosNumbersTest_simpleNumberTest - 2020.10.10 at 14h 38m 00s.xml">
+    <history-entry file="ErdosNumbersTest_simpleNumberTest - 2020.10.10 at 14h 57m 28s.xml">
       <configuration name="ErdosNumbersTest.simpleNumberTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest_simpleNumberTest - 2020.10.10 at 14h 38m 27s.xml">
-      <configuration name="ErdosNumbersTest.simpleNumberTest" configurationId="JUnit" />
+    <history-entry file="ErdosNumbersTest_simpleWeightedTest - 2020.10.10 at 14h 57m 35s.xml">
+      <configuration name="ErdosNumbersTest.simpleWeightedTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest_simpleNumberTest - 2020.10.10 at 14h 41m 13s.xml">
-      <configuration name="ErdosNumbersTest.simpleNumberTest" configurationId="JUnit" />
+    <history-entry file="ErdosNumbersTest_uqTest - 2020.10.10 at 14h 59m 46s.xml">
+      <configuration name="ErdosNumbersTest.uqTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest_simpleNumberTest - 2020.10.10 at 14h 41m 18s.xml">
-      <configuration name="ErdosNumbersTest.simpleNumberTest" configurationId="JUnit" />
+    <history-entry file="ErdosNumbersTest_simpleWeightedTest - 2020.10.10 at 15h 05m 45s.xml">
+      <configuration name="ErdosNumbersTest.simpleWeightedTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest_simpleNumberTest - 2020.10.10 at 14h 41m 34s.xml">
-      <configuration name="ErdosNumbersTest.simpleNumberTest" configurationId="JUnit" />
+    <history-entry file="ErdosNumbersTest_simpleWeightedTest - 2020.10.10 at 15h 07m 12s.xml">
+      <configuration name="ErdosNumbersTest.simpleWeightedTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest - 2020.10.10 at 14h 41m 39s.xml">
-      <configuration name="ErdosNumbersTest" configurationId="JUnit" />
+    <history-entry file="ErdosNumbersTest_simpleWeightedTest2 - 2020.10.10 at 15h 12m 33s.xml">
+      <configuration name="ErdosNumbersTest.simpleWeightedTest2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest - 2020.10.10 at 14h 47m 48s.xml">
-      <configuration name="ErdosNumbersTest" configurationId="JUnit" />
+    <history-entry file="ErdosNumbersTest_simpleWeightedTest2 - 2020.10.10 at 15h 20m 41s.xml">
+      <configuration name="ErdosNumbersTest.simpleWeightedTest2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest - 2020.10.10 at 14h 48m 08s.xml">
-      <configuration name="ErdosNumbersTest" configurationId="JUnit" />
+    <history-entry file="ErdosNumbersTest_simpleWeightedTest2 - 2020.10.10 at 15h 20m 52s.xml">
+      <configuration name="ErdosNumbersTest.simpleWeightedTest2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest - 2020.10.10 at 14h 51m 41s.xml">
-      <configuration name="ErdosNumbersTest" configurationId="JUnit" />
+    <history-entry file="ErdosNumbersTest_simpleWeightedTest2 - 2020.10.10 at 15h 21m 08s.xml">
+      <configuration name="ErdosNumbersTest.simpleWeightedTest2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest - 2020.10.10 at 14h 52m 24s.xml">
-      <configuration name="ErdosNumbersTest" configurationId="JUnit" />
+    <history-entry file="ErdosNumbersTest_simpleWeightedTest2 - 2020.10.10 at 15h 21m 33s.xml">
+      <configuration name="ErdosNumbersTest.simpleWeightedTest2" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -300,7 +305,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38331574" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35480464" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -440,17 +445,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ErdosNumbersTest.java">
+    <entry file="file://$PROJECT_DIR$/src/ErdosNumbers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+        <state relative-caret-position="249">
+          <caret line="229" column="27" selection-start-line="229" selection-start-column="27" selection-end-line="229" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ErdosNumbers.java">
+    <entry file="file://$PROJECT_DIR$/tests/ErdosNumbersTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3056">
-          <caret line="209" column="31" lean-forward="true" selection-start-line="209" selection-start-column="31" selection-end-line="209" selection-end-column="31" />
+        <state relative-caret-position="160">
+          <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
         </state>
       </provider>
     </entry>
