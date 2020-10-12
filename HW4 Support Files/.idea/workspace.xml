@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2387f29c-a940-49b1-9750-6265ede80d50" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,20 +12,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ErdosNumbers.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ErdosNumbers.java">
+      <file leaf-file-name="ContactTracer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ContactTracer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="229" column="27" selection-start-line="229" selection-start-column="27" selection-end-line="229" selection-end-column="27" />
+            <state relative-caret-position="167">
+              <caret line="135" column="9" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
+              <folding>
+                <element signature="e#516#517#0" expanded="true" />
+                <element signature="e#565#566#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ErdosNumbersTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/ErdosNumbersTest.java">
+      <file leaf-file-name="ContactTracerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/ContactTracerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
+            <state relative-caret-position="419">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Trace.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Trace.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -33,6 +48,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>erd</find>
+      <find>getcontacts</find>
+      <find>getcontact</find>
+      <find>contacttracer</find>
+      <find>getcontacttimes</find>
+      <find>getcont</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -40,11 +60,15 @@
       <list>
         <option value="$PROJECT_DIR$/src/ErdosNumbers.java" />
         <option value="$PROJECT_DIR$/tests/ErdosNumbersTest.java" />
+        <option value="$PROJECT_DIR$/tests/ContactTracerTest.java" />
+        <option value="$PROJECT_DIR$/src/Trace.java" />
+        <option value="$PROJECT_DIR$/src/ContactTracer.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
+    <option name="x" value="394" />
+    <option name="y" value="-16" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -54,7 +78,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -72,7 +96,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -94,19 +118,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ErdosNumbersTest.simpleWeightedTest2">
+  <component name="RunManager" selected="JUnit.ContactTracerTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ErdosNumbersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactTracerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW4 Support Files" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
+      <option name="MAIN_CLASS_NAME" value="ContactTracerTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
@@ -118,13 +142,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ErdosNumbersTest.simpleNumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactTracerTest.testBasicContacts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW4 Support Files" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
-      <option name="METHOD_NAME" value="simpleNumberTest" />
+      <option name="MAIN_CLASS_NAME" value="ContactTracerTest" />
+      <option name="METHOD_NAME" value="testBasicContacts" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -135,13 +159,30 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ErdosNumbersTest.simpleWeightedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactTracerTest.testGetContactTimes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW4 Support Files" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
-      <option name="METHOD_NAME" value="simpleWeightedTest" />
+      <option name="MAIN_CLASS_NAME" value="ContactTracerTest" />
+      <option name="METHOD_NAME" value="testGetContactTimes" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ContactTracerTest.testGetContacts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW4 Support Files" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ContactTracerTest" />
+      <option name="METHOD_NAME" value="testGetContacts" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -159,23 +200,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
       <option name="METHOD_NAME" value="simpleWeightedTest2" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="ErdosNumbersTest.uqTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HW4 Support Files" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
-      <option name="METHOD_NAME" value="uqTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -231,19 +255,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ErdosNumbersTest" />
-      <item itemvalue="JUnit.ErdosNumbersTest.simpleNumberTest" />
-      <item itemvalue="JUnit.ErdosNumbersTest.uqTest" />
-      <item itemvalue="JUnit.ErdosNumbersTest.simpleWeightedTest" />
       <item itemvalue="JUnit.ErdosNumbersTest.simpleWeightedTest2" />
+      <item itemvalue="JUnit.ContactTracerTest.testGetContacts" />
+      <item itemvalue="JUnit.ContactTracerTest.testBasicContacts" />
+      <item itemvalue="JUnit.ContactTracerTest.testGetContactTimes" />
+      <item itemvalue="JUnit.ContactTracerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ContactTracerTest" />
+        <item itemvalue="JUnit.ContactTracerTest.testGetContactTimes" />
+        <item itemvalue="JUnit.ContactTracerTest.testGetContacts" />
+        <item itemvalue="JUnit.ContactTracerTest.testBasicContacts" />
         <item itemvalue="JUnit.ErdosNumbersTest.simpleWeightedTest2" />
-        <item itemvalue="JUnit.ErdosNumbersTest.simpleWeightedTest" />
-        <item itemvalue="JUnit.ErdosNumbersTest.uqTest" />
-        <item itemvalue="JUnit.ErdosNumbersTest.simpleNumberTest" />
-        <item itemvalue="JUnit.ErdosNumbersTest" />
       </list>
     </recent_temporary>
   </component>
@@ -261,35 +285,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ErdosNumbersTest_simpleNumberTest - 2020.10.10 at 14h 57m 28s.xml">
-      <configuration name="ErdosNumbersTest.simpleNumberTest" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest_testGetContactTimes - 2020.10.12 at 16h 05m 18s.xml">
+      <configuration name="ContactTracerTest.testGetContactTimes" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest_simpleWeightedTest - 2020.10.10 at 14h 57m 35s.xml">
-      <configuration name="ErdosNumbersTest.simpleWeightedTest" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest_testBasicContacts - 2020.10.12 at 16h 06m 23s.xml">
+      <configuration name="ContactTracerTest.testBasicContacts" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest_uqTest - 2020.10.10 at 14h 59m 46s.xml">
-      <configuration name="ErdosNumbersTest.uqTest" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest_testGetContactTimes - 2020.10.12 at 16h 06m 23s.xml">
+      <configuration name="ContactTracerTest.testGetContactTimes" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest_simpleWeightedTest - 2020.10.10 at 15h 05m 45s.xml">
-      <configuration name="ErdosNumbersTest.simpleWeightedTest" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest_testGetContacts - 2020.10.12 at 16h 06m 23s.xml">
+      <configuration name="ContactTracerTest.testGetContacts" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest_simpleWeightedTest - 2020.10.10 at 15h 07m 12s.xml">
-      <configuration name="ErdosNumbersTest.simpleWeightedTest" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest_testGetContactTimes - 2020.10.12 at 16h 06m 28s.xml">
+      <configuration name="ContactTracerTest.testGetContactTimes" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest_simpleWeightedTest2 - 2020.10.10 at 15h 12m 33s.xml">
-      <configuration name="ErdosNumbersTest.simpleWeightedTest2" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest_testGetContactTimes - 2020.10.12 at 16h 06m 35s.xml">
+      <configuration name="ContactTracerTest.testGetContactTimes" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest_simpleWeightedTest2 - 2020.10.10 at 15h 20m 41s.xml">
-      <configuration name="ErdosNumbersTest.simpleWeightedTest2" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest_testGetContactTimes - 2020.10.12 at 16h 06m 45s.xml">
+      <configuration name="ContactTracerTest.testGetContactTimes" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest_simpleWeightedTest2 - 2020.10.10 at 15h 20m 52s.xml">
-      <configuration name="ErdosNumbersTest.simpleWeightedTest2" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest_testGetContactTimes - 2020.10.12 at 16h 08m 19s.xml">
+      <configuration name="ContactTracerTest.testGetContactTimes" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest_simpleWeightedTest2 - 2020.10.10 at 15h 21m 08s.xml">
-      <configuration name="ErdosNumbersTest.simpleWeightedTest2" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest - 2020.10.12 at 16h 09m 20s.xml">
+      <configuration name="ContactTracerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ErdosNumbersTest_simpleWeightedTest2 - 2020.10.10 at 15h 21m 33s.xml">
-      <configuration name="ErdosNumbersTest.simpleWeightedTest2" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest - 2020.10.12 at 16h 13m 11s.xml">
+      <configuration name="ContactTracerTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -304,18 +328,18 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27032736" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35480464" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18958333" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3796875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39915523" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -341,6 +365,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1398" height="309" key="GridCell.Tab.0.bottom" timestamp="1602301468698">
@@ -378,10 +405,24 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/ErdosNumbers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4122">
+          <caret line="229" column="27" selection-start-line="229" selection-start-column="27" selection-end-line="229" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ErdosNumbersTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1314">
+          <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ErdosNumbers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -410,10 +451,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Trace.java">
+    <entry file="file://$PROJECT_DIR$/tests/ErdosNumbersTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="160">
+          <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -431,31 +472,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ContactTracer.java">
+    <entry file="file://$PROJECT_DIR$/src/ErdosNumbers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="216">
+          <caret line="12" column="63" lean-forward="true" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Trace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/ContactTracerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-567">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        <state relative-caret-position="419">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ErdosNumbers.java">
+    <entry file="file://$PROJECT_DIR$/src/ContactTracer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="229" column="27" selection-start-line="229" selection-start-column="27" selection-end-line="229" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ErdosNumbersTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
+        <state relative-caret-position="167">
+          <caret line="135" column="9" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
+          <folding>
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#565#566#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
