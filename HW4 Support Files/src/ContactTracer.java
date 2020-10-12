@@ -17,6 +17,9 @@ public class ContactTracer {
         private void addPerson(String contactedPerson, int time) {
             ArrayList<Integer> times;
             if (this.contacts.containsKey(contactedPerson)) {
+                if (this.contacts.get(contactedPerson).contains(time)) {
+                    return; // Do nothing, time is already in the database
+                }
                 times = this.contacts.get(contactedPerson);
             } else {
                 times = new ArrayList<>();
@@ -28,11 +31,14 @@ public class ContactTracer {
 
     HashMap<String, Person> contactsList;
 
+    List<Trace> traces;
+
     /**
      * Initialises an empty ContactTracer with no populated contact traces.
      */
     public ContactTracer() {
         this.contactsList = new HashMap<>();
+        this.traces = new ArrayList<>();
     }
 
     /**
@@ -43,6 +49,7 @@ public class ContactTracer {
      * @require traces != null
      */
     public ContactTracer(List<Trace> traces) {
+        this.traces = traces;
         this.contactsList = new HashMap<>(); // initialise hashmap first
         for (Trace trace: traces) {
             contactsList.put(trace.getPerson1(), new Person(trace.getPerson1()));
@@ -81,6 +88,8 @@ public class ContactTracer {
         person2.addPerson(trace.getPerson1(), trace.getTime());
         this.contactsList.put(trace.getPerson1(), person1);
         this.contactsList.put(trace.getPerson2(), person2);
+
+        this.traces.add(trace);
     }
 
     /**
@@ -137,6 +146,17 @@ public class ContactTracer {
         return peopleToContact;
     }
 
+    private int getContactTime(String person1, String person2, int time) {
+        List<Integer> times = getContactTimes(person1, person2);
+
+        for (int t: times) {
+            if (t >= (time + 60)) {
+                return t;
+            }
+        }
+        return -1; // Couldn't find a time where they would've been infected
+    }
+
     /**
      * Initiates a contact trace starting with the given person, who
      * became contagious at timeOfContagion.
@@ -148,8 +168,26 @@ public class ContactTracer {
      * @return set of people who may have contracted the disease, originating from person
      */
     public Set<String> contactTrace(String person, int timeOfContagion) {
-        // TODO: implement this!
-        
-        return null;
+        Set<String> peopleToContact = new HashSet<>(); // list of people to contact
+        LinkedList<String> toTrace = new LinkedList<>();
+
+        toTrace.addAll(getContactsAfter(person, timeOfContagion)); // Adds patient 0s
+        peopleToContact.addAll(toTrace); // Adds patients to already contacted ones, these aren't used for duplicate checking only returning
+        contactRecurse(person, peopleToContact, toTrace, timeOfContagion);
+        peopleToContact.remove(person);
+        return peopleToContact;
+    }
+
+    private void contactRecurse(String start, Set<String> peopleToContact, LinkedList<String> toTrace, int currentTime) {
+        for (int i = 0; i < toTrace.size(); i++) {
+            String person = toTrace.get(i);
+            int timeOfContact = getContactTime(start, person, currentTime);
+            if (timeOfContact != -1) {
+                peopleToContact.addAll(getContactsAfter(person, timeOfContact + 60));
+                toTrace.addAll(getContactsAfter(person, timeOfContact));
+            }
+            toTrace.remove(i); // Remove it from the list
+            contactRecurse(person, peopleToContact, toTrace, currentTime += 60);
+        }
     }
 }

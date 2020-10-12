@@ -12,24 +12,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ContactTracer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ContactTracer.java">
+      <file leaf-file-name="ContactTracerTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/ContactTracerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="135" column="9" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
-              <folding>
-                <element signature="e#516#517#0" expanded="true" />
-                <element signature="e#565#566#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="382">
+              <caret line="36" column="71" selection-start-line="36" selection-start-column="71" selection-end-line="36" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactTracerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/ContactTracerTest.java">
+      <file leaf-file-name="ContactTracer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ContactTracer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="112">
+              <caret line="180" column="11" selection-start-line="180" selection-start-column="11" selection-end-line="180" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -53,6 +49,8 @@
       <find>contacttracer</find>
       <find>getcontacttimes</find>
       <find>getcont</find>
+      <find>queue</find>
+      <find>private</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -60,9 +58,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/ErdosNumbers.java" />
         <option value="$PROJECT_DIR$/tests/ErdosNumbersTest.java" />
-        <option value="$PROJECT_DIR$/tests/ContactTracerTest.java" />
         <option value="$PROJECT_DIR$/src/Trace.java" />
         <option value="$PROJECT_DIR$/src/ContactTracer.java" />
+        <option value="$PROJECT_DIR$/tests/ContactTracerTest.java" />
       </list>
     </option>
   </component>
@@ -193,13 +191,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ErdosNumbersTest.simpleWeightedTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactTracerTest.testSpecExample" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW4 Support Files" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
-      <option name="METHOD_NAME" value="simpleWeightedTest2" />
+      <option name="MAIN_CLASS_NAME" value="ContactTracerTest" />
+      <option name="METHOD_NAME" value="testSpecExample" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -255,19 +253,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ErdosNumbersTest.simpleWeightedTest2" />
       <item itemvalue="JUnit.ContactTracerTest.testGetContacts" />
       <item itemvalue="JUnit.ContactTracerTest.testBasicContacts" />
       <item itemvalue="JUnit.ContactTracerTest.testGetContactTimes" />
       <item itemvalue="JUnit.ContactTracerTest" />
+      <item itemvalue="JUnit.ContactTracerTest.testSpecExample" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ContactTracerTest" />
+        <item itemvalue="JUnit.ContactTracerTest.testSpecExample" />
         <item itemvalue="JUnit.ContactTracerTest.testGetContactTimes" />
         <item itemvalue="JUnit.ContactTracerTest.testGetContacts" />
         <item itemvalue="JUnit.ContactTracerTest.testBasicContacts" />
-        <item itemvalue="JUnit.ErdosNumbersTest.simpleWeightedTest2" />
       </list>
     </recent_temporary>
   </component>
@@ -285,34 +283,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ContactTracerTest_testGetContactTimes - 2020.10.12 at 16h 05m 18s.xml">
-      <configuration name="ContactTracerTest.testGetContactTimes" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest_testSpecExample - 2020.10.12 at 17h 14m 39s.xml">
+      <configuration name="ContactTracerTest.testSpecExample" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ContactTracerTest_testBasicContacts - 2020.10.12 at 16h 06m 23s.xml">
-      <configuration name="ContactTracerTest.testBasicContacts" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest_testSpecExample - 2020.10.12 at 17h 15m 08s.xml">
+      <configuration name="ContactTracerTest.testSpecExample" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ContactTracerTest_testGetContactTimes - 2020.10.12 at 16h 06m 23s.xml">
-      <configuration name="ContactTracerTest.testGetContactTimes" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest_testSpecExample - 2020.10.12 at 17h 15m 37s.xml">
+      <configuration name="ContactTracerTest.testSpecExample" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ContactTracerTest_testGetContacts - 2020.10.12 at 16h 06m 23s.xml">
-      <configuration name="ContactTracerTest.testGetContacts" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest_testSpecExample - 2020.10.12 at 17h 15m 46s.xml">
+      <configuration name="ContactTracerTest.testSpecExample" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ContactTracerTest_testGetContactTimes - 2020.10.12 at 16h 06m 28s.xml">
-      <configuration name="ContactTracerTest.testGetContactTimes" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest_testSpecExample - 2020.10.12 at 17h 16m 40s.xml">
+      <configuration name="ContactTracerTest.testSpecExample" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ContactTracerTest_testGetContactTimes - 2020.10.12 at 16h 06m 35s.xml">
-      <configuration name="ContactTracerTest.testGetContactTimes" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest_testSpecExample - 2020.10.12 at 17h 17m 04s.xml">
+      <configuration name="ContactTracerTest.testSpecExample" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ContactTracerTest_testGetContactTimes - 2020.10.12 at 16h 06m 45s.xml">
-      <configuration name="ContactTracerTest.testGetContactTimes" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest_testSpecExample - 2020.10.12 at 17h 17m 10s.xml">
+      <configuration name="ContactTracerTest.testSpecExample" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ContactTracerTest_testGetContactTimes - 2020.10.12 at 16h 08m 19s.xml">
-      <configuration name="ContactTracerTest.testGetContactTimes" configurationId="JUnit" />
+    <history-entry file="ContactTracerTest_testSpecExample - 2020.10.12 at 17h 17m 27s.xml">
+      <configuration name="ContactTracerTest.testSpecExample" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ContactTracerTest - 2020.10.12 at 16h 09m 20s.xml">
+    <history-entry file="ContactTracerTest - 2020.10.12 at 17h 17m 31s.xml">
       <configuration name="ContactTracerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ContactTracerTest - 2020.10.12 at 16h 13m 11s.xml">
+    <history-entry file="ContactTracerTest - 2020.10.12 at 17h 18m 07s.xml">
       <configuration name="ContactTracerTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -322,13 +320,13 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32946146" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27032736" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.46145722" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
@@ -472,13 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ErdosNumbers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="63" lean-forward="true" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Trace.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -486,21 +477,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ContactTracerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/ErdosNumbers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="174">
+          <caret line="142" column="13" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ContactTracer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="135" column="9" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
-          <folding>
-            <element signature="e#516#517#0" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="112">
+          <caret line="180" column="11" selection-start-line="180" selection-start-column="11" selection-end-line="180" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ContactTracerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="36" column="71" selection-start-line="36" selection-start-column="71" selection-end-line="36" selection-end-column="71" />
         </state>
       </provider>
     </entry>

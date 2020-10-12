@@ -23,6 +23,22 @@ public class ContactTracerTest {
     }
 
     @Test
+    public void myOwnTest() {
+        ContactTracer tracer = new ContactTracer();
+        // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
+        tracer.addTrace(new Trace("Anna", "Sanni", 100));
+        tracer.addTrace(new Trace("Anna", "Matt", 1740));
+        tracer.addTrace(new Trace("Matt", "Kristian", 3240));
+        tracer.addTrace(new Trace("Kristian", "Sanni", 3370));
+        tracer.addTrace(new Trace("Kristian", "Kenton", 3360));
+        tracer.addTrace(new Trace("Kristian", "Max", 3360));
+        tracer.addTrace(new Trace("Kenton", "Kristian", 4020));
+
+        assertEquals(Set.of("Matt", "Kristian", "Kenton", "Max", "Sanni"),
+                tracer.contactTrace("Anna", 130));
+    }
+
+    @Test
     public void testBasicContacts() {
         ContactTracer tracer = new ContactTracer();
         // we start at 100 here, but really its arbitrary.. only the relative time differences matter.
