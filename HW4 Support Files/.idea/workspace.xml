@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2387f29c-a940-49b1-9750-6265ede80d50" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW4 Support Files/ContactTracer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/ContactTracer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW4 Support Files/Trace.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/Trace.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/HW4 Support Files/ContactTracerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/HW4 Support Files/ContactTracerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContactTracer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContactTracer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Trace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ContactTracerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ContactTracerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FactChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/FactCheckerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/FactCheckerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,57 +47,59 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactTracerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HW4 Support Files" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ContactTracerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactTracerTest.testGetContactTimes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HW4 Support Files" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ContactTracerTest" />
-      <option name="METHOD_NAME" value="testGetContactTimes" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactTracerTest.testSpecExample" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HW4 Support Files" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ContactTracerTest" />
-      <option name="METHOD_NAME" value="testSpecExample" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ErdosNumbersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HW4 Support Files" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FactCheckerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW4 Support Files" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FactCheckerTest" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FactCheckerTest.testConsistent1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW4 Support Files" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FactCheckerTest" />
+      <option name="METHOD_NAME" value="testConsistent1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FactCheckerTest.testSimpleConsistent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW4 Support Files" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FactCheckerTest" />
+      <option name="METHOD_NAME" value="testSimpleConsistent" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FactCheckerTest.testSimpleInconsistent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW4 Support Files" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FactCheckerTest" />
+      <option name="METHOD_NAME" value="testSimpleInconsistent" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FactCheckerTest.testType2Consistent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW4 Support Files" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FactCheckerTest" />
+      <option name="METHOD_NAME" value="testType2Consistent" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -130,19 +125,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ContactTracerTest.testGetContactTimes" />
-      <item itemvalue="JUnit.ContactTracerTest" />
-      <item itemvalue="JUnit.ContactTracerTest.testSpecExample" />
-      <item itemvalue="JUnit.ErdosNumbersTest" />
       <item itemvalue="JUnit.FactCheckerTest" />
+      <item itemvalue="JUnit.FactCheckerTest.testSimpleInconsistent" />
+      <item itemvalue="JUnit.FactCheckerTest.testConsistent1" />
+      <item itemvalue="JUnit.FactCheckerTest.testSimpleConsistent" />
+      <item itemvalue="JUnit.FactCheckerTest.testType2Consistent" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.FactCheckerTest" />
-        <item itemvalue="JUnit.ErdosNumbersTest" />
-        <item itemvalue="JUnit.ContactTracerTest" />
-        <item itemvalue="JUnit.ContactTracerTest.testSpecExample" />
-        <item itemvalue="JUnit.ContactTracerTest.testGetContactTimes" />
+        <item itemvalue="JUnit.FactCheckerTest.testSimpleInconsistent" />
+        <item itemvalue="JUnit.FactCheckerTest.testSimpleConsistent" />
+        <item itemvalue="JUnit.FactCheckerTest.testType2Consistent" />
+        <item itemvalue="JUnit.FactCheckerTest.testConsistent1" />
       </list>
     </recent_temporary>
   </component>
@@ -173,41 +168,44 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="288" key="GridCell.Tab.0.bottom" timestamp="1602567403682">
+    <state width="1398" height="288" key="GridCell.Tab.0.bottom" timestamp="1602579515967">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="288" key="GridCell.Tab.0.bottom/0.23.1440.778@0.23.1440.778" timestamp="1602567403682" />
-    <state width="1398" height="288" key="GridCell.Tab.0.center" timestamp="1602567403681">
+    <state width="1398" height="288" key="GridCell.Tab.0.bottom/0.23.1440.778@0.23.1440.778" timestamp="1602579515967" />
+    <state width="1398" height="288" key="GridCell.Tab.0.center" timestamp="1602579515965">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="288" key="GridCell.Tab.0.center/0.23.1440.778@0.23.1440.778" timestamp="1602567403681" />
-    <state width="1398" height="288" key="GridCell.Tab.0.left" timestamp="1602567403681">
+    <state width="1398" height="288" key="GridCell.Tab.0.center/0.23.1440.778@0.23.1440.778" timestamp="1602579515965" />
+    <state width="1398" height="288" key="GridCell.Tab.0.left" timestamp="1602579515964">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="288" key="GridCell.Tab.0.left/0.23.1440.778@0.23.1440.778" timestamp="1602567403681" />
-    <state width="1398" height="288" key="GridCell.Tab.0.right" timestamp="1602567403682">
+    <state width="1398" height="288" key="GridCell.Tab.0.left/0.23.1440.778@0.23.1440.778" timestamp="1602579515964" />
+    <state width="1398" height="288" key="GridCell.Tab.0.right" timestamp="1602579515967">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="288" key="GridCell.Tab.0.right/0.23.1440.778@0.23.1440.778" timestamp="1602567403682" />
-    <state width="1398" height="309" key="GridCell.Tab.1.bottom" timestamp="1602301468699">
+    <state width="1398" height="288" key="GridCell.Tab.0.right/0.23.1440.778@0.23.1440.778" timestamp="1602579515967" />
+    <state width="1398" height="245" key="GridCell.Tab.1.bottom" timestamp="1602579461336">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="309" key="GridCell.Tab.1.bottom/0.23.1440.778@0.23.1440.778" timestamp="1602301468699" />
-    <state width="1398" height="309" key="GridCell.Tab.1.center" timestamp="1602301468699">
+    <state width="1398" height="245" key="GridCell.Tab.1.bottom/0.23.1440.778@0.23.1440.778" timestamp="1602579461336" />
+    <state width="1398" height="245" key="GridCell.Tab.1.center" timestamp="1602579461335">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="309" key="GridCell.Tab.1.center/0.23.1440.778@0.23.1440.778" timestamp="1602301468699" />
-    <state width="1398" height="309" key="GridCell.Tab.1.left" timestamp="1602301468698">
+    <state width="1398" height="245" key="GridCell.Tab.1.center/0.23.1440.778@0.23.1440.778" timestamp="1602579461335" />
+    <state width="1398" height="245" key="GridCell.Tab.1.left" timestamp="1602579461335">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="309" key="GridCell.Tab.1.left/0.23.1440.778@0.23.1440.778" timestamp="1602301468698" />
-    <state width="1398" height="309" key="GridCell.Tab.1.right" timestamp="1602301468699">
+    <state width="1398" height="245" key="GridCell.Tab.1.left/0.23.1440.778@0.23.1440.778" timestamp="1602579461335" />
+    <state width="1398" height="245" key="GridCell.Tab.1.right" timestamp="1602579461336">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="309" key="GridCell.Tab.1.right/0.23.1440.778@0.23.1440.778" timestamp="1602301468699" />
+    <state width="1398" height="245" key="GridCell.Tab.1.right/0.23.1440.778@0.23.1440.778" timestamp="1602579461336" />
     <state x="208" y="23" key="SettingsEditor" timestamp="1602567357614">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
     <state x="208" y="23" key="SettingsEditor/0.23.1440.778@0.23.1440.778" timestamp="1602567357614" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/HW4_Support_Files$FactCheckerTest_testType2Consistent.ic" NAME="FactCheckerTest.testType2Consistent Coverage Results" MODIFIED="1602578255066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
