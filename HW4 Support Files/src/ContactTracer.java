@@ -1,13 +1,44 @@
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class ContactTracer {
+
+
+    private class Person { // going to have to make two nodes for each type that is implemented
+
+        String name;
+
+        HashMap<String, ArrayList<Integer>> contacts; // contactNames, list of times contacted
+
+        private Person(String contactName) {
+            this.name = contactName;
+            this.contacts = new HashMap<>();
+        }
+
+        private void addPerson(String contactedPerson, int time) {
+            ArrayList<Integer> times;
+            if (this.contacts.containsKey(contactedPerson)) {
+                if (this.contacts.get(contactedPerson).contains(time)) {
+                    return; // Do nothing, time is already in the database
+                }
+                times = this.contacts.get(contactedPerson);
+            } else {
+                times = new ArrayList<>();
+            }
+            times.add(time);
+            this.contacts.put(contactedPerson, times);
+        }
+    }
+
+    HashMap<String, Person> contactsList;
+
+    List<Trace> traces;
 
     /**
      * Initialises an empty ContactTracer with no populated contact traces.
      */
     public ContactTracer() {
-        // TODO: implement this!
+        this.contactsList = new HashMap<>();
+        this.traces = new ArrayList<>();
     }
 
     /**
@@ -18,7 +49,12 @@ public class ContactTracer {
      * @require traces != null
      */
     public ContactTracer(List<Trace> traces) {
-        // TODO: implement this!
+        this.traces = traces;
+        this.contactsList = new HashMap<>(); // initialise hashmap first
+        for (Trace trace: traces) {
+            contactsList.put(trace.getPerson1(), new Person(trace.getPerson1()));
+            contactsList.put(trace.getPerson1(), new Person(trace.getPerson2()));
+        }
     }
 
     /**
@@ -31,7 +67,29 @@ public class ContactTracer {
      * @require trace != null
      */
     public void addTrace(Trace trace) {
-        // TODO: implement this!
+        // get node for both person 1 and person 2
+        // add times to the node, need to check if the time already exists before adding
+        Person person1;
+        Person person2;
+
+        if (this.contactsList.containsKey(trace.getPerson1())) {
+            person1 = this.contactsList.get(trace.getPerson1());
+        } else {
+            person1 = new Person(trace.getPerson1());
+        }
+
+        if (this.contactsList.containsKey(trace.getPerson2())) {
+            person2 = this.contactsList.get(trace.getPerson2());
+        } else {
+            person2 = new Person(trace.getPerson2());
+        }
+
+        person1.addPerson(trace.getPerson2(), trace.getTime());
+        person2.addPerson(trace.getPerson1(), trace.getTime());
+        this.contactsList.put(trace.getPerson1(), person1);
+        this.contactsList.put(trace.getPerson2(), person2);
+
+        this.traces.add(trace);
     }
 
     /**
@@ -48,9 +106,10 @@ public class ContactTracer {
      * @require person1 != null && person2 != null
      */
     public List<Integer> getContactTimes(String person1, String person2) {
-        // TODO: implement this!
-        
-        return null;
+        if (this.contactsList.get(person1).contacts.get(person2) == null) {
+            return new ArrayList<>(); // if it's empty/no times between them
+        }
+        return this.contactsList.get(person1).contacts.get(person2);
     }
 
     /**
@@ -61,9 +120,7 @@ public class ContactTracer {
      * @return set of the person's direct contacts
      */
     public Set<String> getContacts(String person) {
-        // TODO: implement this!
-        
-        return null;
+        return this.contactsList.get(person).contacts.keySet();
     }
 
     /**
@@ -75,9 +132,29 @@ public class ContactTracer {
      * @return set of the person's direct contacts at or after the timestamp
      */
     public Set<String> getContactsAfter(String person, int timestamp) {
-        // TODO: implement this!
-        
-        return null;
+        Person p = this.contactsList.get(person);
+
+        Set<String> peopleToContact = new HashSet<>();
+
+        for (String contact: p.contacts.keySet()) {
+            for (int time: p.contacts.get(contact)) {
+                if (time >= timestamp) {
+                    peopleToContact.add(contact);
+                }
+            }
+        }
+        return peopleToContact;
+    }
+
+    private int getContactTime(String person1, String person2, int time) {
+        List<Integer> times = getContactTimes(person1, person2);
+
+        for (int t: times) {
+            if (t >= (time + 60)) {
+                return t;
+            }
+        }
+        return -1; // Couldn't find a time where they would've been infected
     }
 
     /**
@@ -91,8 +168,26 @@ public class ContactTracer {
      * @return set of people who may have contracted the disease, originating from person
      */
     public Set<String> contactTrace(String person, int timeOfContagion) {
-        // TODO: implement this!
-        
-        return null;
+        Set<String> peopleToContact = new HashSet<>(); // list of people to contact
+        LinkedList<String> toTrace = new LinkedList<>();
+
+        toTrace.addAll(getContactsAfter(person, timeOfContagion)); // Adds patient 0s
+        peopleToContact.addAll(toTrace); // Adds patients to already contacted ones, these aren't used for duplicate checking only returning
+        contactRecurse(person, peopleToContact, toTrace, timeOfContagion);
+        peopleToContact.remove(person);
+        return peopleToContact;
+    }
+
+    private void contactRecurse(String start, Set<String> peopleToContact, LinkedList<String> toTrace, int currentTime) {
+        for (int i = 0; i < toTrace.size(); i++) {
+            String person = toTrace.get(i);
+            int timeOfContact = getContactTime(start, person, currentTime);
+            if (timeOfContact != -1) {
+                peopleToContact.addAll(getContactsAfter(person, timeOfContact + 60));
+                toTrace.addAll(getContactsAfter(person, timeOfContact));
+            }
+            toTrace.remove(i); // Remove it from the list
+            contactRecurse(person, peopleToContact, toTrace, currentTime += 60);
+        }
     }
 }

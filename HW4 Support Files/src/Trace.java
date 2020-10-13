@@ -46,7 +46,7 @@ public class Trace {
      * @return second person
      */
     public String getPerson2() {
-        return person1;
+        return person2;
     }
 
     /**
