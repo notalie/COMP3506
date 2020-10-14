@@ -26,6 +26,43 @@ public class FactCheckerTest {
     }
 
     @Test
+    public void testMildInconsistent() {
+        List<Fact> facts = List.of(
+                new Fact(Fact.FactType.TYPE_ONE, "a", "b"),
+                new Fact(Fact.FactType.TYPE_ONE, "b", "c"),
+                new Fact(Fact.FactType.TYPE_ONE, "c", "a")
+
+                );
+
+        assertFalse(FactChecker.areFactsConsistent(facts));
+    }
+
+    @Test
+    public void testMildInconsistent2() {
+        List<Fact> facts = List.of(
+                new Fact(Fact.FactType.TYPE_ONE, "a", "b"),
+                new Fact(Fact.FactType.TYPE_ONE, "b", "c"),
+                new Fact(Fact.FactType.TYPE_TWO, "c", "a")
+
+        );
+
+        assertFalse(FactChecker.areFactsConsistent(facts));
+    }
+
+    @Test
+    public void testMildInconsistent3() {
+        List<Fact> facts = List.of(
+                new Fact(Fact.FactType.TYPE_ONE, "a", "b"),
+                new Fact(Fact.FactType.TYPE_TWO, "b", "c"),
+                new Fact(Fact.FactType.TYPE_TWO, "c", "d"),
+                new Fact(Fact.FactType.TYPE_ONE, "d", "a")
+
+        );
+
+        assertFalse(FactChecker.areFactsConsistent(facts));
+    }
+
+    @Test
     public void testSimpleConsistent() {
         List<Fact> facts = List.of(
                 new Fact(Fact.FactType.TYPE_ONE, "a", "b"),
