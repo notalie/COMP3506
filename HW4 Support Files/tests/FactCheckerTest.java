@@ -71,4 +71,18 @@ public class FactCheckerTest {
 
         assertFalse(FactChecker.areFactsConsistent(facts));
     }
+
+    @Test
+    public void testInconsistent2() {
+        List<Fact> facts = List.of(
+                new Fact(Fact.FactType.TYPE_ONE, "Anna", "Kenton"),
+                new Fact(Fact.FactType.TYPE_TWO, "Kenton", "Katya"),
+                new Fact(Fact.FactType.TYPE_TWO, "Katya", "Sanni"),
+                new Fact(Fact.FactType.TYPE_ONE, "Sanni", "Matt"),
+                new Fact(Fact.FactType.TYPE_TWO, "Matt", "Max"),
+                new Fact(Fact.FactType.TYPE_ONE, "Max", "Anna")
+        );
+
+        assertFalse(FactChecker.areFactsConsistent(facts));
+    }
 }

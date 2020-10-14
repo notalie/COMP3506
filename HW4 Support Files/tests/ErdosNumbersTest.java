@@ -71,19 +71,6 @@ public class ErdosNumbersTest {
         assertEquals(2.0, nums.calculateWeightedErdosNumber("Riordan, O. M."), 0.001);
         assertEquals(1.5, nums.calculateWeightedErdosNumber("Balister, P. N."), 0.001);
     }
-
-    @Test
-    public void simpleWeightedTest2() {
-        ErdosNumbers nums = new ErdosNumbers(List.of(
-                "Title 1:A|B|C",
-                "Title 1.5:A|D",
-                "Title 2:B|C",
-                "Title 3:A|C",
-                "Title 4:C|Paul Erdös"
-        ));
-
-        assertEquals(1.0, nums.calculateWeightedErdosNumber("A"), 0.001);
-    }
     
     @Test
     public void uqTest() {
