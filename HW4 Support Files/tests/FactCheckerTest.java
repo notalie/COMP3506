@@ -71,4 +71,31 @@ public class FactCheckerTest {
 
         assertFalse(FactChecker.areFactsConsistent(facts));
     }
+
+    @Test
+    public void testTransitive() {
+        List<Fact> facts = List.of(
+                new Fact(Fact.FactType.TYPE_ONE, "P1", "P2"),
+                new Fact(Fact.FactType.TYPE_ONE, "P2", "P3"),
+                new Fact(Fact.FactType.TYPE_ONE, "P3", "P4"),
+                new Fact(Fact.FactType.TYPE_ONE, "P4", "P5"),
+                new Fact(Fact.FactType.TYPE_ONE, "P5", "P6"),
+                new Fact(Fact.FactType.TYPE_ONE, "P6", "P7"),
+                new Fact(Fact.FactType.TYPE_TWO, "P1", "P7")
+        );
+
+        assertFalse(FactChecker.areFactsConsistent(facts));
+
+        facts = List.of(
+                new Fact(Fact.FactType.TYPE_ONE, "P1", "P2"),
+                new Fact(Fact.FactType.TYPE_ONE, "P4", "P5"),
+                new Fact(Fact.FactType.TYPE_ONE, "P5", "P6"),
+                new Fact(Fact.FactType.TYPE_ONE, "P2", "P3"),
+                new Fact(Fact.FactType.TYPE_TWO, "P1", "P7"),
+                new Fact(Fact.FactType.TYPE_ONE, "P6", "P7"),
+                new Fact(Fact.FactType.TYPE_ONE, "P3", "P4")
+        );
+
+        assertFalse(FactChecker.areFactsConsistent(facts));
+    }
 }

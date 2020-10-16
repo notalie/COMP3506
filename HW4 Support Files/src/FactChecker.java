@@ -64,7 +64,7 @@ public class FactChecker {
                 Node toAdd = new Node(fact.getPersonB());
                 if (factMap.containsKey(fact.getPersonA())) { // A came before B, B already in the map
                     current = factMap.get(fact.getPersonA());
-                    if (current.containsPerson(fact.getPersonB())) {
+                    if (current.containsPerson(fact.getPersonB())) { // A was with B
                         return false;
                     }
                 } else {
