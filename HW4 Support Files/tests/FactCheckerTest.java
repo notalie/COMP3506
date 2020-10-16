@@ -26,6 +26,43 @@ public class FactCheckerTest {
     }
 
     @Test
+    public void testMildInconsistent() {
+        List<Fact> facts = List.of(
+                new Fact(Fact.FactType.TYPE_ONE, "a", "b"),
+                new Fact(Fact.FactType.TYPE_ONE, "b", "c"),
+                new Fact(Fact.FactType.TYPE_ONE, "c", "a")
+
+                );
+
+        assertFalse(FactChecker.areFactsConsistent(facts));
+    }
+
+    @Test
+    public void testMildInconsistent2() {
+        List<Fact> facts = List.of(
+                new Fact(Fact.FactType.TYPE_ONE, "a", "b"),
+                new Fact(Fact.FactType.TYPE_ONE, "b", "c"),
+                new Fact(Fact.FactType.TYPE_TWO, "c", "a")
+
+        );
+
+        assertFalse(FactChecker.areFactsConsistent(facts));
+    }
+
+    @Test
+    public void testMildInconsistent3() {
+        List<Fact> facts = List.of(
+                new Fact(Fact.FactType.TYPE_ONE, "a", "b"),
+                new Fact(Fact.FactType.TYPE_TWO, "b", "c"),
+                new Fact(Fact.FactType.TYPE_TWO, "c", "d"),
+                new Fact(Fact.FactType.TYPE_ONE, "d", "a")
+
+        );
+
+        assertFalse(FactChecker.areFactsConsistent(facts));
+    }
+
+    @Test
     public void testSimpleConsistent() {
         List<Fact> facts = List.of(
                 new Fact(Fact.FactType.TYPE_ONE, "a", "b"),
@@ -73,6 +110,19 @@ public class FactCheckerTest {
     }
 
     @Test
+    public void testInconsistent2() {
+        List<Fact> facts = List.of(
+                new Fact(Fact.FactType.TYPE_ONE, "Anna", "Kenton"),
+                new Fact(Fact.FactType.TYPE_TWO, "Kenton", "Katya"),
+                new Fact(Fact.FactType.TYPE_TWO, "Katya", "Sanni"),
+                new Fact(Fact.FactType.TYPE_ONE, "Sanni", "Matt"),
+                new Fact(Fact.FactType.TYPE_TWO, "Matt", "Max"),
+                new Fact(Fact.FactType.TYPE_ONE, "Max", "Anna")
+        );
+        assertFalse(FactChecker.areFactsConsistent(facts));
+    }
+
+    @Test
     public void testTransitive() {
         List<Fact> facts = List.of(
                 new Fact(Fact.FactType.TYPE_ONE, "P1", "P2"),
@@ -82,11 +132,13 @@ public class FactCheckerTest {
                 new Fact(Fact.FactType.TYPE_ONE, "P5", "P6"),
                 new Fact(Fact.FactType.TYPE_ONE, "P6", "P7"),
                 new Fact(Fact.FactType.TYPE_TWO, "P1", "P7")
-        );
-
+        ); //TODO: Fix this I think
         assertFalse(FactChecker.areFactsConsistent(facts));
+    }
 
-        facts = List.of(
+    @Test
+    public void testTransitive2() {
+        List<Fact> facts = List.of(
                 new Fact(Fact.FactType.TYPE_ONE, "P1", "P2"),
                 new Fact(Fact.FactType.TYPE_ONE, "P4", "P5"),
                 new Fact(Fact.FactType.TYPE_ONE, "P5", "P6"),

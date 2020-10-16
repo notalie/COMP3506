@@ -5,8 +5,6 @@ public class FactChecker {
     private static class Node {
         Set<String> presentPeople;
 
-        String next;
-
         private Node(String person1, String person2) {
             this.presentPeople = new HashSet<>();
             this.presentPeople.add(person1);
@@ -18,10 +16,6 @@ public class FactChecker {
             this.presentPeople.add(person1);
         }
 
-        private void addNext(String next) {
-            this.next = next;
-        }
-
         private void addPerson(String person) {
             this.presentPeople.add(person);
         }
@@ -29,6 +23,26 @@ public class FactChecker {
         private boolean containsPerson(String person) {
             return this.presentPeople.contains(person);
         }
+    }
+
+    /**
+     * Checks if person B was at the party before person A.
+     * This is an inconsistency only for facts of type one
+     * @param fact - the fact to check
+     * @param factTracker - the fact tracker to iterate though
+     * @return - a boolean
+     */
+    private static boolean containsPersonBefore(Fact fact, LinkedList<Node> factTracker) {
+        Iterator<Node> iterator = factTracker.iterator();
+        while (iterator.hasNext()) {
+            Node current = iterator.next();
+            if (current.containsPerson(fact.getPersonB())) {
+                return true;
+            } else if (current.containsPerson(fact.getPersonA())) {
+                return false;
+            }
+        }
+        return false;
     }
 
     /**
@@ -45,36 +59,43 @@ public class FactChecker {
 
         for (Fact fact: facts) {
             Node current;
-            if (fact.getType() == Fact.FactType.TYPE_TWO) { // Person a and b were at the party at the same time. //TODO: Error Checking
-                if (factMap.containsKey(fact.getPersonA())) { // person A person is already established as a
+            if (fact.getType() == Fact.FactType.TYPE_TWO) { // Person a and b were at the party at the same time.
+
+                if (factMap.containsKey(fact.getPersonA())) { // Person A already in the data structure
                     current = factMap.get(fact.getPersonA());
-                    if (current.next != null && current.next.equals(fact.getPersonB())) {
+
+                    if (factMap.containsKey(fact.getPersonB())) { // Person B already exists, no need to add to the fact tracker
                         return false;
                     }
-                    current.addPerson(fact.getPersonB());
-                } else {
+
+                    current.addPerson(fact.getPersonB()); // Add person B to person A's node
+                } else { // Person A already in the data structure
                     current = new Node(fact.getPersonA(), fact.getPersonB());
                     factTracker.add(current);
                 }
 
-                factMap.put(fact.getPersonB(), current);
+                factMap.put(fact.getPersonB(), current); // Add person A and person B to the hashmap
                 factMap.put(fact.getPersonA(), current);
 
             } else { // Person a left before person b arrived.
                 Node toAdd = new Node(fact.getPersonB());
-                if (factMap.containsKey(fact.getPersonA())) { // A came before B, B already in the map
+
+                if (factMap.containsKey(fact.getPersonA())) { // B already in the map
                     current = factMap.get(fact.getPersonA());
                     if (current.containsPerson(fact.getPersonB())) { // A was with B
                         return false;
+                    } else if (containsPersonBefore(fact, factTracker)) {
+                        return false;
                     }
-                } else {
+                    factTracker.add(toAdd); // Add node to indicate that it came after person B
+
+                } else { // B not in the map, make a new node
                     current = new Node(fact.getPersonA());
                     factTracker.add(current);
                     factTracker.add(toAdd);
                 }
 
-                current.addNext(fact.getPersonB());
-                factMap.put(fact.getPersonA(), current);
+                factMap.put(fact.getPersonA(), current); // add the nodes to the hashmap
                 factMap.put(fact.getPersonB(), toAdd);
             }
         }

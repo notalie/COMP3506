@@ -2,13 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2387f29c-a940-49b1-9750-6265ede80d50" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/ErdosNumbers$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/ErdosNumbers$Author.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/ErdosNumbers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/Fact$FactType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/Fact.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/FactChecker$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/FactChecker$Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/FactChecker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/HW4 Support Files/ErdosNumbersTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/HW4 Support Files/FactCheckerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FactChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/ErdosNumbersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ErdosNumbersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/FactCheckerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/FactCheckerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/HW4_Support_Files$FactCheckerTest_testConsistent1.ic" NAME="FactCheckerTest.testConsistent1 Coverage Results" MODIFIED="1602666614453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -20,10 +36,20 @@
       <find>getcont</find>
       <find>queue</find>
       <find>private</find>
+      <find>next</find>
+      <find>addNext</find>
+      <find>.next</find>
+      <find>addnext</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="394" />
+    <option name="y" value="-16" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectId" id="1ioEykWsp1gZhoXDmzQ5dmjSI6M" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -46,6 +72,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in HW4 Support Files" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW4 Support Files" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FactCheckerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW4 Support Files" />
       <option name="PACKAGE_NAME" value="" />
@@ -57,11 +93,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FactCheckerTest.testConsistent1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FactCheckerTest.testMildInconsistent2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW4 Support Files" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FactCheckerTest" />
-      <option name="METHOD_NAME" value="testConsistent1" />
+      <option name="METHOD_NAME" value="testMildInconsistent2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -69,11 +105,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FactCheckerTest.testSimpleConsistent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FactCheckerTest.testMildInconsistent3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW4 Support Files" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FactCheckerTest" />
-      <option name="METHOD_NAME" value="testSimpleConsistent" />
+      <option name="METHOD_NAME" value="testMildInconsistent3" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -81,23 +117,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FactCheckerTest.testSimpleInconsistent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FactCheckerTest.testTransitive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW4 Support Files" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FactCheckerTest" />
-      <option name="METHOD_NAME" value="testSimpleInconsistent" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FactCheckerTest.testType2Consistent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HW4 Support Files" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FactCheckerTest" />
-      <option name="METHOD_NAME" value="testType2Consistent" />
+      <option name="METHOD_NAME" value="testTransitive" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -125,22 +149,22 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.FactCheckerTest" />
-      <item itemvalue="JUnit.FactCheckerTest.testSimpleInconsistent" />
-      <item itemvalue="JUnit.FactCheckerTest.testConsistent1" />
-      <item itemvalue="JUnit.FactCheckerTest.testSimpleConsistent" />
-      <item itemvalue="JUnit.FactCheckerTest.testType2Consistent" />
+      <item itemvalue="JUnit.FactCheckerTest.testMildInconsistent2" />
+      <item itemvalue="JUnit.FactCheckerTest.testMildInconsistent3" />
+      <item itemvalue="JUnit.All in HW4 Support Files" />
+      <item itemvalue="JUnit.FactCheckerTest.testTransitive" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.FactCheckerTest" />
-        <item itemvalue="JUnit.FactCheckerTest.testSimpleInconsistent" />
-        <item itemvalue="JUnit.FactCheckerTest.testSimpleConsistent" />
-        <item itemvalue="JUnit.FactCheckerTest.testType2Consistent" />
-        <item itemvalue="JUnit.FactCheckerTest.testConsistent1" />
+        <item itemvalue="JUnit.FactCheckerTest.testTransitive" />
+        <item itemvalue="JUnit.All in HW4 Support Files" />
+        <item itemvalue="JUnit.FactCheckerTest.testMildInconsistent3" />
+        <item itemvalue="JUnit.FactCheckerTest.testMildInconsistent2" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -167,44 +191,126 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1602629703128">
+    <state width="1398" height="287" key="GridCell.Tab.0.bottom" timestamp="1602843032856">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.23.1440.778@0.23.1440.778" timestamp="1602629703128" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1602629703127">
+    <state width="1398" height="287" key="GridCell.Tab.0.bottom/0.23.1440.778@0.23.1440.778" timestamp="1602843032856" />
+    <state width="1398" height="287" key="GridCell.Tab.0.center" timestamp="1602843032855">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.23.1440.778@0.23.1440.778" timestamp="1602629703127" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1602629703127">
+    <state width="1398" height="287" key="GridCell.Tab.0.center/0.23.1440.778@0.23.1440.778" timestamp="1602843032855" />
+    <state width="1398" height="287" key="GridCell.Tab.0.left" timestamp="1602843032855">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.23.1440.778@0.23.1440.778" timestamp="1602629703127" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1602629703128">
+    <state width="1398" height="287" key="GridCell.Tab.0.left/0.23.1440.778@0.23.1440.778" timestamp="1602843032855" />
+    <state width="1398" height="287" key="GridCell.Tab.0.right" timestamp="1602843032856">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.23.1440.778@0.23.1440.778" timestamp="1602629703128" />
-    <state width="1398" height="245" key="GridCell.Tab.1.bottom" timestamp="1602629703129">
+    <state width="1398" height="287" key="GridCell.Tab.0.right/0.23.1440.778@0.23.1440.778" timestamp="1602843032856" />
+    <state width="1398" height="245" key="GridCell.Tab.1.bottom" timestamp="1602830382676">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.1.bottom/0.23.1440.778@0.23.1440.778" timestamp="1602629703129" />
-    <state width="1398" height="245" key="GridCell.Tab.1.center" timestamp="1602629703129">
+    <state width="1398" height="245" key="GridCell.Tab.1.bottom/0.23.1440.778@0.23.1440.778" timestamp="1602830382676" />
+    <state width="1398" height="245" key="GridCell.Tab.1.center" timestamp="1602830382676">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.1.center/0.23.1440.778@0.23.1440.778" timestamp="1602629703129" />
-    <state width="1398" height="245" key="GridCell.Tab.1.left" timestamp="1602629703128">
+    <state width="1398" height="245" key="GridCell.Tab.1.center/0.23.1440.778@0.23.1440.778" timestamp="1602830382676" />
+    <state width="1398" height="245" key="GridCell.Tab.1.left" timestamp="1602830382675">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.1.left/0.23.1440.778@0.23.1440.778" timestamp="1602629703128" />
-    <state width="1398" height="245" key="GridCell.Tab.1.right" timestamp="1602629703129">
+    <state width="1398" height="245" key="GridCell.Tab.1.left/0.23.1440.778@0.23.1440.778" timestamp="1602830382675" />
+    <state width="1398" height="245" key="GridCell.Tab.1.right" timestamp="1602830382676">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.1.right/0.23.1440.778@0.23.1440.778" timestamp="1602629703129" />
+    <state width="1398" height="245" key="GridCell.Tab.1.right/0.23.1440.778@0.23.1440.778" timestamp="1602830382676" />
     <state x="208" y="23" key="SettingsEditor" timestamp="1602567357614">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
     <state x="208" y="23" key="SettingsEditor/0.23.1440.778@0.23.1440.778" timestamp="1602567357614" />
   </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="current" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HW4_Support_Files$FactCheckerTest_testType2Consistent.ic" NAME="FactCheckerTest.testType2Consistent Coverage Results" MODIFIED="1602578255066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>HW4 Support Files</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
