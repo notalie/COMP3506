@@ -25,7 +25,7 @@ public class ErdosNumbers {
             if (collaborators.containsKey(name)) { // name exists in collaborators
                 Integer numPapers = collaborators.get(name);
                 collaborators.put(name, ++numPapers);
-            } else if (!name.equals(this.name)){
+            } else if (!name.equals(this.name)) {
                 collaborators.put(name, 1);
             }
         }
@@ -224,7 +224,7 @@ public class ErdosNumbers {
         }
     }
 
-    private void replaceKey(Map.Entry<Double, String> toReplace, Double valueToReplaceWith, PriorityQueue<Node> pq) {
+    private void replaceKey(Node toReplace, Double valueToReplaceWith, PriorityQueue<Node> pq) {
         Iterator<Node> i = pq.iterator();
         while(i.hasNext()) {
             Node current = i.next();
@@ -233,7 +233,6 @@ public class ErdosNumbers {
             }
         }
     }
-
 
     /**
      * Calculates the "weighted Erdos number" of an author.
@@ -253,7 +252,7 @@ public class ErdosNumbers {
 
         PriorityQueue<Node> pq = new PriorityQueue<>();
 
-        Map<String, Map.Entry<Double, String>> pqTokens = new HashMap<>();
+        Map<String, Node> pqTokens = new HashMap<>();
 
         for (String v: this.authors.keySet()) {
             if (v.equals(author)) {
@@ -262,7 +261,7 @@ public class ErdosNumbers {
                 d.put(v, Double.MAX_VALUE);
             }
             pq.add(new Node(v, d.get(v)));
-            pqTokens.put(v, new AbstractMap.SimpleEntry<>(d.get(v), v));
+            pqTokens.put(v, new Node(v, d.get(v)));
         }
 
         while (!pq.isEmpty()) {
@@ -275,9 +274,9 @@ public class ErdosNumbers {
             for (String v: getCollaborators(u)) {
                 if (cloud.get(v) == null) {
                     // perform relaxation step on edge (u,v)
-                    double e = 1.0 / this.authors.get(u).collaborators.get(v);
+                    double e = 1.0 / (this.authors.get(v).collaborators.get(u));
 
-                    if ((d.get(u) + e) < d.get(v)) {
+                    if (d.get(u) + e < d.get(v)) {
                         d.put(v, d.get(u) + e);
                         replaceKey(pqTokens.get(v), d.get(v), pq);
                     }
