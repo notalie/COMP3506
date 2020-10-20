@@ -260,8 +260,9 @@ public class ErdosNumbers {
             } else {
                 d.put(v, Double.MAX_VALUE);
             }
-            pq.add(new Node(v, d.get(v)));
-            pqTokens.put(v, new Node(v, d.get(v)));
+            Node toAdd = new Node(v, d.get(v));
+            pq.add(toAdd);
+            pqTokens.put(v, toAdd);
         }
 
         while (!pq.isEmpty()) {

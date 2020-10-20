@@ -2,10 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2387f29c-a940-49b1-9750-6265ede80d50" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/ErdosNumbers$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/ErdosNumbers$Author.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/ErdosNumbers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/Fact$FactType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/Fact.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/FactChecker$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/FactChecker$Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/FactChecker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/HW4 Support Files/ErdosNumbersTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/HW4 Support Files/FactCheckerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW4 Support Files/ErdosNumbers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW4 Support Files/ErdosNumbers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ErdosNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ErdosNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FactChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/ErdosNumbersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ErdosNumbersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/FactCheckerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/FactCheckerTest.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,17 +29,96 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/HW4_Support_Files$FactCheckerTest_testConsistent1.ic" NAME="FactCheckerTest.testConsistent1 Coverage Results" MODIFIED="1602666614453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="ErdosNumbers.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ErdosNumbers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="657">
+              <caret line="282" column="21" lean-forward="true" selection-start-line="282" selection-start-column="21" selection-end-line="282" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ErdosNumbersTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/ErdosNumbersTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="146" selection-start-line="146" selection-end-line="146" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>erd</find>
+      <find>getcontacts</find>
+      <find>getcontact</find>
+      <find>contacttracer</find>
+      <find>getcontacttimes</find>
+      <find>getcont</find>
+      <find>queue</find>
+      <find>private</find>
+      <find>next</find>
+      <find>addNext</find>
+      <find>.next</find>
+      <find>addnext</find>
+      <find>todo</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/FactChecker.java" />
+        <option value="$PROJECT_DIR$/tests/ErdosNumbersTest.java" />
+        <option value="$PROJECT_DIR$/src/ErdosNumbers.java" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="633" />
+    <option name="y" value="-20" />
     <option name="width" value="976" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectId" id="1ioEykWsp1gZhoXDmzQ5dmjSI6M" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="HW4 Support Files" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HW4 Support Files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HW4 Support Files" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HW4 Support Files" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HW4 Support Files" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HW4 Support Files" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,85 +131,151 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.ErdosNumbersTest.uqTest">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.ErdosNumbersTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="All in HW4 Support Files" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW4 Support Files" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="ErdosNumbersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW4 Support Files" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
+      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="ErdosNumbersTest.basicWeightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW4 Support Files" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
       <option name="METHOD_NAME" value="basicWeightTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="ErdosNumbersTest.simpleWeightedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW4 Support Files" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
       <option name="METHOD_NAME" value="simpleWeightedTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="ErdosNumbersTest.uqTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW4 Support Files" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ErdosNumbersTest" />
       <option name="METHOD_NAME" value="uqTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG">
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
-      <method v="2">
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -128,15 +288,15 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ErdosNumbersTest.uqTest" />
         <item itemvalue="JUnit.ErdosNumbersTest" />
         <item itemvalue="JUnit.ErdosNumbersTest.basicWeightTest" />
         <item itemvalue="JUnit.ErdosNumbersTest.simpleWeightedTest" />
+        <item itemvalue="JUnit.ErdosNumbersTest.uqTest" />
         <item itemvalue="JUnit.All in HW4 Support Files" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -150,70 +310,132 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="ErdosNumbersTest - 2020.10.20 at 18h 26m 48s.xml">
+      <configuration name="ErdosNumbersTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ErdosNumbersTest_basicWeightTest - 2020.10.20 at 18h 27m 08s.xml">
+      <configuration name="ErdosNumbersTest.basicWeightTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ErdosNumbersTest_basicWeightTest - 2020.10.20 at 18h 27m 31s.xml">
+      <configuration name="ErdosNumbersTest.basicWeightTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ErdosNumbersTest_basicWeightTest - 2020.10.20 at 18h 29m 56s.xml">
+      <configuration name="ErdosNumbersTest.basicWeightTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ErdosNumbersTest_simpleWeightedTest - 2020.10.20 at 18h 30m 18s.xml">
+      <configuration name="ErdosNumbersTest.simpleWeightedTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ErdosNumbersTest_basicWeightTest - 2020.10.20 at 18h 31m 18s.xml">
+      <configuration name="ErdosNumbersTest.basicWeightTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ErdosNumbersTest_basicWeightTest - 2020.10.20 at 18h 36m 00s.xml">
+      <configuration name="ErdosNumbersTest.basicWeightTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ErdosNumbersTest_basicWeightTest - 2020.10.20 at 18h 36m 26s.xml">
+      <configuration name="ErdosNumbersTest.basicWeightTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ErdosNumbersTest - 2020.10.20 at 18h 36m 38s.xml">
+      <configuration name="ErdosNumbersTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ErdosNumbersTest - 2020.10.20 at 20h 41m 02s.xml">
+      <configuration name="ErdosNumbersTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32946146" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34846884" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12708333" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.46145722" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="100" y="123" width="1240" height="578" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1603184981161">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1602843087687">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state x="100" y="123" width="1240" height="578" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.778@0.23.1440.778" timestamp="1603184981161" />
-    <state width="1398" height="270" key="GridCell.Tab.0.bottom" timestamp="1603186718269">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.23.1440.778@0.23.1440.778" timestamp="1602843087687" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1602843087686">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="270" key="GridCell.Tab.0.bottom/0.23.1440.778@0.23.1440.778" timestamp="1603186718269" />
-    <state width="1398" height="270" key="GridCell.Tab.0.center" timestamp="1603186718268">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.23.1440.778@0.23.1440.778" timestamp="1602843087686" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1602843087686">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="270" key="GridCell.Tab.0.center/0.23.1440.778@0.23.1440.778" timestamp="1603186718268" />
-    <state width="1398" height="270" key="GridCell.Tab.0.left" timestamp="1603186718268">
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.23.1440.778@0.23.1440.778" timestamp="1602843087686" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1602843087687">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="270" key="GridCell.Tab.0.left/0.23.1440.778@0.23.1440.778" timestamp="1603186718268" />
-    <state width="1398" height="270" key="GridCell.Tab.0.right" timestamp="1603186718269">
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.23.1440.778@0.23.1440.778" timestamp="1602843087687" />
+    <state width="1398" height="245" key="GridCell.Tab.1.bottom" timestamp="1602843087688">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="270" key="GridCell.Tab.0.right/0.23.1440.778@0.23.1440.778" timestamp="1603186718269" />
-    <state width="1398" height="344" key="GridCell.Tab.1.bottom" timestamp="1603185620164">
+    <state width="1398" height="245" key="GridCell.Tab.1.bottom/0.23.1440.778@0.23.1440.778" timestamp="1602843087688" />
+    <state width="1398" height="245" key="GridCell.Tab.1.center" timestamp="1602843087688">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="344" key="GridCell.Tab.1.bottom/0.23.1440.778@0.23.1440.778" timestamp="1603185620164" />
-    <state width="1398" height="344" key="GridCell.Tab.1.center" timestamp="1603185620164">
+    <state width="1398" height="245" key="GridCell.Tab.1.center/0.23.1440.778@0.23.1440.778" timestamp="1602843087688" />
+    <state width="1398" height="245" key="GridCell.Tab.1.left" timestamp="1602843087687">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="344" key="GridCell.Tab.1.center/0.23.1440.778@0.23.1440.778" timestamp="1603185620164" />
-    <state width="1398" height="344" key="GridCell.Tab.1.left" timestamp="1603185620163">
+    <state width="1398" height="245" key="GridCell.Tab.1.left/0.23.1440.778@0.23.1440.778" timestamp="1602843087687" />
+    <state width="1398" height="245" key="GridCell.Tab.1.right" timestamp="1602843087688">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
-    <state width="1398" height="344" key="GridCell.Tab.1.left/0.23.1440.778@0.23.1440.778" timestamp="1603185620163" />
-    <state width="1398" height="344" key="GridCell.Tab.1.right" timestamp="1603185620164">
-      <screen x="0" y="23" width="1440" height="778" />
-    </state>
-    <state width="1398" height="344" key="GridCell.Tab.1.right/0.23.1440.778@0.23.1440.778" timestamp="1603185620164" />
+    <state width="1398" height="245" key="GridCell.Tab.1.right/0.23.1440.778@0.23.1440.778" timestamp="1602843087688" />
     <state x="208" y="23" key="SettingsEditor" timestamp="1602567357614">
       <screen x="0" y="23" width="1440" height="778" />
     </state>
     <state x="208" y="23" key="SettingsEditor/0.23.1440.778@0.23.1440.778" timestamp="1602567357614" />
-    <state x="385" y="125" width="670" height="676" key="search.everywhere.popup" timestamp="1603183082087">
-      <screen x="0" y="23" width="1440" height="778" />
-    </state>
-    <state x="385" y="125" width="670" height="676" key="search.everywhere.popup/0.23.1440.778@0.23.1440.778" timestamp="1603183082087" />
   </component>
   <component name="XDebuggerManager">
-    <pin-to-top-manager>
-      <pinned-members>
-        <PinnedItemInfo parentTag="ErdosNumbers" memberName="authors" />
-      </pinned-members>
-    </pin-to-top-manager>
+    <breakpoint-manager>
+      <option name="time" value="20" />
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="current" />
@@ -223,6 +445,64 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HW4_Support_Files$FactCheckerTest_testType2Consistent.ic" NAME="FactCheckerTest.testType2Consistent Coverage Results" MODIFIED="1602578255066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/ErdosNumbers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5148">
+          <caret line="286" selection-start-line="286" selection-end-line="286" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ErdosNumbersTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2538">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FactChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1278">
+          <caret line="71" column="102" selection-start-line="71" selection-start-column="102" selection-end-line="71" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FactChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1278">
+          <caret line="71" column="102" selection-start-line="71" selection-start-column="102" selection-end-line="71" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FactChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="59" column="32" lean-forward="true" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-13.0.2/lib/src.zip!/java.base/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="1245" column="23" selection-start-line="1245" selection-start-column="23" selection-end-line="1245" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ErdosNumbersTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ErdosNumbers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="282" column="21" lean-forward="true" selection-start-line="282" selection-start-column="21" selection-end-line="282" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
