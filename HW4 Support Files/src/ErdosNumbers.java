@@ -78,7 +78,6 @@ public class ErdosNumbers {
      * @return the unique set of papers this author has written.
      */
     public Set<String> getPapers(String author) {
-        // TODO: implement this
         return authors.get(author).papers;
     }
 
@@ -196,11 +195,45 @@ public class ErdosNumbers {
     }
 
 
-    private double calculateWeight(LinkedList<String> visited, int distance) {
-        System.out.println(visited);
-        System.out.println(distance);
-        return 0;
+    private class Node implements Comparable<Node>{
+        private String value;
+
+        private Double key;
+
+        private Node(String s, Double i) {
+            this.value = s;
+            this.key = i;
+        }
+
+        private String getValue() {
+            return this.value;
+        }
+
+        private Double getKey() {
+            return this.key;
+        }
+
+        public int compareTo(Node n) {
+            if (this.key < n.key) {
+                return -1;
+            } else if (this.key > n.key) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }
     }
+
+    private void replaceValue(Map.Entry<Double, String> toReplace, Double valueToReplaceWith, PriorityQueue<Node> pq) {
+        Iterator<Node> i = pq.iterator();
+        while(i.hasNext()) {
+            Node current = i.next();
+            if (current.getKey().equals(toReplace.getKey()) && current.getValue().equals(toReplace.getValue())) {
+                current.key = valueToReplaceWith;
+            }
+        }
+    }
+
 
     /**
      * Calculates the "weighted Erdos number" of an author.
@@ -214,40 +247,43 @@ public class ErdosNumbers {
      * @return author's weighted Erdos number
      */
     public double calculateWeightedErdosNumber(String author) {
-        Queue<String> toVisit = new LinkedList<>();
-        LinkedList<String> visited = new LinkedList<>();
+        Map<String, Double> d = new HashMap<>();
 
-        String current;
-        toVisit.add(author); // level 1
-        toVisit.add(null);
-        int distance = 0;
+        Map<String, Double> cloud = new HashMap<>();
 
-        while(!toVisit.isEmpty()) {
-            current = toVisit.poll();
+        PriorityQueue<Node> pq = new PriorityQueue<>();
 
-            if (current == null) { // reached a new level
-                visited.add(null);
-                distance++;
-                toVisit.add(null); // add indicator for next level
-                if (toVisit.peek() == null) {
-                    return Integer.MAX_VALUE; // end of the search
-                }
-                continue;
+        Map<String, Map.Entry<Double, String>> pqTokens = new HashMap<>();
+
+        for (String v: this.authors.keySet()) {
+            if (v.equals(ERDOS)) {
+                d.put(v, 0.0);
+            } else {
+                d.put(v, -1.0);
             }
+            pq.add(new Node(v, d.get(v)));
+            pqTokens.put(v, new AbstractMap.SimpleEntry<>(d.get(v), v));
+        }
 
-            if (current.equals(ERDOS)) {
-                return calculateWeight(visited, distance);
+        while (!pq.isEmpty()) {
+            Node entry = pq.poll();
+            double key = entry.getKey();
+            String u = entry.getValue();
+            if (key != -1) {
+                cloud.put(u, key);
             }
-
-            if (!visited.contains(current)) {
-                for (String collaborator: getCollaborators(current)) {
-                    if (!visited.contains(collaborator)) {
-                        toVisit.add(collaborator);
+            pqTokens.remove(u);
+            for (String v: getCollaborators(u)) {
+                if (cloud.get(v) == null) {
+                    // perform relaxation step on edge (u,v)
+                    double e = this.authors.get(u).collaborators.get(v);
+                    if (d.get(u) + e < d.get(v)) {
+                        d.put(v, d.get(u) + e);
+                        replaceValue(pqTokens.get(v), d.get(v), pq);
                     }
                 }
             }
-            visited.add(current);
         }
-        return Integer.MAX_VALUE; // If nothing else is returned
+        return cloud.get(author);
     }
 }

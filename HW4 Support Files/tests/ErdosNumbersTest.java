@@ -61,7 +61,21 @@ public class ErdosNumbersTest {
         
         assertEquals(1.66666666, nums.averageErdosNumber("Vertex‐distinguishing edge colorings of graphs"), 0.001);
     }
-    
+
+
+    @Test
+    public void basicWeightTest() {
+        ErdosNumbers nums = new ErdosNumbers(List.of(
+                "A Single Paper With People:Paul Erdös|A|B|C",
+                "Another Paper Or Something:A|C|D",
+                "Longerr Paper Whee:D|C"
+        ));
+
+
+        assertEquals(2.0, nums.calculateWeightedErdosNumber("D"), 0.001);
+        assertEquals(1.0, nums.calculateWeightedErdosNumber("A"), 0.001);
+    }
+
     @Test
     public void simpleWeightedTest() {
         ErdosNumbers nums = new ErdosNumbers(SIMPLE_TEST_SET);
