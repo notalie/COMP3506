@@ -69,7 +69,7 @@ public class FactChecker {
                     }
 
                     current.addPerson(fact.getPersonB()); // Add person B to person A's node
-                } else { // Person A already in the data structure
+                } else { // Person A not in the structure, add person and person b to the fact tracker
                     current = new Node(fact.getPersonA(), fact.getPersonB());
                     factTracker.add(current);
                 }
