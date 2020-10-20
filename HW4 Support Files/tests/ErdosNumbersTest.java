@@ -72,7 +72,7 @@ public class ErdosNumbersTest {
         ));
 
 
-        assertEquals(2.0, nums.calculateWeightedErdosNumber("D"), 0.001);
+        assertEquals(1.5, nums.calculateWeightedErdosNumber("D"), 0.001);
         assertEquals(1.0, nums.calculateWeightedErdosNumber("A"), 0.001);
     }
 

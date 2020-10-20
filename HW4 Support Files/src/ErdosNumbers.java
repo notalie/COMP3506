@@ -224,7 +224,7 @@ public class ErdosNumbers {
         }
     }
 
-    private void replaceValue(Map.Entry<Double, String> toReplace, Double valueToReplaceWith, PriorityQueue<Node> pq) {
+    private void replaceKey(Map.Entry<Double, String> toReplace, Double valueToReplaceWith, PriorityQueue<Node> pq) {
         Iterator<Node> i = pq.iterator();
         while(i.hasNext()) {
             Node current = i.next();
@@ -256,10 +256,10 @@ public class ErdosNumbers {
         Map<String, Map.Entry<Double, String>> pqTokens = new HashMap<>();
 
         for (String v: this.authors.keySet()) {
-            if (v.equals(ERDOS)) {
+            if (v.equals(author)) {
                 d.put(v, 0.0);
             } else {
-                d.put(v, -1.0);
+                d.put(v, Double.MAX_VALUE);
             }
             pq.add(new Node(v, d.get(v)));
             pqTokens.put(v, new AbstractMap.SimpleEntry<>(d.get(v), v));
@@ -269,21 +269,21 @@ public class ErdosNumbers {
             Node entry = pq.poll();
             double key = entry.getKey();
             String u = entry.getValue();
-            if (key != -1) {
-                cloud.put(u, key);
-            }
+            cloud.put(u, key);
             pqTokens.remove(u);
+
             for (String v: getCollaborators(u)) {
                 if (cloud.get(v) == null) {
                     // perform relaxation step on edge (u,v)
-                    double e = this.authors.get(u).collaborators.get(v);
-                    if (d.get(u) + e < d.get(v)) {
+                    double e = 1.0 / this.authors.get(u).collaborators.get(v);
+
+                    if ((d.get(u) + e) < d.get(v)) {
                         d.put(v, d.get(u) + e);
-                        replaceValue(pqTokens.get(v), d.get(v), pq);
+                        replaceKey(pqTokens.get(v), d.get(v), pq);
                     }
                 }
             }
         }
-        return cloud.get(author);
+        return cloud.get(ERDOS);
     }
 }
