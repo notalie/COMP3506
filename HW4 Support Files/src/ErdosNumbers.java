@@ -216,7 +216,7 @@ public class ErdosNumbers {
         public int compareTo(Node n) {
             if (this.key < n.key) {
                 return -1;
-            } else if (this.key > n.key) {
+            } else if (this.key >= n.key) {
                 return 1;
             } else {
                 return 0;
@@ -232,6 +232,19 @@ public class ErdosNumbers {
                 current.key = valueToReplaceWith;
             }
         }
+    }
+
+    private Node getMin(PriorityQueue<Node> pq) {
+        Node smallest = new Node("COMP3506", Double.MAX_VALUE);
+        Iterator<Node> i = pq.iterator();
+        while(i.hasNext()) {
+            Node current = i.next();
+            if (current.getKey() <= smallest.getKey()) {
+                smallest = current;
+            }
+        }
+        pq.remove(smallest);
+        return smallest;
     }
 
     /**
@@ -266,7 +279,7 @@ public class ErdosNumbers {
         }
 
         while (!pq.isEmpty()) {
-            Node entry = pq.poll();
+            Node entry = getMin(pq);
             double key = entry.getKey();
             String u = entry.getValue();
             cloud.put(u, key);
