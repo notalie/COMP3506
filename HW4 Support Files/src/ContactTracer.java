@@ -5,15 +5,22 @@ public class ContactTracer {
 
     private class Person { // going to have to make two nodes for each type that is implemented
 
+        /* Name of the person */
         String name;
 
-        HashMap<String, ArrayList<Integer>> contacts; // contactNames, list of times contacted
+        /* contactNames, list of times contacted */
+        HashMap<String, ArrayList<Integer>> contacts;
 
         private Person(String contactName) {
             this.name = contactName;
             this.contacts = new HashMap<>();
         }
 
+        /**
+         * Adds the person and contact to the Person's contact list
+         * @param contactedPerson - the person that was in contact
+         * @param time - the time that they were in contact
+         */
         private void addPerson(String contactedPerson, int time) {
             ArrayList<Integer> times;
             if (this.contacts.containsKey(contactedPerson)) {
@@ -52,8 +59,7 @@ public class ContactTracer {
         this.traces = traces;
         this.contactsList = new HashMap<>(); // initialise hashmap first
         for (Trace trace: traces) {
-            contactsList.put(trace.getPerson1(), new Person(trace.getPerson1()));
-            contactsList.put(trace.getPerson1(), new Person(trace.getPerson2()));
+            addTrace(trace);
         }
     }
 
@@ -146,6 +152,13 @@ public class ContactTracer {
         return peopleToContact;
     }
 
+    /**
+     * Gets the latest contact time of the first and second person after time x
+     * @param person1 - the first person
+     * @param person2 - the second person
+     * @param time - the time to check for after
+     * @return - the latest time for person 1 and person 2 to meet
+     */
     private int getContactTime(String person1, String person2, int time) {
         List<Integer> times = getContactTimes(person1, person2);
 
@@ -169,7 +182,7 @@ public class ContactTracer {
      */
     public Set<String> contactTrace(String person, int timeOfContagion) {
         Set<String> peopleToContact = new HashSet<>(); // list of people to contact
-        LinkedList<String> toTrace = new LinkedList<>();
+        LinkedList<String> toTrace = new LinkedList<>(); // list of people to trace
 
         toTrace.addAll(getContactsAfter(person, timeOfContagion)); // Adds patient 0s
         peopleToContact.addAll(toTrace); // Adds patients to already contacted ones, these aren't used for duplicate checking only returning
@@ -178,15 +191,22 @@ public class ContactTracer {
         return peopleToContact;
     }
 
+    /**
+     * Recursive algorithm to get all people to contact
+     * @param start - the person to start with
+     * @param peopleToContact - a set containing the people to contact
+     * @param toTrace - a linked list of people to trace
+     * @param currentTime - the current time of contact
+     */
     private void contactRecurse(String start, Set<String> peopleToContact, LinkedList<String> toTrace, int currentTime) {
         for (int i = 0; i < toTrace.size(); i++) {
             String person = toTrace.get(i);
             int timeOfContact = getContactTime(start, person, currentTime);
-            if (timeOfContact != -1) {
+            if (timeOfContact != -1) { // If there was a contact time found
                 peopleToContact.addAll(getContactsAfter(person, timeOfContact + 60));
                 toTrace.addAll(getContactsAfter(person, timeOfContact));
             }
-            toTrace.remove(i); // Remove it from the list
+            toTrace.remove(i); // Remove the person from the list
             contactRecurse(person, peopleToContact, toTrace, currentTime += 60);
         }
     }

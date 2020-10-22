@@ -132,7 +132,7 @@ public class FactCheckerTest {
                 new Fact(Fact.FactType.TYPE_ONE, "P5", "P6"),
                 new Fact(Fact.FactType.TYPE_ONE, "P6", "P7"),
                 new Fact(Fact.FactType.TYPE_TWO, "P1", "P7")
-        ); //TODO: Fix this I think
+        );
         assertFalse(FactChecker.areFactsConsistent(facts));
     }
 

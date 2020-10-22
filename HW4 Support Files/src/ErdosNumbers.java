@@ -6,12 +6,16 @@ public class ErdosNumbers {
      */
     public static final String ERDOS = "Paul Erdös";
 
+    /* A class representing each author in within the given papers */
     private class Author {
 
-        Set<String> papers; // list of papers worked on
+        /* list of papers worked on */
+        Set<String> papers;
 
-        HashMap<String, Integer> collaborators; // e.g. AuthorName:AmountOfPapers worked on
+        /* AuthorName:AmountOfPapers worked on with each collaborator, important for weighted erdos numbers */
+        HashMap<String, Integer> collaborators;
 
+        /* The name of the Author */
         String name;
 
         private Author(String name) {
@@ -20,22 +24,38 @@ public class ErdosNumbers {
             collaborators = new HashMap<>();
         }
 
+        /**
+         * Adds an author to the collaborated author hashmap
+         * @param name - name of the author to add
+         * @param paperTitle - name of the paper
+         */
         private void addAuthor(String name, String paperTitle) {
             papers.add(paperTitle);
             if (collaborators.containsKey(name)) { // name exists in collaborators
                 Integer numPapers = collaborators.get(name);
                 collaborators.put(name, ++numPapers);
-            } else if (!name.equals(this.name)) {
+            } else if (!name.equals(this.name)) { // don't add ourselves so we don't get cycles
                 collaborators.put(name, 1);
             }
         }
 
+        /**
+         * Adds a list of authors to the author hashmap
+         * @param authorNames - a list of authors to add
+         * @param paperTitle - the title of the paper
+         */
         private void addAuthors(String[] authorNames, String paperTitle) {
             for (String name: authorNames) {
                 addAuthor(name, paperTitle);
             }
         }
     }
+
+    /* The Authors in the Erdos Papers */
+    HashMap<String, Author> authors; // Name, AuthorObject
+
+    /*  The List of Collaborators per Paper */
+    HashMap<String, String[]> paperCollaborators; //PaperName, Authors (String [])
 
     /**
      * Initialises the class with a list of papers and authors.
@@ -49,9 +69,6 @@ public class ErdosNumbers {
      * 
      * @param papers List of papers and their authors
      */
-    HashMap<String, Author> authors; // Name, AuthorObject //TODO: comment properly
-    HashMap<String, String[]> paperCollaborators; //PaperName, Authors
-
     public ErdosNumbers(List<String> papers) {
         this.authors = new HashMap<>();
         this.paperCollaborators = new HashMap<>();
@@ -61,7 +78,8 @@ public class ErdosNumbers {
             String paperTitle = paper.split(":")[0];
             paperCollaborators.put(paperTitle, collaborators);
             for (String collaborator: collaborators) {
-                // add each collaborator if they don't exist and if they do exist you need to update the collaborator
+
+                // add each collaborator if they don't exist and if they do exist, update the collaborator
                 if (!authors.containsKey(collaborator)) {
                     authors.put(collaborator, new Author(collaborator));
                 }
@@ -139,12 +157,12 @@ public class ErdosNumbers {
      * @return authors' Erdos number or otherwise Integer.MAX_VALUE
      */
     public int calculateErdosNumber(String author) {
-        Queue<String> toVisit = new LinkedList<>();
-        Set<String> visited = new HashSet<>();
+        Queue<String> toVisit = new LinkedList<>(); // nodes to visit
+        Set<String> visited = new HashSet<>(); // visited nodes
 
         String current;
         toVisit.add(author); // level 1
-        toVisit.add(null);
+        toVisit.add(null); // each null indicates a new level that was visited
 
         int distance = 0;
 
@@ -161,7 +179,7 @@ public class ErdosNumbers {
             }
 
             if (current.equals(ERDOS)) {
-                return distance;
+                return distance; // return the distance when erdos is found
             }
 
             if (!visited.contains(current)) {
@@ -195,9 +213,13 @@ public class ErdosNumbers {
     }
 
 
-    private class Node implements Comparable<Node>{
+    /* A class representing a node to use with dijkstra's algorithm */
+    private class Node implements Comparable<Node> {
+
+        /* The value of the node, represents the author's name */
         private String value;
 
+        /* The key of the node, represents the distance */
         private Double key;
 
         private Node(String s, Double i) {
@@ -205,46 +227,54 @@ public class ErdosNumbers {
             this.key = i;
         }
 
+        /**
+         * @return - the value of the node
+         */
         private String getValue() {
             return this.value;
         }
 
+        /**
+         * @return - the key of the node
+         */
         private Double getKey() {
             return this.key;
         }
 
+        /**
+         * Comparator function
+         * @param n - the node to compare to
+         * @return - -1 if is smaller than the other node, 1 otherwise
+         */
         public int compareTo(Node n) {
             if (this.key < n.key) {
                 return -1;
-            } else if (this.key >= n.key) {
-                return 1;
             } else {
-                return 0;
+                return 1;
             }
         }
     }
 
+    /**
+     * Replaces the key of the node passed in
+     * @param toReplace - the node to replace
+     * @param valueToReplaceWith - the value to replace with
+     * @param pq - the priority queue to get the nodes from
+     */
     private void replaceKey(Node toReplace, Double valueToReplaceWith, PriorityQueue<Node> pq) {
-        Iterator<Node> i = pq.iterator();
-        while(i.hasNext()) {
-            Node current = i.next();
-            if (current.getKey().equals(toReplace.getKey()) && current.getValue().equals(toReplace.getValue())) {
-                current.key = valueToReplaceWith;
-            }
-        }
-    }
+        Iterator<Node> i = pq.iterator(); // Create an iterator to go through
 
-    private Node getMin(PriorityQueue<Node> pq) {
-        Node smallest = new Node("COMP3506", Double.MAX_VALUE);
-        Iterator<Node> i = pq.iterator();
+        Node toAdd = new Node("COVID-19 LUL", valueToReplaceWith);
+        Node current = i.next();
         while(i.hasNext()) {
-            Node current = i.next();
-            if (current.getKey() <= smallest.getKey()) {
-                smallest = current;
+            current = i.next();
+            if (current.equals(toReplace)) {
+                toAdd.value = current.value;
+                 break;
             }
         }
-        pq.remove(smallest);
-        return smallest;
+        pq.remove(current); // Remove the node found
+        pq.add(toAdd); // Add and reshuffle the priority queue
     }
 
     /**
@@ -267,6 +297,7 @@ public class ErdosNumbers {
 
         Map<String, Node> pqTokens = new HashMap<>();
 
+        // Add all authors from the graph to the priority queue and tokens objects
         for (String v: this.authors.keySet()) {
             if (v.equals(author)) {
                 d.put(v, 0.0);
@@ -279,24 +310,23 @@ public class ErdosNumbers {
         }
 
         while (!pq.isEmpty()) {
-            Node entry = getMin(pq);
+            Node entry = pq.poll();
             double key = entry.getKey();
             String u = entry.getValue();
             cloud.put(u, key);
             pqTokens.remove(u);
 
-            for (String v: getCollaborators(u)) {
+            for (String v: getCollaborators(u)) { // Get all people that u collaborated with (Adjacent Edges)
                 if (cloud.get(v) == null) {
                     // perform relaxation step on edge (u,v)
-                    double e = 1.0 / (this.authors.get(v).collaborators.get(u));
-
+                    double e = 1.0 / (this.authors.get(v).collaborators.get(u)); // 1 / c(a, b)
                     if (d.get(u) + e < d.get(v)) {
                         d.put(v, d.get(u) + e);
-                        replaceKey(pqTokens.get(v), d.get(v), pq);
+                        replaceKey(pqTokens.get(v), d.get(v), pq); // replace the key with the new distance
                     }
                 }
             }
         }
-        return cloud.get(ERDOS);
+        return cloud.get(ERDOS); // Return the weighted Erdos Number
     }
 }
